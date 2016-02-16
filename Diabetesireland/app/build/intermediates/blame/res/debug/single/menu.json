@@ -4,6 +4,18 @@
         "source": "C:\\Users\\maxim\\Desktop\\Diabetesireland\\app\\src\\main\\res\\menu\\menu_exercise.xml"
     },
     {
+        "merged": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_plan.xml",
+        "source": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\src\\main\\res\\menu\\menu_plan.xml"
+    },
+    {
+        "merged": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
+        "source": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\src\\main\\res\\menu\\menu_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_daily__update.xml",
+        "source": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\src\\main\\res\\menu\\menu_daily__update.xml"
+    },
+    {
         "merged": "C:\\Users\\maxim\\Desktop\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
         "source": "C:\\Users\\maxim\\Desktop\\Diabetesireland\\app\\src\\main\\res\\menu\\menu_main.xml"
     },
@@ -22,5 +34,17 @@
     {
         "merged": "C:\\Users\\maxim\\Desktop\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_plan.xml",
         "source": "C:\\Users\\maxim\\Desktop\\Diabetesireland\\app\\src\\main\\res\\menu\\menu_plan.xml"
+    },
+    {
+        "merged": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_triangle.xml",
+        "source": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\src\\main\\res\\menu\\menu_triangle.xml"
+    },
+    {
+        "merged": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_weekly_update.xml",
+        "source": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\src\\main\\res\\menu\\menu_weekly_update.xml"
+    },
+    {
+        "merged": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_exercise.xml",
+        "source": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\src\\main\\res\\menu\\menu_exercise.xml"
     }
 ]

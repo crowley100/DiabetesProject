@@ -28,14 +28,14 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-   <!-- <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Gender"
-        android:layout_marginTop="53dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignLeft="@+id/Age"
-        android:layout_alignStart="@+id/Age" />-->
+    <!-- <EditText
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/Gender"
+         android:layout_marginTop="53dp"
+         android:layout_below="@+id/textView"
+         android:layout_alignLeft="@+id/Age"
+         android:layout_alignStart="@+id/Age" />-->
 
     <Button
         android:layout_width="wrap_content"
@@ -58,8 +58,24 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="27dp" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Male"
+        android:id="@+id/maleButton"
+        android:layout_below="@+id/textView21"
+        android:layout_toLeftOf="@+id/continueButton"
+        android:layout_toStartOf="@+id/continueButton"
+        android:layout_marginTop="32dp" />
 
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Female"
+        android:id="@+id/femaleButton"
+        android:layout_alignTop="@+id/maleButton"
+        android:layout_toRightOf="@+id/continueButton"
+        android:layout_toEndOf="@+id/continueButton" />
 
 
     <!-- <TextView

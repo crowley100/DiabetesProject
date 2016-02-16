@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\maxim\\Desktop\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\maxim\\Desktop\\Diabetesireland\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     }
