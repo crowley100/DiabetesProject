@@ -14,12 +14,13 @@
         android:src="@drawable/background"
         android:adjustViewBounds="false"
         android:cropToPadding="false"
-        android:scaleType="fitXY" />
+        android:scaleType="fitXY"
+        android:layout_alignBottom="@+id/textView" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Answer the following questions to start getting in shape"
         android:id="@+id/textView"
         android:paddingTop="@dimen/activity_vertical_margin"
@@ -28,14 +29,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <!-- <EditText
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:id="@+id/Gender"
-         android:layout_marginTop="53dp"
-         android:layout_below="@+id/textView"
-         android:layout_alignLeft="@+id/Age"
-         android:layout_alignStart="@+id/Age" />-->
 
     <Button
         android:layout_width="wrap_content"
@@ -44,9 +37,9 @@
         android:background="#432687"
         android:textColor="#ffffff"
         android:id="@+id/continueButton"
-        android:layout_marginBottom="48dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -55,14 +48,15 @@
         android:text="Enter your gender"
         android:id="@+id/textView21"
         android:layout_below="@+id/imageView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Male"
         android:id="@+id/maleButton"
+        android:textColor="#adadad"
+        android:background="#dbdbdb"
         android:layout_below="@+id/textView21"
         android:layout_toLeftOf="@+id/continueButton"
         android:layout_toStartOf="@+id/continueButton"
@@ -73,20 +67,109 @@
         android:layout_height="wrap_content"
         android:text="Female"
         android:id="@+id/femaleButton"
+        android:textColor="#adadad"
+        android:background="#dbdbdb"
         android:layout_alignTop="@+id/maleButton"
         android:layout_toRightOf="@+id/continueButton"
         android:layout_toEndOf="@+id/continueButton" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:src="@drawable/background2"
+        android:layout_alignTop="@+id/maleButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-    <!-- <TextView
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:textAppearance="?android:attr/textAppearanceMedium"
-         android:text="Gender:"
-         android:id="@+id/textView3"
-         android:layout_alignBaseline="@id/spinner"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentStart="true" />-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Age"
+        android:textColor="#ffffff"
+        android:id="@+id/textView22"
+        android:layout_below="@+id/maleButton"
+        android:layout_alignLeft="@+id/textView24"
+        android:layout_alignStart="@+id/textView24"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Weight"
+        android:textColor="#ffffff"
+        android:id="@+id/textView23"
+        android:layout_alignTop="@+id/middleTextBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Height"
+        android:textColor="#ffffff"
+        android:id="@+id/textView24"
+        android:layout_alignTop="@+id/lowestTextBox"
+        android:layout_alignRight="@+id/textView23"
+        android:layout_alignEnd="@+id/textView23" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lowestTextBox"
+        android:src="@drawable/button"
+        android:layout_below="@+id/middleTextBox"
+        android:layout_alignLeft="@+id/textView21"
+        android:layout_alignStart="@+id/textView21"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/middleTextBox"
+        android:src="@drawable/button"
+        android:layout_below="@+id/topTextBox"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/lowestTextBox"
+        android:layout_alignStart="@+id/lowestTextBox" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/topTextBox"
+        android:src="@drawable/button"
+        android:layout_alignTop="@+id/textView22"
+        android:layout_alignLeft="@+id/middleTextBox"
+        android:layout_alignStart="@+id/middleTextBox"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+
+
+    <Spinner
+        android:id="@+id/weightSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/middleTextBox"
+        android:layout_alignLeft="@+id/lowestTextBox"
+        android:layout_alignStart="@+id/lowestTextBox"
+        android:layout_above="@+id/lowestTextBox" />
+
+    <Spinner
+        android:id="@+id/hSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/middleTextBox"
+        android:layout_toEndOf="@+id/textView22"
+        android:layout_alignBottom="@+id/lowestTextBox"
+        android:layout_alignLeft="@+id/lowestTextBox"
+        android:layout_alignStart="@+id/lowestTextBox" />
 
 
 </RelativeLayout>
