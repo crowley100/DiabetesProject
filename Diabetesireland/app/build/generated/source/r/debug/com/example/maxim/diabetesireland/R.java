@@ -2198,13 +2198,24 @@ containing a value of this type.
         public static final int background2=0x7f020046;
         public static final int background3=0x7f020047;
         public static final int button=0x7f020048;
-        public static final int design_fab_background=0x7f020049;
-        public static final int design_snackbar_background=0x7f02004a;
-        public static final int leaf=0x7f02004b;
-        public static final int notification_template_icon_bg=0x7f02004f;
-        public static final int pebble=0x7f02004c;
-        public static final int purple=0x7f02004d;
-        public static final int triangle=0x7f02004e;
+        public static final int custom=0x7f020049;
+        public static final int custom1=0x7f02004a;
+        public static final int custom2=0x7f02004b;
+        public static final int customexercise=0x7f02004c;
+        public static final int customfood=0x7f02004d;
+        public static final int custompedometer=0x7f02004e;
+        public static final int design_fab_background=0x7f02004f;
+        public static final int design_snackbar_background=0x7f020050;
+        public static final int exercise=0x7f020051;
+        public static final int food=0x7f020052;
+        public static final int leaf=0x7f020053;
+        public static final int loginbg=0x7f020054;
+        public static final int notification_template_icon_bg=0x7f02005a;
+        public static final int pebble=0x7f020055;
+        public static final int pedometer=0x7f020056;
+        public static final int purple=0x7f020057;
+        public static final int roundcorners=0x7f020058;
+        public static final int triangle=0x7f020059;
     }
     public static final class id {
         public static final int action0=0x7f0c00a1;

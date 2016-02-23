@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.continueButton:
-                intent = new Intent(MainActivity.this, Plan.class);
+                intent = new Intent(MainActivity.this, Triangle.class);
                 startActivity(intent);
                 break;
 
