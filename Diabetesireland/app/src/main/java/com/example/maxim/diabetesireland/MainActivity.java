@@ -14,10 +14,6 @@ import android.widget.Spinner;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     boolean touchedMale = false;
     boolean touchedFemale = false;
-    Spinner weight;
-    Spinner height;
-    String[] heights = new String[] {"<140cm","140-150cm", "150-160cm", "160-170cm", "170-180cm","180cm-190cm", "190-200cm", "200cm+"};
-    String[] weights = new String[]{"<60kg", "60-65kg", "65-70kg","70-75kg","75-80kg","80-85kg","85-90kg","90-95kg","95-100kg","100-110kg","110-120kg","120-130kg","130-140kg","140-150kg","150k-200kg", "200+kg"};
     Button maleButton;
     Button femaleButton;
     Button nextScreen;
@@ -36,19 +32,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         maleButton.setOnClickListener(this);
         femaleButton.setOnClickListener(this);
         nextScreen.setOnClickListener(this);
-        //DropDown menus
-        weight = (Spinner)findViewById(R.id.weightSpinner);
-        height = (Spinner)findViewById(R.id.hSpinner);
-        ArrayAdapter<String>adapter = new ArrayAdapter<String>(MainActivity.this,
-                android.R.layout.simple_spinner_dropdown_item,heights);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        ArrayAdapter<String>adapter2 = new ArrayAdapter<String>(MainActivity.this,
-                android.R.layout.simple_spinner_dropdown_item,weights);
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        weight.setAdapter(adapter2);
-        height.setAdapter(adapter);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

@@ -2,10 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.maxim.diabetesireland.MainActivityFragment"
     tools:showIn="@layout/activity_main"
-    android:background="#ffffff">
+    android:background="@drawable/loginbg">
+
 
     <ImageView
         android:layout_width="wrap_content"
@@ -14,162 +14,188 @@
         android:src="@drawable/background"
         android:adjustViewBounds="false"
         android:cropToPadding="false"
-        android:scaleType="fitXY"
-        android:layout_alignBottom="@+id/textView" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Answer the following questions to start getting in shape"
-        android:id="@+id/textView"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:textColor="#ffffff"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit"
-        android:background="#432687"
-        android:textColor="#ffffff"
-        android:id="@+id/continueButton"
-        android:layout_below="@+id/imageView3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp" />
+        android:scaleType="fitXY" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Enter your gender"
-        android:id="@+id/textView21"
-        android:layout_below="@+id/imageView2"
+        android:text="Please fill out the fields below"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:id="@+id/view"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/femaleButton"
+        android:layout_alignEnd="@+id/femaleButton"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30sp"
+        android:text="Submit"
+        android:background="#432687"
+        android:textColor="#ffffff"
+        android:id="@+id/continueButton"
+        android:layout_below="@+id/radioButton2"
         android:layout_centerHorizontal="true" />
+
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Male"
+        android:background="#909090"
+        android:textColor="#ffffff"
         android:id="@+id/maleButton"
-        android:textColor="#adadad"
-        android:background="#dbdbdb"
-        android:layout_below="@+id/textView21"
-        android:layout_toLeftOf="@+id/continueButton"
-        android:layout_toStartOf="@+id/continueButton"
-        android:layout_marginTop="32dp" />
+        android:layout_alignBottom="@+id/textView21"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Female"
+        android:background="#909090"
+        android:textColor="#ffffff"
         android:id="@+id/femaleButton"
-        android:textColor="#adadad"
-        android:background="#dbdbdb"
-        android:layout_alignTop="@+id/maleButton"
-        android:layout_toRightOf="@+id/continueButton"
-        android:layout_toEndOf="@+id/continueButton" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView3"
-        android:src="@drawable/background2"
-        android:layout_alignTop="@+id/maleButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Age"
-        android:textColor="#ffffff"
-        android:id="@+id/textView22"
-        android:layout_below="@+id/maleButton"
-        android:layout_alignLeft="@+id/textView24"
-        android:layout_alignStart="@+id/textView24"
-        android:layout_marginTop="50dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Weight"
-        android:textColor="#ffffff"
-        android:id="@+id/textView23"
-        android:layout_alignTop="@+id/middleTextBox"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Height"
-        android:textColor="#ffffff"
-        android:id="@+id/textView24"
-        android:layout_alignTop="@+id/lowestTextBox"
-        android:layout_alignRight="@+id/textView23"
-        android:layout_alignEnd="@+id/textView23" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lowestTextBox"
-        android:src="@drawable/button"
-        android:layout_below="@+id/middleTextBox"
-        android:layout_alignLeft="@+id/textView21"
-        android:layout_alignStart="@+id/textView21"
+        android:layout_below="@+id/imageView2"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <ImageView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/middleTextBox"
-        android:src="@drawable/button"
-        android:layout_below="@+id/topTextBox"
+        android:background="@drawable/roundcorners"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:textSize="25sp"
+        android:text="   Day/Month/Year "
+        android:gravity="center"
+        android:layout_above="@+id/textView24"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@+id/lowestTextBox"
-        android:layout_alignStart="@+id/lowestTextBox" />
+        android:layout_alignLeft="@+id/continueButton"
+        android:layout_alignStart="@+id/continueButton" />
 
-    <ImageView
+
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/topTextBox"
-        android:src="@drawable/button"
-        android:layout_alignTop="@+id/textView22"
-        android:layout_alignLeft="@+id/middleTextBox"
-        android:layout_alignStart="@+id/middleTextBox"
+        android:background="@drawable/roundcorners"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editText3"
+        android:textSize="25sp"
+        android:text="kilograms"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText"
+        android:layout_above="@+id/textView26"
+        android:gravity="center" />
 
-
-
-    <Spinner
-        android:id="@+id/weightSpinner"
-        android:layout_width="fill_parent"
+    <EditText
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/middleTextBox"
-        android:layout_alignLeft="@+id/lowestTextBox"
-        android:layout_alignStart="@+id/lowestTextBox"
-        android:layout_above="@+id/lowestTextBox" />
+        android:inputType="numberSigned"
+        android:background="@drawable/roundcorners"
+        android:ems="10"
+        android:id="@+id/editText4"
+        android:textSize="25sp"
+        android:text="meters"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/editText3"
+        android:layout_alignStart="@+id/editText3"
+        android:gravity="center" />
 
-    <Spinner
-        android:id="@+id/hSpinner"
-        android:layout_width="fill_parent"
+    <RadioButton
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Do you want to lose weight?"
+        android:id="@+id/radioButton"
+        android:textSize="20sp"
+        android:layout_below="@+id/textView22"
+        android:layout_centerHorizontal="true" />
 
-        android:layout_below="@+id/middleTextBox"
-        android:layout_toEndOf="@+id/textView22"
-        android:layout_alignBottom="@+id/lowestTextBox"
-        android:layout_alignLeft="@+id/lowestTextBox"
-        android:layout_alignStart="@+id/lowestTextBox" />
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do you want to be more active?"
+        android:textSize="20sp"
+        android:id="@+id/radioButton2"
+        android:gravity="center"
+        android:layout_below="@+id/radioButton"
+        android:layout_centerHorizontal="true" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Goal"
+        android:textSize="35sp"
+        android:id="@+id/textView22"
+        android:gravity="center"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/editText4"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age"
+        android:textSize="30sp"
+        android:id="@+id/textView23"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height"
+        android:textSize="30sp"
+        android:id="@+id/textView26"
+        android:layout_alignBottom="@+id/editText4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight"
+        android:textSize="30sp"
+        android:id="@+id/textView24"
+        android:layout_alignBottom="@+id/editText3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        android:textSize="30sp"
+        android:id="@+id/textView21"
+        android:layout_alignBottom="@+id/femaleButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  or"
+        android:textSize="30sp"
+        android:id="@+id/textView27"
+        android:layout_alignBottom="@+id/maleButton"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/femaleButton"
+        android:layout_toRightOf="@+id/maleButton"
+        android:layout_toEndOf="@+id/maleButton" />
 
 </RelativeLayout>

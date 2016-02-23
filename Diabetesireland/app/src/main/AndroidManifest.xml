@@ -19,10 +19,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Plan"
-            android:label="@string/title_activity_plan"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".Exercise"
             android:label="@string/title_activity_exercise"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -37,6 +33,10 @@
         <activity
             android:name=".WeeklyUpdate"
             android:label="@string/title_activity_weekly_update"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FoodIntake"
+            android:label="@string/title_activity_food_intake"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

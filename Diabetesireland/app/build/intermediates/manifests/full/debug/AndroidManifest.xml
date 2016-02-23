@@ -25,10 +25,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.maxim.diabetesireland.Plan"
-            android:label="@string/title_activity_plan"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name="com.example.maxim.diabetesireland.Exercise"
             android:label="@string/title_activity_exercise"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -43,6 +39,10 @@
         <activity
             android:name="com.example.maxim.diabetesireland.WeeklyUpdate"
             android:label="@string/title_activity_weekly_update"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.maxim.diabetesireland.FoodIntake"
+            android:label="@string/title_activity_food_intake"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

@@ -21,7 +21,7 @@ public class Triangle extends AppCompatActivity {
         nextScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Triangle.this, Daily_Update.class);
+                Intent intent = new Intent(Triangle.this, FoodIntake.class);
                 startActivity(intent);
             }
         });
