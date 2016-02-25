@@ -46,7 +46,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Male"
-        android:background="#909090"
+        android:layout_marginTop="5dp"
+        android:background="#dbdbdb"
         android:textColor="#ffffff"
         android:id="@+id/maleButton"
         android:layout_alignBottom="@+id/textView21"
@@ -57,14 +58,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Female"
-        android:background="#909090"
+        android:background="#dbdbdb"
+        android:layout_marginTop="5dp"
         android:textColor="#ffffff"
         android:id="@+id/femaleButton"
         android:layout_below="@+id/imageView2"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/roundcorners"
@@ -72,7 +74,8 @@
         android:ems="10"
         android:id="@+id/editText"
         android:textSize="25sp"
-        android:text="   Day/Month/Year "
+        android:text=""
+        android:backgroundTint="#ffffff"
         android:gravity="center"
         android:layout_above="@+id/textView24"
         android:layout_alignParentRight="true"
@@ -88,8 +91,9 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/editText3"
+        android:backgroundTint="#ffffff"
         android:textSize="25sp"
-        android:text="kilograms"
+        android:text=""
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignLeft="@+id/editText"
@@ -101,11 +105,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="numberSigned"
+        android:backgroundTint="#ffffff"
         android:background="@drawable/roundcorners"
+
         android:ems="10"
         android:id="@+id/editText4"
         android:textSize="25sp"
-        android:text="meters"
+        android:text=""
         android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -148,6 +154,7 @@
         android:layout_height="wrap_content"
         android:text="Age"
         android:textSize="30sp"
+        android:textColor="#ffffff"
         android:id="@+id/textView23"
         android:layout_alignBottom="@+id/editText"
         android:layout_alignParentLeft="true"
@@ -158,6 +165,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Height"
+        android:textColor="#ffffff"
         android:textSize="30sp"
         android:id="@+id/textView26"
         android:layout_alignBottom="@+id/editText4"
@@ -170,6 +178,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Weight"
+        android:textColor="#ffffff"
         android:textSize="30sp"
         android:id="@+id/textView24"
         android:layout_alignBottom="@+id/editText3"
@@ -197,5 +206,27 @@
         android:layout_toLeftOf="@+id/femaleButton"
         android:layout_toRightOf="@+id/maleButton"
         android:layout_toEndOf="@+id/maleButton" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weightSpinner"
+        android:layout_alignBottom="@+id/textView24"
+        android:layout_alignLeft="@+id/textView22"
+        android:layout_alignStart="@+id/textView22"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/editText3" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hSpinner"
+        android:layout_below="@+id/editText3"
+        android:layout_alignLeft="@+id/weightSpinner"
+        android:layout_alignStart="@+id/weightSpinner"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/textView22" />
 
 </RelativeLayout>
