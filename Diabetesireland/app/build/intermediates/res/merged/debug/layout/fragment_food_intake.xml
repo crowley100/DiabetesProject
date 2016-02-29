@@ -1,5 +1,16 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="688sp"
+    android:isScrollContainer="true"
+    android:scrollbars="vertical"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    android:background="#ffffff"
+    >
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.maxim.diabetesireland.FoodIntakeFragment">
@@ -17,33 +28,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox"
-        android:layout_below="@+id/button7"
-        android:layout_toLeftOf="@+id/checkBox2"
-        android:layout_toStartOf="@+id/checkBox2"
-        android:layout_marginRight="56dp"
-        android:layout_marginEnd="56dp" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox2"
-        android:layout_below="@+id/button7"
-        android:layout_centerHorizontal="true" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox3"
-        android:layout_marginLeft="56dp"
-        android:layout_marginStart="56dp"
-        android:layout_below="@+id/button7"
-        android:layout_toRightOf="@+id/checkBox2"
-        android:layout_toEndOf="@+id/checkBox2" />
-
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -52,32 +36,9 @@
         android:textColor="#ffffff"
         android:background="#432687"
         android:id="@+id/button8"
-        android:layout_below="@+id/checkBox"
-        android:layout_centerHorizontal="true" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox4"
-        android:layout_below="@+id/button8"
-        android:layout_alignLeft="@+id/checkBox"
-        android:layout_alignStart="@+id/checkBox" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox5"
-        android:layout_below="@+id/button8"
-        android:layout_toLeftOf="@+id/checkBox3"
-        android:layout_toStartOf="@+id/checkBox3" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox6"
-        android:layout_below="@+id/button8"
-        android:layout_alignLeft="@+id/checkBox3"
-        android:layout_alignStart="@+id/checkBox3" />
+        android:layout_below="@+id/SweetsBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="match_parent"
@@ -87,41 +48,9 @@
         android:textColor="#ffffff"
         android:background="#432687"
         android:id="@+id/button9"
-        android:layout_below="@+id/checkBox4"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox8"
-        android:layout_below="@+id/button9"
-        android:layout_toLeftOf="@+id/checkBox2"
-        android:layout_toStartOf="@+id/checkBox2" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox9"
-        android:layout_below="@+id/button9"
-        android:layout_alignLeft="@+id/checkBox4"
-        android:layout_alignStart="@+id/checkBox4" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox10"
-        android:layout_below="@+id/button9"
-        android:layout_alignLeft="@+id/checkBox6"
-        android:layout_alignStart="@+id/checkBox6" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox11"
-        android:layout_below="@+id/button9"
-        android:layout_toRightOf="@+id/checkBox5"
-        android:layout_toEndOf="@+id/checkBox5" />
+        android:layout_below="@+id/OilsBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="match_parent"
@@ -131,42 +60,9 @@
         android:textColor="#ffffff"
         android:background="#432687"
         android:id="@+id/button10"
-        android:layout_below="@+id/checkBox8"
-        android:layout_toStartOf="@+id/checkBox10"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox7"
-        android:layout_below="@+id/button10"
-        android:layout_alignLeft="@+id/checkBox10"
-        android:layout_alignStart="@+id/checkBox10" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox12"
-        android:layout_below="@+id/button10"
-        android:layout_alignLeft="@+id/checkBox8"
-        android:layout_alignStart="@+id/checkBox8" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox13"
-        android:layout_below="@+id/button10"
-        android:layout_alignLeft="@+id/checkBox11"
-        android:layout_alignStart="@+id/checkBox11" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox14"
-        android:layout_below="@+id/button10"
-        android:layout_alignLeft="@+id/checkBox9"
-        android:layout_alignStart="@+id/checkBox9" />
+        android:layout_below="@+id/ProteinsBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="match_parent"
@@ -176,49 +72,23 @@
         android:textColor="#ffffff"
         android:background="#432687"
         android:id="@+id/button11"
-        android:layout_below="@+id/checkBox7"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/DairyBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox15"
-        android:layout_below="@+id/button11"
-        android:layout_toLeftOf="@+id/checkBox21"
-        android:layout_toStartOf="@+id/checkBox21" />
+    <ProgressBar
+        android:id="@+id/SweetsBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="38sp"
+        android:max="100"
+        android:progress="10"
+        android:progressDrawable="@drawable/custombar"
+        android:secondaryProgress="50"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button7" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox16"
-        android:layout_below="@+id/button11"
-        android:layout_toRightOf="@+id/checkBox7"
-        android:layout_toEndOf="@+id/checkBox7" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox17"
-        android:layout_below="@+id/button11"
-        android:layout_toLeftOf="@+id/checkBox12"
-        android:layout_toStartOf="@+id/checkBox12" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox18"
-        android:layout_below="@+id/button11"
-        android:layout_toRightOf="@+id/checkBox"
-        android:layout_toEndOf="@+id/checkBox"
-        android:layout_centerVertical="true" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox19"
-        android:layout_below="@+id/button11"
-        android:layout_toRightOf="@+id/checkBox13"
-        android:layout_toEndOf="@+id/checkBox13" />
 
     <Button
         android:layout_width="match_parent"
@@ -228,57 +98,235 @@
         android:textColor="#ffffff"
         android:background="#432687"
         android:id="@+id/button12"
-        android:layout_below="@+id/checkBox17"
-        android:layout_toEndOf="@+id/checkBox14"
+        android:layout_below="@+id/FruitVegBar"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox20"
-        android:layout_below="@+id/button12"
-        android:layout_toLeftOf="@+id/checkBox15"
-        android:layout_toStartOf="@+id/checkBox15" />
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/OilsBar"
+        android:layout_width="match_parent"
+        android:layout_height="38sp"
+        android:max="100"
+        android:progress="10"
+        android:progressDrawable="@drawable/custombar"
+        android:secondaryProgress="50"
+        android:layout_below="@+id/button8"
+        android:layout_toLeftOf="@+id/plus2"
+        android:layout_toStartOf="@+id/plus2" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox21"
-        android:layout_below="@+id/button12"
-        android:layout_toLeftOf="@+id/checkBox17"
-        android:layout_toStartOf="@+id/checkBox17" />
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/ProteinsBar"
+        android:layout_width="match_parent"
+        android:layout_height="38sp"
+        android:max="100"
+        android:progress="10"
+        android:progressDrawable="@drawable/custombar"
+        android:secondaryProgress="50"
+        android:layout_below="@+id/button9"
+        android:layout_alignRight="@+id/OilsBar"
+        android:layout_alignEnd="@+id/OilsBar" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox22"
-        android:layout_below="@+id/button12"
-        android:layout_toLeftOf="@+id/checkBox18"
-        android:layout_toStartOf="@+id/checkBox18" />
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/DairyBar"
+        android:layout_width="match_parent"
+        android:layout_height="38sp"
+        android:max="100"
+        android:progress="10"
+        android:progressDrawable="@drawable/custombar"
+        android:secondaryProgress="50"
+        android:layout_below="@+id/button10"
+        android:layout_alignRight="@+id/ProteinsBar"
+        android:layout_alignEnd="@+id/ProteinsBar" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox23"
-        android:layout_below="@+id/button12"
-        android:layout_toLeftOf="@+id/checkBox19"
-        android:layout_toStartOf="@+id/checkBox19" />
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/FruitVegBar"
+        android:layout_width="match_parent"
+        android:layout_height="38sp"
+        android:max="100"
+        android:progress="10"
+        android:progressDrawable="@drawable/custombar"
+        android:secondaryProgress="75"
+        android:layout_below="@+id/button11"
+        android:layout_alignRight="@+id/DairyBar"
+        android:layout_alignEnd="@+id/DairyBar" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox24"
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/CarbsBar"
+        android:layout_width="match_parent"
+        android:layout_height="38sp"
+        android:max="100"
+        android:progress="10"
+        android:progressDrawable="@drawable/custombar"
+        android:secondaryProgress="50"
         android:layout_below="@+id/button12"
-        android:layout_toRightOf="@+id/checkBox19"
-        android:layout_toEndOf="@+id/checkBox19" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/FruitVegBar"
+        android:layout_alignEnd="@+id/FruitVegBar" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="38sp"
+        android:background="#00000000"
+        android:text="1 out of 3 portions left"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_alignLeft="@id/SweetsBar"
+        android:layout_alignTop="@id/SweetsBar"
+        android:layout_alignBottom="@id/SweetsBar"
+        android:id="@+id/textView"
+        android:layout_toLeftOf="@+id/plus1"
+        android:layout_toStartOf="@+id/plus1" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:background="@drawable/customplusicon"
+        android:id="@+id/plus1"
+        android:layout_above="@+id/button8"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/SweetsBar" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:background="@drawable/customplusicon"
+        android:id="@+id/plus2"
+        android:layout_alignTop="@+id/OilsBar"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_alignBottom="@+id/OilsBar" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:background="@drawable/customplusicon"
+        android:id="@+id/plus3"
+        android:layout_alignTop="@+id/ProteinsBar"
+        android:layout_toRightOf="@+id/ProteinsBar"
+        android:layout_toEndOf="@+id/ProteinsBar"
+        android:layout_alignBottom="@+id/ProteinsBar" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:background="@drawable/customplusicon"
+        android:id="@+id/plus4"
+        android:layout_alignTop="@+id/DairyBar"
+        android:layout_toRightOf="@+id/DairyBar"
+        android:layout_toEndOf="@+id/DairyBar"
+        android:layout_alignBottom="@+id/DairyBar" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:background="@drawable/customplusicon"
+        android:id="@+id/plus5"
+        android:layout_alignTop="@+id/FruitVegBar"
+        android:layout_toRightOf="@+id/FruitVegBar"
+        android:layout_toEndOf="@+id/FruitVegBar"
+        android:layout_alignBottom="@+id/FruitVegBar" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:background="@drawable/customplusicon"
+        android:id="@+id/plus6"
+        android:layout_alignTop="@+id/CarbsBar"
+        android:layout_toRightOf="@+id/CarbsBar"
+        android:layout_toEndOf="@+id/CarbsBar" />
+
+    <Button
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox25"
-        android:layout_below="@+id/button12"
-        android:layout_toRightOf="@+id/checkBox16"
-        android:layout_toEndOf="@+id/checkBox16" />
+        android:text="Fluids"
+        android:textSize="25sp"
+        android:textColor="#ffffff"
+        android:background="#432687"
+        android:id="@+id/button20"
+        android:layout_below="@+id/CarbsBar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/FluidsBar"
+        android:layout_width="match_parent"
+        android:layout_height="38sp"
+        android:max="100"
+        android:progress="10"
+        android:progressDrawable="@drawable/custombar"
+        android:secondaryProgress="50"
+        android:indeterminate="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/plus7"
+        android:layout_alignParentBottom="false"
+        android:layout_below="@+id/button20"
+        android:layout_toLeftOf="@+id/plus7" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:background="@drawable/customplusicon"
+        android:id="@+id/plus7"
+        android:layout_below="@+id/button20"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/FluidsBar" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alcoholic Drinks"
+        android:textSize="25sp"
+        android:textColor="#ffffff"
+        android:background="#432687"
+        android:id="@+id/button22"
+        android:layout_below="@+id/FluidsBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/AlcoholsBar"
+        android:layout_width="match_parent"
+        android:layout_height="38sp"
+        android:max="100"
+        android:progress="10"
+        android:progressDrawable="@drawable/custombar"
+        android:secondaryProgress="50"
+        android:indeterminate="false"
+        android:layout_below="@+id/button22"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/plus8"
+        android:layout_toStartOf="@+id/plus8" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:background="@drawable/customplusicon"
+        android:id="@+id/plus8"
+        android:layout_alignTop="@+id/AlcoholsBar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/AlcoholsBar" />
 
 </RelativeLayout>
+    </ScrollView>
