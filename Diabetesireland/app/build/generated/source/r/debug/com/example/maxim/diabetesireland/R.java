@@ -2254,7 +2254,6 @@ containing a value of this type.
         public static final int always=0x7f0c0032;
         public static final int beginning=0x7f0c0030;
         public static final int bottom=0x7f0c001c;
-        public static final int button=0x7f0c007a;
         public static final int button10=0x7f0c0087;
         public static final int button11=0x7f0c0089;
         public static final int button12=0x7f0c008b;
@@ -2295,7 +2294,7 @@ containing a value of this type.
         public static final int design_navigation_view=0x7f0c006e;
         public static final int disableHome=0x7f0c000e;
         public static final int editText=0x7f0c00a2;
-        public static final int editText2=0x7f0c007d;
+        public static final int editText2=0x7f0c007c;
         public static final int editText3=0x7f0c00a5;
         public static final int editText4=0x7f0c00a7;
         public static final int edit_query=0x7f0c005c;
@@ -2376,9 +2375,9 @@ containing a value of this type.
         public static final int snackbar_text=0x7f0c006b;
         public static final int snap=0x7f0c0019;
         public static final int spacer=0x7f0c0045;
-        public static final int spinner=0x7f0c007e;
-        public static final int spinner2=0x7f0c007f;
-        public static final int spinner3=0x7f0c0080;
+        public static final int spinner=0x7f0c007d;
+        public static final int spinner2=0x7f0c007e;
+        public static final int spinner3=0x7f0c007f;
         public static final int split_action_bar=0x7f0c0008;
         public static final int src_atop=0x7f0c0028;
         public static final int src_in=0x7f0c0029;
@@ -2389,6 +2388,7 @@ containing a value of this type.
         public static final int tabMode=0x7f0c000d;
         public static final int text=0x7f0c00c5;
         public static final int text2=0x7f0c00c3;
+        public static final int textPedometer=0x7f0c0080;
         public static final int textSpacerNoButtons=0x7f0c004d;
         public static final int textView=0x7f0c008f;
         public static final int textView13=0x7f0c00b4;
@@ -2397,9 +2397,9 @@ containing a value of this type.
         public static final int textView16=0x7f0c00b7;
         public static final int textView17=0x7f0c00b8;
         public static final int textView18=0x7f0c00b9;
-        public static final int textView19=0x7f0c007b;
+        public static final int textView19=0x7f0c007a;
         public static final int textView2=0x7f0c00b0;
-        public static final int textView20=0x7f0c007c;
+        public static final int textView20=0x7f0c007b;
         public static final int textView21=0x7f0c009f;
         public static final int textView22=0x7f0c00a8;
         public static final int textView23=0x7f0c00ab;
@@ -2543,12 +2543,14 @@ containing a value of this type.
         public static final int hello_blank_fragment=0x7f060018;
         public static final int large_text=0x7f060019;
         public static final int status_bar_notification_info_overflow=0x7f060013;
-        public static final int title_activity_daily__update=0x7f06001a;
-        public static final int title_activity_exercise=0x7f06001b;
-        public static final int title_activity_food_intake=0x7f06001c;
-        public static final int title_activity_plan=0x7f06001d;
-        public static final int title_activity_triangle=0x7f06001e;
-        public static final int title_activity_weekly_update=0x7f06001f;
+        public static final int step_counter=0x7f06001a;
+        public static final int step_detector=0x7f06001b;
+        public static final int title_activity_daily__update=0x7f06001c;
+        public static final int title_activity_exercise=0x7f06001d;
+        public static final int title_activity_food_intake=0x7f06001e;
+        public static final int title_activity_plan=0x7f06001f;
+        public static final int title_activity_triangle=0x7f060020;
+        public static final int title_activity_weekly_update=0x7f060021;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f09007f;
