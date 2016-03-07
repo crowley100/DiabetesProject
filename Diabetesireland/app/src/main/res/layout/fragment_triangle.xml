@@ -11,8 +11,8 @@
 
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="180sp"
+        android:layout_height="160sp"
         android:background="@drawable/customfood"
         android:id="@+id/button3"
         android:layout_below="@+id/textView2"
@@ -20,17 +20,17 @@
         android:layout_toStartOf="@+id/textView2" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/custom1"
+        android:layout_width="180sp"
+        android:layout_height="160sp"
+        android:background="@drawable/customgraphs"
         android:id="@+id/button4"
         android:layout_above="@+id/button3"
         android:layout_centerHorizontal="true" />
 
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="180sp"
+        android:layout_height="160sp"
         android:background="@drawable/customexercise"
         android:id="@+id/button6"
         android:layout_centerVertical="true"
@@ -49,8 +49,8 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="65sp"
-        android:layout_height="90sp"
+        android:layout_width="75sp"
+        android:layout_height="95sp"
         android:background="@drawable/custom_diabetes_ireland"
         android:id="@+id/button14"
         android:layout_below="@+id/button4"

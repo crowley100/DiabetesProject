@@ -1,3 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_4e974de2d73af95ee5ac110b017cd970b10af255.jar" />
+    </item>
+    <item
+        jar="C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.1_eb209b64d78516c2bdad1cc1ae70e87a062bf3fd.jar" />
+    </item>
+    <item
+        jar="C:\Users\jessa\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_aeede60f4dd5c29b59311786d3c1cf4ecd11027f.jar" />
+    </item>
+    <item
+        jar="C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.1_8d65bf19e3691f23b044b7c018193044a25a67fa.jar" />
+    </item>
+    <item
+        jar="C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.1.1_7f0d2f7459225367ece48ab59f114fac1eb9fe04.jar" />
+    </item>
+    <item
+        jar="C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.1.1_0b04b663e7bdf526e3eece83188721ba26fb1fac.jar" />
+    </item>
+
+</items>

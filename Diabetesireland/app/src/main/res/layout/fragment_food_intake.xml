@@ -84,7 +84,7 @@
         android:max="100"
         android:progress="10"
         android:progressDrawable="@drawable/custombar"
-        android:secondaryProgress="50"
+        android:secondaryProgress="33"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/button7" />
@@ -174,7 +174,7 @@
         android:layout_width="match_parent"
         android:layout_height="38sp"
         android:background="#00000000"
-        android:text="1 out of 3 portions left"
+        android:text="1 out of 2 portions left"
         android:textSize="25sp"
         android:gravity="center"
         android:layout_alignLeft="@id/SweetsBar"
@@ -327,6 +327,83 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignBottom="@+id/AlcoholsBar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="38sp"
+        android:background="#00000000"
+        android:text="1 out of 2 portions left"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:id="@+id/textView10"
+        android:layout_alignTop="@+id/OilsBar"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="38sp"
+        android:background="#00000000"
+        android:text="1 out of 4 portions left"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:id="@+id/textView11"
+        android:layout_alignTop="@+id/ProteinsBar"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="38sp"
+        android:background="#00000000"
+        android:text="1 out of 4 portions left"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:id="@+id/textView12"
+        android:layout_above="@+id/button11"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="38sp"
+        android:background="#00000000"
+        android:text="1 out of 6 portions left"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:id="@+id/textView25"
+        android:layout_below="@+id/button11"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="38sp"
+        android:background="#00000000"
+        android:text="1 out of 6 portions left"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:id="@+id/textView28"
+        android:layout_below="@+id/button12"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="38sp"
+        android:background="#00000000"
+        android:text="1 out of 8 portions left"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:id="@+id/textView29"
+        android:layout_above="@+id/button22"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="38sp"
+        android:background="#00000000"
+        android:text="1 out of 3 portions left"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:id="@+id/textView30"
+        android:layout_below="@+id/button22"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
     </ScrollView>
