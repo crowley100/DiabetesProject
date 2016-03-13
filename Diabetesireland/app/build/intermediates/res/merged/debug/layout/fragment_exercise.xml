@@ -1,3 +1,4 @@
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -6,9 +7,11 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_gravity="center"
     tools:context="com.example.maxim.diabetesireland.ExerciseFragment"
     tools:showIn="@layout/activity_exercise"
     android:background="@drawable/pebble">
+
 
 
     <TextView
@@ -35,26 +38,16 @@
         android:layout_alignRight="@+id/editText2"
         android:layout_alignEnd="@+id/editText2" />
 
+
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="25dp"
+        android:layout_width="150sp"
+        android:layout_height="30sp"
+        android:hint="Exercise Type"
+        android:textSize="25sp"
         android:layout_marginTop="53dp" />
 
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:layout_marginTop="53dp" />
 
-    <Spinner
-        android:id="@+id/spinner3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:layout_marginTop="53dp" />
 
     <EditText
         android:layout_width="wrap_content"

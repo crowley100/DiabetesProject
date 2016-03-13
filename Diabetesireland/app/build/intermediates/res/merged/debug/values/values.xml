@@ -372,6 +372,7 @@
     <string name="title_activity_exercise">Exercise</string>
     <string name="title_activity_food_intake">FoodIntake</string>
     <string name="title_activity_plan">Plan</string>
+    <string name="title_activity_tab">TabActivity</string>
     <string name="title_activity_triangle">Triangle</string>
     <string name="title_activity_weekly_update">WeeklyUpdate</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:text="or"
+            android:text=" "
             android:textSize="30sp"
             android:id="@+id/textView27"
             android:layout_alignBottom="@+id/maleButton"
@@ -96,57 +96,41 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/roundcorners"
-        android:inputType="date"
-        android:ems="10"
-        android:id="@+id/editText"
-        android:textSize="25sp"
-        android:text=""
-        android:backgroundTint="#ffffff"
-        android:gravity="center"
-        android:layout_above="@+id/textView24"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@+id/continueButton"
-        android:layout_alignStart="@+id/continueButton" />
 
-
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/roundcorners"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/editText3"
+        android:id="@+id/weightField"
         android:backgroundTint="#ffffff"
+        android:hint="kg/lb"
         android:textSize="25sp"
-        android:text=""
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText"
         android:layout_above="@+id/textView26"
-        android:gravity="center" />
+        android:gravity="center"
+        android:layout_alignLeft="@+id/continueButton"
+        android:layout_alignStart="@+id/continueButton"
+        android:layout_toLeftOf="@+id/spinner2"
+        android:layout_toStartOf="@+id/spinner2"/>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:layout_width="120sp"
         android:layout_height="wrap_content"
-        android:inputType="numberSigned"
+        android:inputType="number"
+        android:hint="cm/ft"
+        android:textSize="25sp"
         android:backgroundTint="#ffffff"
         android:background="@drawable/roundcorners"
         android:ems="10"
-        android:id="@+id/editText4"
-        android:textSize="25sp"
-        android:text=""
+        android:id="@+id/heightField"
         android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@+id/editText3"
-        android:layout_alignStart="@+id/editText3"
-        android:gravity="center" />
+        android:layout_alignLeft="@+id/weightField"
+        android:layout_alignStart="@+id/weightField"
+        android:gravity="center"
+        android:layout_toLeftOf="@+id/spinner2"
+        android:layout_toStartOf="@+id/spinner2" />
+
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -186,7 +170,7 @@
         android:id="@+id/textView22"
         android:gravity="center"
         android:layout_marginTop="35dp"
-        android:layout_below="@+id/editText4"
+        android:layout_below="@+id/heightField"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -196,10 +180,10 @@
         android:textSize="30sp"
         android:textColor="#ffffff"
         android:id="@+id/textView23"
-        android:layout_alignBottom="@+id/editText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:gravity="center_horizontal" />
+        android:gravity="center_horizontal"
+        android:layout_above="@+id/textView24" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -222,47 +206,46 @@
         android:gravity="center"
         android:textSize="30sp"
         android:id="@+id/textView24"
-        android:layout_alignBottom="@+id/editText3"
+        android:layout_alignBottom="@+id/weightField"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <Spinner
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/weightSpinner"
+        android:background="@drawable/roundcorners"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/ageField"
+        android:backgroundTint="#ffffff"
+        android:textSize="25sp"
         android:gravity="center"
-        android:layout_alignBottom="@+id/textView24"
-        android:layout_alignLeft="@+id/textView22"
-        android:layout_alignStart="@+id/textView22"
+        android:layout_above="@+id/weightField"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/editText3" />
+        android:layout_alignLeft="@+id/weightField"
+        android:layout_alignStart="@+id/weightField" />
 
     <Spinner
-        android:layout_width="wrap_content"
+        android:layout_width="120sp"
         android:layout_height="wrap_content"
-        android:id="@+id/hSpinner"
-        android:gravity="center"
-        android:layout_below="@+id/editText3"
-        android:layout_alignLeft="@+id/weightSpinner"
-        android:layout_alignStart="@+id/weightSpinner"
+        android:background="@drawable/roundcorners"
+        android:id="@+id/spinner2"
+        android:hint="cm"
+        android:layout_above="@+id/textView22"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_above="@+id/textView22" />
-    <Button
-        android:layout_width="wrap_content"
+        android:layout_below="@+id/textView24" />
+
+    <Spinner
+        android:layout_width="120sp"
         android:layout_height="wrap_content"
-        android:text="Date/Month/Year"
-        android:gravity="center_vertical"
-        android:paddingLeft="20dp"
         android:background="@drawable/roundcorners"
-        android:id="@+id/datePicker"
-        android:textStyle="bold"
-        android:layout_above="@+id/editText3"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText"
-        android:layout_alignTop="@+id/editText"
-        android:layout_alignRight="@+id/editText"
-        android:layout_alignEnd="@+id/editText" />
+        android:id="@+id/spinner3"
+        android:hint="cm"
+        android:layout_alignBottom="@+id/textView24"
+        android:layout_alignLeft="@+id/spinner2"
+        android:layout_alignStart="@+id/spinner2"
+        android:layout_alignTop="@+id/textView24" />
 
 </RelativeLayout>

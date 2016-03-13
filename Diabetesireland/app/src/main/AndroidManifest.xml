@@ -3,20 +3,20 @@
     package="com.example.maxim.diabetesireland">
 
     <uses-feature
-        android:name="@string/step_detector" android:required="false"/>
-
+        android:name="@string/step_detector"
+        android:required="false" />
     <uses-feature
-        android:name="@string/step_counter" android:required="false"/>
+        android:name="@string/step_counter"
+        android:required="false" />
 
     <application
         android:allowBackup="true"
+        android:debuggable="true"
         android:hasCode="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:debuggable="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -32,7 +32,7 @@
             android:label="@string/title_activity_exercise"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Daily_Update"
+            android:name=".Profile"
             android:label="@string/title_activity_daily__update"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -46,6 +46,10 @@
         <activity
             android:name=".FoodIntake"
             android:label="@string/title_activity_food_intake"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TabActivity"
+            android:label="@string/title_activity_tab"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

@@ -38,7 +38,7 @@
             android:label="@string/title_activity_exercise"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.example.maxim.diabetesireland.Daily_Update"
+            android:name="com.example.maxim.diabetesireland.Profile"
             android:label="@string/title_activity_daily__update"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -52,6 +52,10 @@
         <activity
             android:name="com.example.maxim.diabetesireland.FoodIntake"
             android:label="@string/title_activity_food_intake"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.maxim.diabetesireland.TabActivity"
+            android:label="@string/title_activity_tab"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

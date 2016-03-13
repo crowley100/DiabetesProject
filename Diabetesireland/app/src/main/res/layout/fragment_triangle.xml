@@ -9,7 +9,6 @@
     tools:showIn="@layout/activity_triangle"
     android:background="#ffffff">
 
-
     <Button
         android:layout_width="180sp"
         android:layout_height="160sp"

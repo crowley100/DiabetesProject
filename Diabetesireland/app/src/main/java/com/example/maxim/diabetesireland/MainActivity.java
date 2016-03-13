@@ -5,70 +5,64 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 
-import java.util.Calendar;
 
-
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    boolean touchedMale = false;
-    boolean touchedFemale = false;
-    Calendar calendar = Calendar.getInstance();
-    Spinner weight;
-    Spinner height;
-    String[] heights = new String[]{"Metres", "<1.40m", "1.4-1.5m", "1.5-1.6m", "1.6-1.7m", "1.7-1.8m", "1.8m-1.9m", "1.9-2m", "2m+"};
-    String[] weights = new String[]{"Kilograms", "<60kg", "60-65kg", "65-70kg", "70-75kg", "75-80kg", "80-85kg", "85-90kg", "90-95kg", "95-100kg", "100-110kg", "110-120kg", "120-130kg", "130-140kg", "140-150kg", "150k-200kg", "200+kg"};
-    Button maleButton;
-    Button femaleButton;
-    Button datePicker;
-    RadioButton weightButton;
-    RadioButton activeButton;
-    Button nextScreen;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+    boolean touchedMale, touchedFemale = false;
+    Button maleButton, femaleButton,nextScreen;
+    RadioButton weightButton, activeButton;
     Intent intent;
+    EditText height, weight,age;
+    Spinner heightSpinner,weightSpinner;
+    String [] metrics = {"cm","ft"};
+    String [] weightMetrics = {"kg","lbs"};
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        heightSpinner = (Spinner) findViewById(R.id.spinner2);
+        weightSpinner = (Spinner) findViewById(R.id.spinner3);
+        ArrayAdapter<String> heightAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, metrics);
+        heightAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        heightSpinner.setAdapter(heightAdapter);
 
+        ArrayAdapter<String> weightAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, weightMetrics);
+        weightAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        weightSpinner.setAdapter(weightAdapter);
         nextScreen = (Button) findViewById(R.id.continueButton);
         maleButton = (Button) findViewById(R.id.maleButton);
         femaleButton = (Button) findViewById(R.id.femaleButton);
         weightButton = (RadioButton) findViewById(R.id.weightRadio);
         activeButton = (RadioButton) findViewById(R.id.activeRadio);
-        datePicker = (Button) findViewById(R.id.datePicker);
-        datePicker.setOnClickListener(this);
         maleButton.setOnClickListener(this);
         femaleButton.setOnClickListener(this);
         nextScreen.setOnClickListener(this);
-        //DropDowns
-        weight = (Spinner) findViewById(R.id.weightSpinner);
-        height = (Spinner) findViewById(R.id.hSpinner);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this,
-                android.R.layout.simple_spinner_dropdown_item, heights);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        height = (EditText) findViewById(R.id.heightField);
+        weight = (EditText) findViewById(R.id.weightField);
+        age = (EditText) findViewById(R.id.ageField);
 
-        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(MainActivity.this,
-                android.R.layout.simple_spinner_dropdown_item, weights);
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        weight.setAdapter(adapter2);
-        height.setAdapter(adapter);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
     }
-
 
 
     @Override
@@ -95,26 +89,69 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.continueButton:
-                intent = new Intent(MainActivity.this, Triangle.class);
+                intent = new Intent(MainActivity.this, TabActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.datePicker:
-                new DatePickerDialog(MainActivity.this, listener, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show();
+            case R.id.spinner2:
+                int index = heightSpinner.getSelectedItemPosition();
+                double value = Double.parseDouble(height.getText().toString());
+                if (index == 1){
+                    height.addTextChangedListener(new CustomTextWatcher(height));
+                }
+                height.setText(value + "cm");
                 break;
-
-
+            case R.id.spinner3:
+                int index2 = heightSpinner.getSelectedItemPosition();
+                double value2 = Double.parseDouble(height.getText().toString());
+                if (index2 == 1){
+                    weight.setText(value2+"kgs");
+                }
+                weight.setText(value2 + "lbs");
+                break;
         }
     }
 
-    DatePickerDialog.OnDateSetListener listener = new DatePickerDialog.OnDateSetListener() {
-        @Override
-        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
 
-            datePicker.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
+    public double calcBMR(String gender,int age,int weight,int height){
+        double BMR=0;
+        if(gender.equals("Male")){
+            BMR=(10*weight)+(6.25*height)-(5*age)+5;
         }
+        BMR=(10*weight)+(6.25*height)-(5*age)-161;
+        return BMR;
+    }
 
+}
+class CustomTextWatcher implements TextWatcher {
+    private EditText mEditText;
 
-    };
+    public CustomTextWatcher(EditText e) {
+        mEditText = e;
+    }
+
+    public void beforeTextChanged(CharSequence s, int start, int count,
+                                  int after) {
+    }
+
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+    }
+
+    public void afterTextChanged(Editable s) {
+        int count = s.length();
+        String str = s.toString();
+        if (count == 1) {
+            str = str + "'";
+        } else if (count == 3) {
+            str = str + "\"";
+        } else if ((count > 4) && (str.charAt(str.length() - 1) != '\"') ){
+            str = str.substring(0, str.length() - 2) + str.charAt(str.length() - 1)
+                    + "\"";
+        } else {
+            return;
+        }
+        mEditText.setText(str);
+        mEditText.setSelection(mEditText.getText().length());
+    }
 }
 
 

@@ -1,409 +1,80 @@
-<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ScrollView"
-    android:layout_width="fill_parent"
-    android:layout_height="688sp"
-    android:isScrollContainer="true"
-    android:scrollbars="vertical"
-    android:layout_gravity="center"
-    android:orientation="vertical"
-    android:fillViewport="true"
-    android:background="#ffffff"
-    >
-<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.maxim.diabetesireland.FoodIntakeFragment">
+    android:layout_gravity="center"
+    tools:context="com.example.maxim.diabetesireland.FoodIntakeFragment"
+    tools:showIn="@layout/activity_food_intake">
 
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sweets"
-        android:textSize="25sp"
-        android:textColor="#ffffff"
-        android:background="#432687"
-        android:id="@+id/button7"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Fats and Oils"
-        android:textSize="25sp"
-        android:textColor="#ffffff"
-        android:background="#432687"
-        android:id="@+id/button8"
-        android:layout_below="@+id/SweetsBar"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Protein"
-        android:textSize="25sp"
-        android:textColor="#ffffff"
-        android:background="#432687"
-        android:id="@+id/button9"
-        android:layout_below="@+id/OilsBar"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Dairy"
-        android:textSize="25sp"
-        android:textColor="#ffffff"
-        android:background="#432687"
-        android:id="@+id/button10"
-        android:layout_below="@+id/ProteinsBar"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Fruit and Vegetables"
-        android:textSize="25sp"
-        android:textColor="#ffffff"
-        android:background="#432687"
-        android:id="@+id/button11"
-        android:layout_below="@+id/DairyBar"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <ProgressBar
-        android:id="@+id/SweetsBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="38sp"
-        android:max="100"
-        android:progress="10"
-        android:progressDrawable="@drawable/custombar"
-        android:secondaryProgress="33"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/button7" />
 
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Carbohydrates"
-        android:textSize="25sp"
-        android:textColor="#ffffff"
-        android:background="#432687"
-        android:id="@+id/button12"
-        android:layout_below="@+id/FruitVegBar"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <ProgressBar
-        style="?android:attr/progressBarStyleHorizontal"
-        android:id="@+id/OilsBar"
-        android:layout_width="match_parent"
-        android:layout_height="38sp"
-        android:max="100"
-        android:progress="10"
-        android:progressDrawable="@drawable/custombar"
-        android:secondaryProgress="50"
-        android:layout_below="@+id/button8"
-        android:layout_toLeftOf="@+id/plus2"
-        android:layout_toStartOf="@+id/plus2" />
-
-    <ProgressBar
-        style="?android:attr/progressBarStyleHorizontal"
-        android:id="@+id/ProteinsBar"
-        android:layout_width="match_parent"
-        android:layout_height="38sp"
-        android:max="100"
-        android:progress="10"
-        android:progressDrawable="@drawable/custombar"
-        android:secondaryProgress="50"
-        android:layout_below="@+id/button9"
-        android:layout_alignRight="@+id/OilsBar"
-        android:layout_alignEnd="@+id/OilsBar" />
-
-    <ProgressBar
-        style="?android:attr/progressBarStyleHorizontal"
-        android:id="@+id/DairyBar"
-        android:layout_width="match_parent"
-        android:layout_height="38sp"
-        android:max="100"
-        android:progress="10"
-        android:progressDrawable="@drawable/custombar"
-        android:secondaryProgress="50"
-        android:layout_below="@+id/button10"
-        android:layout_alignRight="@+id/ProteinsBar"
-        android:layout_alignEnd="@+id/ProteinsBar" />
-
-    <ProgressBar
-        style="?android:attr/progressBarStyleHorizontal"
-        android:id="@+id/FruitVegBar"
-        android:layout_width="match_parent"
-        android:layout_height="38sp"
-        android:max="100"
-        android:progress="10"
-        android:progressDrawable="@drawable/custombar"
-        android:secondaryProgress="75"
-        android:layout_below="@+id/button11"
-        android:layout_alignRight="@+id/DairyBar"
-        android:layout_alignEnd="@+id/DairyBar" />
-
-    <ProgressBar
-        style="?android:attr/progressBarStyleHorizontal"
-        android:id="@+id/CarbsBar"
-        android:layout_width="match_parent"
-        android:layout_height="38sp"
-        android:max="100"
-        android:progress="10"
-        android:progressDrawable="@drawable/custombar"
-        android:secondaryProgress="50"
-        android:layout_below="@+id/button12"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/FruitVegBar"
-        android:layout_alignEnd="@+id/FruitVegBar" />
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="38sp"
-        android:background="#00000000"
-        android:text="1 out of 2 portions left"
-        android:textSize="25sp"
-        android:gravity="center"
-        android:layout_alignLeft="@id/SweetsBar"
-        android:layout_alignTop="@id/SweetsBar"
-        android:layout_alignBottom="@id/SweetsBar"
-        android:id="@+id/textView"
-        android:layout_toLeftOf="@+id/plus1"
-        android:layout_toStartOf="@+id/plus1" />
+        android:layout_width="260sp"
+        android:layout_height="60sp"
+        android:background="@drawable/customwaterbutton"
+        android:id="@+id/waterbutton"
+        android:layout_marginBottom="184dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="40sp"
-        android:layout_height="40sp"
-        android:background="@drawable/customplusicon"
-        android:id="@+id/plus1"
-        android:layout_above="@+id/button8"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/SweetsBar" />
+        android:layout_width="230sp"
+        android:layout_height="60sp"
+        android:id="@+id/fruitvegbutton"
+        android:background="@drawable/customfgbutton"
+        android:layout_above="@+id/waterbutton"
+        android:layout_centerHorizontal="true" />
 
     <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="40sp"
-        android:layout_height="40sp"
-        android:background="@drawable/customplusicon"
-        android:id="@+id/plus2"
-        android:layout_alignTop="@+id/OilsBar"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView"
-        android:layout_alignBottom="@+id/OilsBar" />
+        android:layout_width="180sp"
+        android:layout_height="60sp"
+        android:background="@drawable/customcarbbutton"
+        android:id="@+id/carbutton"
+        android:layout_above="@+id/fruitvegbutton"
+        android:layout_centerHorizontal="true" />
 
     <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="40sp"
-        android:layout_height="40sp"
-        android:background="@drawable/customplusicon"
-        android:id="@+id/plus3"
-        android:layout_alignTop="@+id/ProteinsBar"
-        android:layout_toRightOf="@+id/ProteinsBar"
-        android:layout_toEndOf="@+id/ProteinsBar"
-        android:layout_alignBottom="@+id/ProteinsBar" />
+        android:layout_width="70sp"
+        android:layout_height="60sp"
+        android:background="@drawable/customdairybutton"
+        android:id="@+id/dairybutton"
+        android:layout_above="@+id/carbutton"
+        android:layout_toRightOf="@+id/space"
+        android:layout_toEndOf="@+id/space" />
 
     <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="40sp"
-        android:layout_height="40sp"
-        android:background="@drawable/customplusicon"
-        android:id="@+id/plus4"
-        android:layout_alignTop="@+id/DairyBar"
-        android:layout_toRightOf="@+id/DairyBar"
-        android:layout_toEndOf="@+id/DairyBar"
-        android:layout_alignBottom="@+id/DairyBar" />
+        android:layout_width="70sp"
+        android:layout_height="60sp"
+        android:background="@drawable/custommeatbutton"
+        android:id="@+id/proteinbutton"
+        android:layout_alignTop="@+id/dairybutton"
+        android:layout_toLeftOf="@+id/space"
+        android:layout_toStartOf="@+id/space" />
 
     <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="40sp"
-        android:layout_height="40sp"
-        android:background="@drawable/customplusicon"
-        android:id="@+id/plus5"
-        android:layout_alignTop="@+id/FruitVegBar"
-        android:layout_toRightOf="@+id/FruitVegBar"
-        android:layout_toEndOf="@+id/FruitVegBar"
-        android:layout_alignBottom="@+id/FruitVegBar" />
+        android:layout_width="110sp"
+        android:layout_height="50sp"
+        android:background="@drawable/customalcoholbutton"
+        android:id="@+id/alcoholbutton"
+        android:layout_above="@+id/proteinbutton"
+        android:layout_centerHorizontal="true" />
 
     <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="40sp"
-        android:layout_height="40sp"
-        android:background="@drawable/customplusicon"
-        android:id="@+id/plus6"
-        android:layout_alignTop="@+id/CarbsBar"
-        android:layout_toRightOf="@+id/CarbsBar"
-        android:layout_toEndOf="@+id/CarbsBar" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Fluids"
-        android:textSize="25sp"
-        android:textColor="#ffffff"
-        android:background="#432687"
-        android:id="@+id/button20"
-        android:layout_below="@+id/CarbsBar"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <ProgressBar
-        style="?android:attr/progressBarStyleHorizontal"
-        android:id="@+id/FluidsBar"
-        android:layout_width="match_parent"
-        android:layout_height="38sp"
-        android:max="100"
-        android:progress="10"
-        android:progressDrawable="@drawable/custombar"
-        android:secondaryProgress="50"
-        android:indeterminate="false"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/plus7"
-        android:layout_alignParentBottom="false"
-        android:layout_below="@+id/button20"
-        android:layout_toLeftOf="@+id/plus7" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="40sp"
-        android:layout_height="40sp"
-        android:background="@drawable/customplusicon"
-        android:id="@+id/plus7"
-        android:layout_below="@+id/button20"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignBottom="@+id/FluidsBar" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Alcoholic Drinks"
-        android:textSize="25sp"
-        android:textColor="#ffffff"
-        android:background="#432687"
-        android:id="@+id/button22"
-        android:layout_below="@+id/FluidsBar"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <ProgressBar
-        style="?android:attr/progressBarStyleHorizontal"
-        android:id="@+id/AlcoholsBar"
-        android:layout_width="match_parent"
-        android:layout_height="38sp"
-        android:max="100"
-        android:progress="10"
-        android:progressDrawable="@drawable/custombar"
-        android:secondaryProgress="50"
-        android:indeterminate="false"
-        android:layout_below="@+id/button22"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/plus8"
-        android:layout_toStartOf="@+id/plus8" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="40sp"
-        android:layout_height="40sp"
-        android:background="@drawable/customplusicon"
-        android:id="@+id/plus8"
-        android:layout_alignTop="@+id/AlcoholsBar"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignBottom="@+id/AlcoholsBar" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="38sp"
-        android:background="#00000000"
-        android:text="1 out of 2 portions left"
-        android:textSize="25sp"
-        android:gravity="center"
-        android:id="@+id/textView10"
-        android:layout_alignTop="@+id/OilsBar"
+        android:layout_width="80sp"
+        android:layout_height="50sp"
+        android:background="@drawable/customtreatsbutton"
+        android:id="@+id/treatsbutton"
+        android:layout_above="@+id/alcoholbutton"
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="38sp"
-        android:background="#00000000"
-        android:text="1 out of 4 portions left"
-        android:textSize="25sp"
-        android:gravity="center"
-        android:id="@+id/textView11"
-        android:layout_alignTop="@+id/ProteinsBar"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="38sp"
-        android:background="#00000000"
-        android:text="1 out of 4 portions left"
-        android:textSize="25sp"
-        android:gravity="center"
-        android:id="@+id/textView12"
-        android:layout_above="@+id/button11"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="38sp"
-        android:background="#00000000"
-        android:text="1 out of 6 portions left"
-        android:textSize="25sp"
-        android:gravity="center"
-        android:id="@+id/textView25"
-        android:layout_below="@+id/button11"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="38sp"
-        android:background="#00000000"
-        android:text="1 out of 6 portions left"
-        android:textSize="25sp"
-        android:gravity="center"
-        android:id="@+id/textView28"
-        android:layout_below="@+id/button12"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="38sp"
-        android:background="#00000000"
-        android:text="1 out of 8 portions left"
-        android:textSize="25sp"
-        android:gravity="center"
-        android:id="@+id/textView29"
-        android:layout_above="@+id/button22"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="38sp"
-        android:background="#00000000"
-        android:text="1 out of 3 portions left"
-        android:textSize="25sp"
-        android:gravity="center"
-        android:id="@+id/textView30"
-        android:layout_below="@+id/button22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:id="@+id/space"
+        android:layout_above="@+id/treatsbutton"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
-    </ScrollView>

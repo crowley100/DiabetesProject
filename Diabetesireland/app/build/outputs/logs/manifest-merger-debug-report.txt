@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:2:1-52:12
+ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:2:1-56:12
 	package
 		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:3:5-48
 		INJECTED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml
@@ -14,19 +14,19 @@ ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\A
 		INJECTED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml
 uses-feature#@string/step_detector
-ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:5:5-6:72
+ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:5:5-7:36
 	android:required
-		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:6:46-70
+		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:7:9-33
 	android:name
 		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:6:9-45
 uses-feature#@string/step_counter
-ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:8:5-9:71
+ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:8:5-10:36
 	android:required
-		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:9:45-69
+		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:10:9-33
 	android:name
 		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:9:9-44
 application
-ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:11:5-50:19
+ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:12:5-54:19
 MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:23.1.1] C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\AndroidManifest.xml:22:5-20
@@ -36,19 +36,19 @@ MERGED from [com.android.support:support-v4:23.1.1] C:\Users\jessa\Desktop\Diabe
 MERGED from [com.android.support:support-v4:23.1.1] C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 	android:hasCode
-		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:13:9-31
+		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:15:9-31
 	android:label
-		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:15:9-41
+		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:17:9-41
 	android:supportsRtl
-		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:17:9-35
+		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:18:9-35
 	android:debuggable
-		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:16:9-34
+		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:14:9-34
 	android:allowBackup
-		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:13:9-35
 	android:icon
-		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:14:9-43
+		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:16:9-43
 	android:theme
-		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:18:9-40
+		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:19:9-40
 activity#com.example.maxim.diabetesireland.MainActivity
 ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:20:9-29:20
 	android:label
@@ -75,14 +75,14 @@ ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\A
 		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:33:13-56
 	android:name
 		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:31:13-37
-activity#com.example.maxim.diabetesireland.Daily_Update
+activity#com.example.maxim.diabetesireland.Profile
 ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:34:9-37:59
 	android:label
 		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:36:13-65
 	android:theme
 		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:37:13-56
 	android:name
-		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:35:13-41
+		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:35:13-36
 activity#com.example.maxim.diabetesireland.Triangle
 ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:38:9-41:59
 	android:label
@@ -100,13 +100,21 @@ ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\A
 	android:name
 		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:43:13-41
 activity#com.example.maxim.diabetesireland.FoodIntake
-ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:46:9-49:68
+ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:46:9-49:59
 	android:label
 		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:48:13-63
 	android:theme
 		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:49:13-56
 	android:name
 		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:47:13-39
+activity#com.example.maxim.diabetesireland.TabActivity
+ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:50:9-53:68
+	android:label
+		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:52:13-55
+	android:theme
+		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:53:13-56
+	android:name
+		ADDED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml:51:13-40
 uses-sdk
 INJECTED from C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\jessa\Desktop\DiabetesProject\Diabetesireland\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:20:5-43
