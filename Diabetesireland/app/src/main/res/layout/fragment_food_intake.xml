@@ -1,72 +1,75 @@
-
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
+    android:layout_gravity="center_vertical"
     tools:context="com.example.maxim.diabetesireland.FoodIntakeFragment"
     tools:showIn="@layout/activity_food_intake">
 
-
-
-    <Button
-        android:layout_width="260sp"
-        android:layout_height="60sp"
+<Button
+        android:layout_width="270dp"
+        android:layout_height="65dp"
         android:background="@drawable/customwaterbutton"
         android:id="@+id/waterbutton"
-        android:layout_marginBottom="184dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="129dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="230sp"
-        android:layout_height="60sp"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
         android:id="@+id/fruitvegbutton"
+        android:layout_gravity="center_vertical"
         android:background="@drawable/customfgbutton"
         android:layout_above="@+id/waterbutton"
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="180sp"
-        android:layout_height="60sp"
+        android:layout_width="190dp"
+        android:layout_height="58dp"
         android:background="@drawable/customcarbbutton"
+        android:layout_gravity="center_vertical"
         android:id="@+id/carbutton"
         android:layout_above="@+id/fruitvegbutton"
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="70sp"
-        android:layout_height="60sp"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
         android:background="@drawable/customdairybutton"
+        android:layout_gravity="center_vertical"
         android:id="@+id/dairybutton"
         android:layout_above="@+id/carbutton"
         android:layout_toRightOf="@+id/space"
         android:layout_toEndOf="@+id/space" />
 
     <Button
-        android:layout_width="70sp"
-        android:layout_height="60sp"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
         android:background="@drawable/custommeatbutton"
+        android:layout_gravity="center_vertical"
         android:id="@+id/proteinbutton"
         android:layout_alignTop="@+id/dairybutton"
         android:layout_toLeftOf="@+id/space"
         android:layout_toStartOf="@+id/space" />
 
     <Button
-        android:layout_width="110sp"
-        android:layout_height="50sp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:background="@drawable/customalcoholbutton"
+        android:layout_gravity="center_vertical"
         android:id="@+id/alcoholbutton"
         android:layout_above="@+id/proteinbutton"
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="80sp"
-        android:layout_height="50sp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:background="@drawable/customtreatsbutton"
+        android:layout_gravity="center_vertical"
         android:id="@+id/treatsbutton"
-        android:layout_above="@+id/alcoholbutton"
+        android:layout_above="@+id/button2"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -75,6 +78,15 @@
         android:text=" "
         android:id="@+id/space"
         android:layout_above="@+id/treatsbutton"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:background="@drawable/customoilbutton"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/button2"
+        android:layout_above="@+id/alcoholbutton"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

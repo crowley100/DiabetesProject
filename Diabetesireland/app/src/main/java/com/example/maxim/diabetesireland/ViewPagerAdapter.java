@@ -7,8 +7,18 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
     private String [] titles ={"Profile","Exercise","Home","Diet","Graphs"};
+    private TriangleFragment mFragTriangle;
+    private FoodIntakeFragment mFragFood;
+    private ProfileFragment mProfile;
+    private ExerciseFragment mExer;
+    private WeeklyUpdateFragment mGraphs;
     public ViewPagerAdapter(FragmentManager fm) {
         super(fm);
+        this.mFragTriangle = new TriangleFragment();
+        this.mFragFood = new FoodIntakeFragment();
+        this.mExer = new ExerciseFragment();
+        this.mProfile =new ProfileFragment();
+        this.mGraphs = new WeeklyUpdateFragment();
     }
 
     @Override
@@ -20,20 +30,19 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
      switch(position){
          case 0:
-             return new ProfileFragment();
+             return mProfile;
          case 1:
-             return new ExerciseFragment();
+             return mExer;
          case 2:
-             return new TriangleFragment();
+             return mFragTriangle;
          case 3:
-             return new FoodIntakeFragment();
+             return mFragFood;
          case 4:
-             return new WeeklyUpdateFragment();
+             return mGraphs;
          default:
-             return new TriangleFragment();
+             return mFragTriangle;
      }
     }
-
     @Override
     public CharSequence getPageTitle(int position) {
         return titles[position];

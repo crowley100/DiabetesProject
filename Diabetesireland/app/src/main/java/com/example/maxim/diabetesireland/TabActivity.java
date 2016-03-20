@@ -6,9 +6,12 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 
-public class TabActivity extends AppCompatActivity {
+public class TabActivity extends AppCompatActivity implements FoodIntakeFragment.foodIntakeFragmentListener{
     int defaultval=2;
+    private  ViewPagerAdapter adapter;
+    int portionSize=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +23,7 @@ public class TabActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
-        ViewPagerAdapter adapter=new ViewPagerAdapter(getSupportFragmentManager());
+        adapter=new ViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
@@ -28,5 +31,9 @@ public class TabActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
         viewPager.setCurrentItem(position);
     }
+    public void sendPortionSize(int portionSize) {
+        TriangleFragment frag = (TriangleFragment) adapter.getItem(2);
+        frag.setPortion(portionSize);
 
+    }
 }

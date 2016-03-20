@@ -1,21 +1,50 @@
 package com.example.maxim.diabetesireland;
 
+import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+
+import java.util.Scanner;
 
 public class FoodIntakeFragment extends Fragment {
-    View view;
+    private View view;
+    private View radioLayout;
+    private foodIntakeFragmentListener mListener;
+
+    public interface foodIntakeFragmentListener {
+        public void sendPortionSize(int portionSize);
+    }
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        try {
+            mListener = (foodIntakeFragmentListener)context;
+        }catch (ClassCastException e){
+
+        }
+
+    }
     public static FoodIntakeFragment newInstance() {
         return new FoodIntakeFragment();
     }
 
     public FoodIntakeFragment() {
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
     }
 
     @Override
@@ -88,17 +117,27 @@ public class FoodIntakeFragment extends Fragment {
         helpBuilder.setMessage("Select food portion eaten:");
 
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        View checkboxLayout = inflater.inflate(R.layout.portionlayout, null);
-        helpBuilder.setView(checkboxLayout);
-
-        helpBuilder.setPositiveButton("Ok",
+        radioLayout = inflater.inflate(R.layout.portionlayout, null);
+        helpBuilder.setView(radioLayout);
+        final RadioGroup radioGroup = (RadioGroup) radioLayout.findViewById(R.id.radioGroup1);
+        helpBuilder.setPositiveButton("Submit",
                 new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
-                        // Do nothing but close the dialog
+                        int selectedId = radioGroup.getCheckedRadioButtonId();
+                        final RadioButton  radioButton = (RadioButton) radioLayout.findViewById(selectedId);
+                        Scanner userInput = new Scanner(radioButton.getText().toString());
+                        int portion = userInput.nextInt();
+                        mListener.sendPortionSize(portion);
+                        dialog.dismiss();
                     }
                 });
+        helpBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
 
+            public void onClick(DialogInterface dialog, int which) {
+                // Do nothing but close the dialog
+            }
+        });
         // Remember, create doesn't show the dialog
         AlertDialog helpDialog = helpBuilder.create();
         helpDialog.show();

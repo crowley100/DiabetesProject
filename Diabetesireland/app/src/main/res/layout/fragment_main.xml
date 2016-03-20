@@ -1,15 +1,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     tools:context="com.example.maxim.diabetesireland.MainActivityFragment"
-    tools:showIn="@layout/activity_main"
-    android:background="@drawable/loginbg">
+    tools:showIn="@layout/activity_main">
 
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:id="@+id/imageView2"
         android:src="@drawable/background"
         android:adjustViewBounds="false"
@@ -28,22 +28,14 @@
         android:layout_alignParentTop="true"
         android:layout_alignBottom="@+id/imageView2"
          />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="30sp"
-        android:text="Submit"
-        android:background="#432687"
-        android:textColor="#ffffff"
-        android:id="@+id/continueButton"
-        android:layout_below="@+id/radioGroup"
-        android:layout_centerHorizontal="true" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_below="@id/view">
+        android:layout_below="@id/view"
+        android:id="@+id/linearLayout">
 
         <TextView
             android:layout_width="0dp"
@@ -95,101 +87,72 @@
             android:layout_alignParentEnd="true" />
 
     </LinearLayout>
-
-
-    <EditText
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/roundcorners"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/weightField"
-        android:backgroundTint="#ffffff"
-        android:hint="kg/lb"
-        android:textSize="25sp"
-        android:layout_above="@+id/textView26"
-        android:gravity="center"
-        android:layout_alignLeft="@+id/continueButton"
-        android:layout_alignStart="@+id/continueButton"
-        android:layout_toLeftOf="@+id/spinner2"
-        android:layout_toStartOf="@+id/spinner2"/>
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
 
     <EditText
         android:layout_width="120sp"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:hint="cm/ft"
-        android:textSize="25sp"
-        android:backgroundTint="#ffffff"
-        android:background="@drawable/roundcorners"
         android:ems="10"
         android:id="@+id/heightField"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/weightField"
-        android:layout_alignStart="@+id/weightField"
         android:gravity="center"
-        android:layout_toLeftOf="@+id/spinner2"
-        android:layout_toStartOf="@+id/spinner2" />
+        android:layout_alignBottom="@+id/textView26"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="120sp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/weightField"
+        android:gravity="center"
+        android:layout_above="@+id/heightField"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
 
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:id="@+id/radioGroup"
         android:layout_below="@+id/textView22"
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:orientation="vertical">
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Do you want to lose weight?"
-            android:id="@+id/weightRadio"
-            android:textSize="20sp"
-            android:layout_below="@+id/textView22"
-            android:layout_centerHorizontal="true" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Do you want to be more active?"
-            android:textSize="20sp"
-
-            android:id="@+id/activeRadio"
-            android:gravity="center"
-            android:layout_below="@+id/weightRadio"
-            android:layout_centerHorizontal="true" />
 
     </RadioGroup>
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:background="#432687"
+        android:id="@+id/continueButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/activeRadio"
+        android:layout_centerHorizontal="true" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Goal"
+        android:text="Do you want to ..."
         android:textSize="35sp"
         android:id="@+id/textView22"
         android:gravity="center"
-        android:layout_marginTop="35dp"
-        android:layout_below="@+id/heightField"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Age"
-        android:textSize="30sp"
-        android:textColor="#ffffff"
-        android:id="@+id/textView23"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:gravity="center_horizontal"
-        android:layout_above="@+id/textView24" />
+        android:layout_alignParentStart="true" />
+
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Height"
-        android:textColor="#ffffff"
         android:textSize="30sp"
         android:id="@+id/textView26"
         android:layout_above="@+id/textView22"
@@ -202,50 +165,73 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Weight"
-        android:textColor="#ffffff"
         android:gravity="center"
         android:textSize="30sp"
         android:id="@+id/textView24"
-        android:layout_alignBottom="@+id/weightField"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_above="@+id/heightField"
+        android:layout_toLeftOf="@+id/activeRadio"
+        android:layout_toStartOf="@+id/activeRadio" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Maintain your health?"
+        android:textSize="20sp"
+        android:id="@+id/healthRadio"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/radioGroup"
+        android:layout_centerHorizontal="true" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Be more healthy?"
+        android:textSize="20sp"
+        android:id="@+id/weightRadio"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/healthRadio"
+        android:layout_alignRight="@+id/textView22"
+        android:layout_alignEnd="@+id/textView22" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Be more active?"
+        android:id="@+id/activeRadio"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/weightRadio"
+        android:layout_alignRight="@+id/weightRadio"
+        android:layout_alignEnd="@+id/weightRadio" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/roundcorners"
         android:inputType="number"
         android:ems="10"
         android:id="@+id/ageField"
-        android:backgroundTint="#ffffff"
         android:textSize="25sp"
         android:gravity="center"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age"
+        android:textSize="30sp"
+        android:id="@+id/textView23"
+        android:gravity="center_horizontal"
         android:layout_above="@+id/weightField"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@+id/weightField"
-        android:layout_alignStart="@+id/weightField" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-    <Spinner
-        android:layout_width="120sp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/roundcorners"
-        android:id="@+id/spinner2"
-        android:hint="cm"
-        android:layout_above="@+id/textView22"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/textView24" />
-
-    <Spinner
-        android:layout_width="120sp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/roundcorners"
-        android:id="@+id/spinner3"
-        android:hint="cm"
-        android:layout_alignBottom="@+id/textView24"
-        android:layout_alignLeft="@+id/spinner2"
-        android:layout_alignStart="@+id/spinner2"
-        android:layout_alignTop="@+id/textView24" />
 
 </RelativeLayout>

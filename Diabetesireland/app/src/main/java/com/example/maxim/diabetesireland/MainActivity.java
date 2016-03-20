@@ -30,26 +30,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     RadioButton weightButton, activeButton;
     Intent intent;
     EditText height, weight,age;
-    Spinner heightSpinner,weightSpinner;
-    String [] metrics = {"cm","ft"};
-    String [] weightMetrics = {"kg","lbs"};
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        heightSpinner = (Spinner) findViewById(R.id.spinner2);
-        weightSpinner = (Spinner) findViewById(R.id.spinner3);
-        ArrayAdapter<String> heightAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, metrics);
-        heightAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        heightSpinner.setAdapter(heightAdapter);
-
-        ArrayAdapter<String> weightAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, weightMetrics);
-        weightAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        weightSpinner.setAdapter(weightAdapter);
         nextScreen = (Button) findViewById(R.id.continueButton);
         maleButton = (Button) findViewById(R.id.maleButton);
         femaleButton = (Button) findViewById(R.id.femaleButton);
@@ -92,66 +78,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(MainActivity.this, TabActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.spinner2:
-                int index = heightSpinner.getSelectedItemPosition();
-                double value = Double.parseDouble(height.getText().toString());
-                if (index == 1){
-                    height.addTextChangedListener(new CustomTextWatcher(height));
-                }
-                height.setText(value + "cm");
-                break;
-            case R.id.spinner3:
-                int index2 = heightSpinner.getSelectedItemPosition();
-                double value2 = Double.parseDouble(height.getText().toString());
-                if (index2 == 1){
-                    weight.setText(value2+"kgs");
-                }
-                weight.setText(value2 + "lbs");
-                break;
         }
-    }
-
-
-    public double calcBMR(String gender,int age,int weight,int height){
-        double BMR=0;
-        if(gender.equals("Male")){
-            BMR=(10*weight)+(6.25*height)-(5*age)+5;
-        }
-        BMR=(10*weight)+(6.25*height)-(5*age)-161;
-        return BMR;
     }
 
 }
-class CustomTextWatcher implements TextWatcher {
-    private EditText mEditText;
 
-    public CustomTextWatcher(EditText e) {
-        mEditText = e;
-    }
-
-    public void beforeTextChanged(CharSequence s, int start, int count,
-                                  int after) {
-    }
-
-    public void onTextChanged(CharSequence s, int start, int before, int count) {
-    }
-
-    public void afterTextChanged(Editable s) {
-        int count = s.length();
-        String str = s.toString();
-        if (count == 1) {
-            str = str + "'";
-        } else if (count == 3) {
-            str = str + "\"";
-        } else if ((count > 4) && (str.charAt(str.length() - 1) != '\"') ){
-            str = str.substring(0, str.length() - 2) + str.charAt(str.length() - 1)
-                    + "\"";
-        } else {
-            return;
-        }
-        mEditText.setText(str);
-        mEditText.setSelection(mEditText.getText().length());
-    }
-}
 
 

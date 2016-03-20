@@ -1,19 +1,20 @@
 package com.example.maxim.diabetesireland;
 
-import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.support.design.widget.TabLayout;
-import android.widget.Button;
 
-/**
- * A placeholder fragment containing a simple view.
- */
+import com.akexorcist.roundcornerprogressbar.IconRoundCornerProgressBar;
+
+
 public class TriangleFragment extends Fragment{
     View view;
+    int portion=0;
+
+
     public static TriangleFragment newInstance() {
         return new TriangleFragment();
     }
@@ -21,40 +22,30 @@ public class TriangleFragment extends Fragment{
     }
 
     @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setRetainInstance(true);
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view=inflater.inflate(R.layout.fragment_triangle, container, false);
-        Button nextScreen = (Button) view.findViewById(R.id.button3);
-        Button nextScreen1 = (Button) view.findViewById(R.id.button4);
-        Button nextScreen2 = (Button) view.findViewById(R.id.button6);
-        nextScreen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), TabActivity.class);
-                intent.putExtra("position",3);
-                startActivity(intent);
-            }
-        });
+        view = inflater.inflate(R.layout.fragment_triangle, container, false);
+        IconRoundCornerProgressBar carbProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.carb_prog);
+        IconRoundCornerProgressBar waterProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.carb_prog);
+        IconRoundCornerProgressBar fgProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.carb_prog);
+        IconRoundCornerProgressBar dairyProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.carb_prog);
+        IconRoundCornerProgressBar proteinProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.carb_prog);
+        IconRoundCornerProgressBar alcProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.carb_prog);
+        IconRoundCornerProgressBar oilProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.carb_prog);
+        IconRoundCornerProgressBar treatsProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.carb_prog);
 
-        nextScreen1.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                Intent intent = new Intent(getActivity(), TabActivity.class);
-                intent.putExtra("position",4);
-                startActivity(intent);
-            }
-        });
-
-        nextScreen2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), TabActivity.class);
-                intent.putExtra("position",1);
-                startActivity(intent);
-            }
-        });
         return view;
     }
+    public void setPortion(int portionSize) {
+       portion += portionSize;
+    }
+
+
+
 }
