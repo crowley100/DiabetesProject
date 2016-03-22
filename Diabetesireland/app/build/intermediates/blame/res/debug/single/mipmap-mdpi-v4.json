@@ -38,5 +38,9 @@
     {
         "merged": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_protein_icon.png",
         "source": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\mipmap-mdpi\\ic_protein_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_pedometer_icon.png",
+        "source": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\mipmap-mdpi\\ic_pedometer_icon.png"
     }
 ]

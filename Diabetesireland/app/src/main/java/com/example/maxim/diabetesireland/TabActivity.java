@@ -31,9 +31,9 @@ public class TabActivity extends AppCompatActivity implements FoodIntakeFragment
         tabLayout.setupWithViewPager(viewPager);
         viewPager.setCurrentItem(position);
     }
-    public void sendPortionSize(int portionSize) {
+    public void sendPortionSize(int portionSize,String type) {
         TriangleFragment frag = (TriangleFragment) adapter.getItem(2);
-        frag.setPortion(portionSize);
+        frag.setPortion(portionSize,type);
 
     }
 }

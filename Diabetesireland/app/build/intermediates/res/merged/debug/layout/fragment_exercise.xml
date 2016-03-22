@@ -11,63 +11,19 @@
     tools:context="com.example.maxim.diabetesireland.ExerciseFragment"
     tools:showIn="@layout/activity_exercise">
 
+    <ListView
+        android:id="@+id/list_exercise"
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
+    </ListView>
 
-
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Type"
-        android:id="@+id/textView19"
-        android:layout_marginLeft="26dp"
-        android:layout_marginStart="26dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Time"
-        android:id="@+id/textView20"
-        android:layout_marginRight="23dp"
-        android:layout_marginEnd="23dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/editText2"
-        android:layout_alignEnd="@+id/editText2" />
-
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="150sp"
-        android:layout_height="30sp"
-        android:hint="Exercise Type"
-        android:textSize="25sp"
-        android:layout_marginTop="53dp" />
-
-
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_alignBottom="@+id/spinner"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/textPedometer" />
-
- <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:background="@drawable/roundcorners"
-        android:id="@+id/textPedometer"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="95dp" />
+        android:text="Add Exercise"
+        android:id="@+id/add_exercise"
+        android:layout_below="@+id/list_exercise"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

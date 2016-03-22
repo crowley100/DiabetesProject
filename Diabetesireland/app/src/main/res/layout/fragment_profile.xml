@@ -16,9 +16,10 @@
         android:text="Age:"
         android:textSize="30sp"
         android:id="@+id/textView"
-        android:layout_below="@+id/textView7"
+        android:layout_below="@+id/view"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -27,8 +28,9 @@
         android:text="Gender:"
         android:id="@+id/textView3"
         android:layout_below="@+id/textView"
-        android:layout_alignLeft="@+id/textView5"
-        android:layout_alignStart="@+id/textView5" />
+        android:layout_alignLeft="@+id/height_meta"
+        android:layout_alignStart="@+id/height_meta"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -38,17 +40,19 @@
         android:id="@+id/textView4"
         android:layout_below="@+id/textView6"
         android:layout_alignRight="@+id/textView3"
-        android:layout_alignEnd="@+id/textView3" />
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30sp"
         android:text="Height:"
-        android:id="@+id/textView5"
+        android:id="@+id/height_meta"
         android:layout_below="@+id/textView4"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -58,24 +62,127 @@
         android:id="@+id/textView6"
         android:layout_below="@+id/textView3"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Update"
+        android:id="@+id/button"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignRight="@+id/textView9"
+        android:layout_alignEnd="@+id/textView9" />
+
+    <View style="@style/Divider"
+        android:id="@+id/divider1"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <View style="@style/Divider"
+        android:id="@+id/divider2"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <View style="@style/Divider"
+        android:id="@+id/divider3"
+        android:layout_above="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <View style="@style/Divider"
+        android:id="@+id/divider4"
+        android:layout_below="@+id/button"
+        android:layout_alignRight="@+id/textView9"
+        android:layout_alignEnd="@+id/textView9"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+    <View style="@style/Divider"
+        android:id="@+id/divider5"
+        android:layout_below="@+id/height_meta"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/background"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Personal Information"
-        android:id="@+id/textView7"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        android:id="@+id/view"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:id="@+id/profile_ageText"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/divider1" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:id="@+id/textView8"
+        android:layout_above="@+id/textView6"
+        android:layout_alignLeft="@+id/profile_ageText"
+        android:layout_alignStart="@+id/profile_ageText" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:id="@+id/textView9"
+        android:layout_above="@+id/textView4"
+        android:layout_alignRight="@+id/divider3"
+        android:layout_alignEnd="@+id/divider3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:id="@+id/weight_text"
+        android:layout_alignBottom="@+id/divider4"
+        android:layout_toLeftOf="@+id/button"
+        android:layout_toStartOf="@+id/button"
+        android:layout_toRightOf="@+id/textView4" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:id="@+id/height_text"
+        android:layout_alignBottom="@+id/divider5"
+        android:layout_alignStart="@+id/weight_text"
+        android:layout_toStartOf="@+id/weight_text"
+        android:layout_toRightOf="@+id/height_meta"
+        android:text="5&apos;7 ft" />
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:text="Update"
-        android:id="@+id/button"
-        android:layout_alignBottom="@+id/textView4"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:id="@+id/button5"
+        android:layout_alignBottom="@+id/divider5"
+        android:layout_toEndOf="@+id/height_text" />
 
 </RelativeLayout>

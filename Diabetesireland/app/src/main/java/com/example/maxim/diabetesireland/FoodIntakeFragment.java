@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +24,7 @@ public class FoodIntakeFragment extends Fragment {
     private foodIntakeFragmentListener mListener;
 
     public interface foodIntakeFragmentListener {
-        public void sendPortionSize(int portionSize);
+        void sendPortionSize(int portionSize,String type);
     }
     @Override
     public void onAttach(Context context) {
@@ -56,7 +57,7 @@ public class FoodIntakeFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                showPopUp3();
+                showPopUp3("Select Water portion taken:","Water");
             }
         });
         Button showPopUpButton2 = (Button) view.findViewById(R.id.fruitvegbutton);
@@ -64,7 +65,7 @@ public class FoodIntakeFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                showPopUp3();
+                showPopUp3("Select Fruit and Vegetables portion taken:","Fruit and Veg");
             }
         });
         Button showPopUpButton3 = (Button) view.findViewById(R.id.carbutton);
@@ -72,7 +73,7 @@ public class FoodIntakeFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                showPopUp3();
+                showPopUp3("Select Carbohydrates portion taken:","Carbohydrates");
             }
         });
         Button showPopUpButton4 = (Button) view.findViewById(R.id.dairybutton);
@@ -80,7 +81,7 @@ public class FoodIntakeFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                showPopUp3();
+                showPopUp3("Select Dairy portion taken:","Dairy");
             }
         });
         Button showPopUpButton5 = (Button) view.findViewById(R.id.proteinbutton);
@@ -88,7 +89,7 @@ public class FoodIntakeFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                showPopUp3();
+                showPopUp3("Select Protein portion taken:","Protein");
             }
         });
         Button showPopUpButton6 = (Button) view.findViewById(R.id.alcoholbutton);
@@ -96,7 +97,15 @@ public class FoodIntakeFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                showPopUp3();
+                showPopUp3("Select Alcohol portion taken:","Alcohol");
+            }
+        });
+        Button showPopUpButton8 = (Button) view.findViewById(R.id.oilbutton);
+        showPopUpButton8.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                showPopUp3("Select Fats and Oils portion taken:","Fats");
             }
         });
         Button showPopUpButton7 = (Button) view.findViewById(R.id.treatsbutton);
@@ -104,17 +113,18 @@ public class FoodIntakeFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                showPopUp3();
+                showPopUp3("Select Treats portion taken: (Only eat occasionally","Treats");
             }
         });
 
         return view;
     }
-    private void showPopUp3() {
+    private void showPopUp3(String msg,String type) {
 
         AlertDialog.Builder helpBuilder = new AlertDialog.Builder(getActivity());
         helpBuilder.setTitle("Portion Size");
-        helpBuilder.setMessage("Select food portion eaten:");
+        helpBuilder.setMessage(msg);
+        final String food = type;
 
         LayoutInflater inflater = getActivity().getLayoutInflater();
         radioLayout = inflater.inflate(R.layout.portionlayout, null);
@@ -128,7 +138,7 @@ public class FoodIntakeFragment extends Fragment {
                         final RadioButton  radioButton = (RadioButton) radioLayout.findViewById(selectedId);
                         Scanner userInput = new Scanner(radioButton.getText().toString());
                         int portion = userInput.nextInt();
-                        mListener.sendPortionSize(portion);
+                        mListener.sendPortionSize(portion,food);
                         dialog.dismiss();
                     }
                 });

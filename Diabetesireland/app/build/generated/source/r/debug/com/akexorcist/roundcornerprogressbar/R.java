@@ -38,12 +38,12 @@ public final class R {
 		public static final int round_corner_progress_bar_secondary_progress_default = 0x7f0b0053;
 	}
 	public static final class id {
-		public static final int iv_progress_icon = 0x7f0c00af;
-		public static final int layout_background = 0x7f0c00ae;
-		public static final int layout_progress = 0x7f0c00b2;
-		public static final int layout_progress_holder = 0x7f0c00b0;
-		public static final int layout_secondary_progress = 0x7f0c00b1;
-		public static final int tv_progress = 0x7f0c00b3;
+		public static final int iv_progress_icon = 0x7f0c00bf;
+		public static final int layout_background = 0x7f0c00be;
+		public static final int layout_progress = 0x7f0c00c2;
+		public static final int layout_progress_holder = 0x7f0c00c0;
+		public static final int layout_secondary_progress = 0x7f0c00c1;
+		public static final int tv_progress = 0x7f0c00c3;
 	}
 	public static final class layout {
 		public static final int layout_icon_round_corner_progress_bar = 0x7f040038;
@@ -51,7 +51,7 @@ public final class R {
 		public static final int layout_text_round_corner_progress_bar = 0x7f04003a;
 	}
 	public static final class mipmap {
-		public static final int round_corner_progress_icon = 0x7f030009;
+		public static final int round_corner_progress_icon = 0x7f03000a;
 	}
 	public static final class styleable {
 		public static final int[] IconRoundCornerProgress = { 0x7f010064, 0x7f010065, 0x7f010066, 0x7f010067, 0x7f010068, 0x7f010069, 0x7f01006a, 0x7f01006b, 0x7f01006c, 0x7f01006d };

@@ -4,12 +4,12 @@
         "source": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\drawable\\pebble.jpg"
     },
     {
-        "merged": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background.png",
-        "source": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\drawable\\background.png"
-    },
-    {
         "merged": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\customgraphs.xml",
         "source": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\drawable\\customgraphs.xml"
+    },
+    {
+        "merged": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background.png",
+        "source": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\drawable\\background.png"
     },
     {
         "merged": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\customdairybutton.xml",

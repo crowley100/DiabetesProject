@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Spinner
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:id="@+id/metrics_spinner"
+        android:layout_gravity="right"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/cmFt"
+        android:layout_alignParentTop="true" />
+
+    <EditText
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/inches"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/cmFt_text"
+        android:layout_toEndOf="@+id/cmFt_text"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ft"
+        android:id="@+id/cmFt_text"
+        android:textSize="35sp"
+        android:layout_alignBottom="@+id/cmFt"
+        android:layout_toRightOf="@+id/cmFt"
+        android:layout_toEndOf="@+id/cmFt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="in"
+        android:id="@+id/in_text"
+        android:textSize="35sp"
+        android:layout_alignBottom="@+id/inches"
+        android:layout_toRightOf="@+id/inches"
+        android:layout_toEndOf="@+id/inches" />
+
+</RelativeLayout>

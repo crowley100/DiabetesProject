@@ -104,6 +104,7 @@
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
+    <color name="themeColor">#3F1451</color>
     <color name="treats_color_icon">#CC0052</color>
     <color name="treats_color_progress">#FF3385</color>
     <color name="water_color_icon">#4D88FF</color>
@@ -336,9 +337,9 @@
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#5b006b</item>
-        <item name="colorPrimaryDark">#5b006b</item>
-        <item name="colorAccent">#5b006b</item>
+        <item name="colorPrimary">#3F1451</item>
+        <item name="colorPrimaryDark">#3F1451</item>
+        <item name="colorAccent">#3F1451</item>
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="AppTheme.NoActionBar">
@@ -1304,6 +1305,14 @@
     </style>
     <style name="CardView.Light">
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
+    </style>
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/themeColor</item>
+    </style>
+    <style name="Divider">
+        <item name="android:layout_width">350dp</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">#3F1451</item>
     </style>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>

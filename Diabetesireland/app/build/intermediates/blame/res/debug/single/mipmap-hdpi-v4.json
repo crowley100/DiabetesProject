@@ -32,6 +32,10 @@
         "source": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\mipmap-hdpi\\ic_alc_icon.png"
     },
     {
+        "merged": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_pedometer_icon.png",
+        "source": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\mipmap-hdpi\\ic_pedometer_icon.png"
+    },
+    {
         "merged": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_water_icon.png",
         "source": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\mipmap-hdpi\\ic_water_icon.png"
     },

@@ -12,9 +12,10 @@
         android:background="@drawable/customwaterbutton"
         android:id="@+id/waterbutton"
         android:layout_gravity="center_vertical"
-        android:layout_marginBottom="129dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+    android:layout_below="@+id/fruitvegbutton"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="50dp" />
 
     <Button
         android:layout_width="220dp"
@@ -22,8 +23,9 @@
         android:id="@+id/fruitvegbutton"
         android:layout_gravity="center_vertical"
         android:background="@drawable/customfgbutton"
-        android:layout_above="@+id/waterbutton"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/carbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
 
     <Button
         android:layout_width="190dp"
@@ -31,8 +33,9 @@
         android:background="@drawable/customcarbbutton"
         android:layout_gravity="center_vertical"
         android:id="@+id/carbutton"
-        android:layout_above="@+id/fruitvegbutton"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/dairybutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
 
     <Button
         android:layout_width="70dp"
@@ -40,9 +43,10 @@
         android:background="@drawable/customdairybutton"
         android:layout_gravity="center_vertical"
         android:id="@+id/dairybutton"
-        android:layout_above="@+id/carbutton"
-        android:layout_toRightOf="@+id/space"
-        android:layout_toEndOf="@+id/space" />
+        android:layout_below="@+id/alcoholbutton"
+        android:layout_toRightOf="@+id/textView7"
+        android:layout_toEndOf="@+id/textView7"
+        android:layout_marginTop="10dp" />
 
     <Button
         android:layout_width="70dp"
@@ -50,9 +54,10 @@
         android:background="@drawable/custommeatbutton"
         android:layout_gravity="center_vertical"
         android:id="@+id/proteinbutton"
-        android:layout_alignTop="@+id/dairybutton"
-        android:layout_toLeftOf="@+id/space"
-        android:layout_toStartOf="@+id/space" />
+        android:layout_below="@+id/alcoholbutton"
+        android:layout_toLeftOf="@+id/textView7"
+        android:layout_toStartOf="@+id/textView7"
+        android:layout_marginTop="10dp" />
 
     <Button
         android:layout_width="100dp"
@@ -60,8 +65,9 @@
         android:background="@drawable/customalcoholbutton"
         android:layout_gravity="center_vertical"
         android:id="@+id/alcoholbutton"
-        android:layout_above="@+id/proteinbutton"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/oilbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
 
     <Button
         android:layout_width="50dp"
@@ -69,24 +75,26 @@
         android:background="@drawable/customtreatsbutton"
         android:layout_gravity="center_vertical"
         android:id="@+id/treatsbutton"
-        android:layout_above="@+id/button2"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" "
-        android:id="@+id/space"
-        android:layout_above="@+id/treatsbutton"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentTop="true" />
 
     <Button
         android:layout_width="80dp"
         android:layout_height="45dp"
         android:background="@drawable/customoilbutton"
         android:layout_gravity="center_vertical"
-        android:id="@+id/button2"
-        android:layout_above="@+id/alcoholbutton"
+        android:id="@+id/oilbutton"
+        android:layout_below="@+id/treatsbutton"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=" "
+        android:id="@+id/textView7"
+        android:layout_below="@+id/alcoholbutton"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

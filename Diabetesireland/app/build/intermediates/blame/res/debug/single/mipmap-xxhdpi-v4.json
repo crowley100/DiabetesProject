@@ -20,6 +20,10 @@
         "source": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_water_icon.png"
     },
     {
+        "merged": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_pedometer_icon.png",
+        "source": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_pedometer_icon.png"
+    },
+    {
         "merged": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\round_corner_progress_icon.png",
         "source": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.akexorcist\\RoundCornerProgressBar\\2.0.3\\res\\mipmap-xxhdpi\\round_corner_progress_icon.png"
     },
