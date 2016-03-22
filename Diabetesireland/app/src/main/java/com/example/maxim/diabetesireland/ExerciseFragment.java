@@ -1,14 +1,22 @@
 package com.example.maxim.diabetesireland;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import java.util.Scanner;
 
 
 /**
@@ -16,8 +24,18 @@ import android.widget.TextView;
  */
 public class ExerciseFragment extends Fragment {
     View view;
+    private View helpLayout;
+    private exerciseFragmentListener mListener;
+
+    public interface exerciseFragmentListener {
+        void sendExerciseDetails(int minutesSpent, String exerciseType); //EXERCISE DETAILS SENT HERE FOR DATABASE
+    }
+
     private Spinner exerciseSpinner;
-    private static final String[] exerciseList = {"Exercise", "Jogging", "Swimming", "Walking"};
+    private static final String[] exerciseDurations = {"15", "30", "45", "60"};
+    public Button lightButton, mediumButton, vigorousButton, lightHelpButton, mediumHelpButton, vigorousHelpButton, submitButton;
+    boolean touchedLight, touchedMedium, touchedVigorous = false;
+    int currentDuration = 0;
 
     public static ExerciseFragment newInstance() {
         return new ExerciseFragment();
@@ -34,11 +52,143 @@ public class ExerciseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view =inflater.inflate(R.layout.fragment_exercise, container, false);
+        lightButton = (Button) view.findViewById(R.id.lightbutton);
+        mediumButton = (Button) view.findViewById(R.id.mediumbutton);
+        vigorousButton = (Button) view.findViewById(R.id.vigorousbutton);
+        lightHelpButton = (Button) view.findViewById(R.id.lighthelpbutton);
+        mediumHelpButton = (Button) view.findViewById(R.id.mediumhelpbutton);
+        vigorousHelpButton = (Button) view.findViewById(R.id.vigoroushelpbutton);
+        exerciseSpinner = (Spinner) view.findViewById(R.id.exercisespinner);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, exerciseDurations);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        exerciseSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                currentDuration = (position + 1) * 15;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                currentDuration = 0;
+            }
+        });
+        exerciseSpinner.setAdapter(adapter);
+        submitButton = (Button) view.findViewById(R.id.submitbutton);
+
+        lightButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                touchedLight = true;
+                touchedMedium = false;
+                touchedVigorous = false;
+                lightButton.setBackgroundColor(0xff16ff00); //green
+                mediumButton.setBackgroundColor(0xffdbdbdb); //light grey
+                vigorousButton.setBackgroundColor(0xffdbdbdb); //light grey
+            }
+        });
+        mediumButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                touchedLight = false;
+                touchedMedium = true;
+                touchedVigorous = false;
+                lightButton.setBackgroundColor(0xffdbdbdb); //light grey
+                mediumButton.setBackgroundColor(0xffff6600); //orange
+                vigorousButton.setBackgroundColor(0xffdbdbdb); //light grey
+            }
+        });
+        vigorousButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                touchedLight = false;
+                touchedMedium = false;
+                touchedVigorous = true;
+                lightButton.setBackgroundColor(0xffdbdbdb); //light grey
+                mediumButton.setBackgroundColor(0xffdbdbdb); //light grey
+                vigorousButton.setBackgroundColor(0xffff0000); //red
+            }
+        });
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lightButton.setBackgroundColor(0xffdbdbdb); //light grey
+                mediumButton.setBackgroundColor(0xffdbdbdb); //light grey
+                vigorousButton.setBackgroundColor(0xffdbdbdb); //light grey
+                if(touchedLight){mListener.sendExerciseDetails(currentDuration, "Light");}
+                else if(touchedMedium){mListener.sendExerciseDetails(currentDuration, "Medium");}
+                else if(touchedVigorous){mListener.sendExerciseDetails(currentDuration, "Vigorous");}
+                touchedLight = false;
+                touchedMedium = false;
+                touchedVigorous = false;
+            }
+        });
+        lightHelpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popUpExercise("•Walking—slowly\n" +
+                        "•Sitting—using computer\n" +
+                        "•Standing—light work\n" +
+                        "•Fishing—sitting\n" +
+                        "•Playing most instruments", "Examples of Light Exercise");
+            }
+        });
+        mediumHelpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popUpExercise("•Walking—very brisk\n" +
+                        "•Cleaning—heavy\n" +
+                        "•Mowing lawn\n" +
+                        "•Cycling—light effort\n" +
+                        "•Badminton—recreational\n" +
+                        "•Tennis—doubles", "Examples of Medium Exercise");
+            }
+        });
+        vigorousHelpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popUpExercise("•Hiking\n" +
+                        "•Jogging\n" +
+                        "•Shoveling\n" +
+                        "•Carrying heavy loads\n" +
+                        "•Bicycling fast\n" +
+                        "•Basketball game\n" +
+                        "•Soccer game\n" +
+                        "•Tennis—singles", "Examples of Vigorous Exercise");
+            }
+        });
+
         // exerciseSpinner = (Spinner) view.findViewById(R.id.spinner);
         // ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
         //        android.R.layout.simple_spinner_item, exerciseList);
         // adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //exerciseSpinner.setAdapter(adapter);
         return view;
+    }
+
+
+
+    private void popUpExercise(String exampleList, String type) {
+
+        AlertDialog.Builder helpBuilder = new AlertDialog.Builder(getActivity());
+        helpBuilder.setTitle(type);
+        helpBuilder.setMessage(exampleList);
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+        helpLayout = inflater.inflate(R.layout.exercise_layout, null);
+        helpBuilder.setView(helpLayout);
+
+        //final TextView listPopUp = (TextView) view.findViewById(R.id.textView10);
+        //listPopUp.setText(exampleList);
+
+        helpBuilder.setNegativeButton("Back", new DialogInterface.OnClickListener() {
+
+            public void onClick(DialogInterface dialog, int which) {
+                // Do nothing but close the dialog
+            }
+        });
+        // Remember, create doesn't show the dialog
+        AlertDialog helpDialog = helpBuilder.create();
+        helpDialog.show();
+
     }
 }

@@ -142,7 +142,7 @@ public class FoodIntakeFragment extends Fragment {
                         dialog.dismiss();
                     }
                 });
-        helpBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        helpBuilder.setNegativeButton("Back", new DialogInterface.OnClickListener() {
 
             public void onClick(DialogInterface dialog, int which) {
                 // Do nothing but close the dialog

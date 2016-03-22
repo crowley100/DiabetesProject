@@ -11,19 +11,119 @@
     tools:context="com.example.maxim.diabetesireland.ExerciseFragment"
     tools:showIn="@layout/activity_exercise">
 
-    <ListView
-        android:id="@+id/list_exercise"
-        android:layout_width="match_parent"
-        android:layout_height="350dp">
-    </ListView>
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Exercise"
-        android:id="@+id/add_exercise"
-        android:layout_below="@+id/list_exercise"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/submitbutton"
+        android:layout_below="@+id/exercisespinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp" />
 
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:id="@+id/lightbutton"
+        android:layout_gravity="center_vertical"
+        android:background="#ffdbdbdb"
+        android:bottomRightRadius="20dp"
+        android:bottomLeftRadius="20dp"
+        android:topLeftRadius="20dp"
+        android:topRightRadius="20dp"
+        android:layout_below="@+id/carbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Light Exercise"
+        android:textColor="#ffffff"
+        android:textSize="18dp" />
+
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:id="@+id/mediumbutton"
+        android:layout_gravity="center_vertical"
+        android:background="#ffdbdbdb"
+        android:bottomRightRadius="20dp"
+        android:bottomLeftRadius="20dp"
+        android:topLeftRadius="20dp"
+        android:topRightRadius="20dp"
+        android:layout_below="@+id/lightbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:text="Medium Exercise"
+        android:textColor="#ffffff"
+        android:textSize="18dp"/>
+
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:id="@+id/vigorousbutton"
+        android:layout_gravity="center_vertical"
+        android:background="#ffdbdbdb"
+        android:bottomRightRadius="20dp"
+        android:bottomLeftRadius="20dp"
+        android:topLeftRadius="20dp"
+        android:topRightRadius="20dp"
+        android:layout_below="@+id/mediumbutton"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:text="Vigorous Exercise"
+        android:textColor="#ffffff"
+        android:textSize="18dp"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\?"
+        android:id="@+id/lighthelpbutton"
+        android:layout_alignBottom="@+id/lightbutton"
+        android:layout_toRightOf="@+id/lightbutton"
+        android:layout_toEndOf="@+id/lightbutton"
+        android:background="@android:drawable/alert_light_frame" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\?"
+        android:id="@+id/mediumhelpbutton"
+        android:background="@android:drawable/alert_light_frame"
+        android:layout_alignBottom="@+id/mediumbutton"
+        android:layout_alignLeft="@+id/lighthelpbutton"
+        android:layout_alignStart="@+id/lighthelpbutton" />
+
+    <Spinner
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:id="@+id/exercisespinner"
+        android:layout_gravity="center"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignRight="@+id/vigorousbutton"
+        android:layout_alignEnd="@+id/vigorousbutton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\?"
+        android:id="@+id/vigoroushelpbutton"
+        android:background="@android:drawable/alert_light_frame"
+        android:layout_alignBottom="@+id/vigorousbutton"
+        android:layout_alignLeft="@+id/mediumhelpbutton"
+        android:layout_alignStart="@+id/mediumhelpbutton"
+        android:layout_marginTop="38dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duration:"
+        android:id="@+id/textView5"
+        android:textSize="30dp"
+        android:layout_below="@+id/vigorousbutton"
+        android:layout_alignLeft="@+id/vigorousbutton"
+        android:layout_alignStart="@+id/vigorousbutton"
+        android:layout_marginTop="38dp" />
 
 </RelativeLayout>
