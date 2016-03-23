@@ -8,10 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 
-public class TabActivity extends AppCompatActivity implements FoodIntakeFragment.foodIntakeFragmentListener{
+public class TabActivity extends AppCompatActivity {
     int defaultval=2;
     private  ViewPagerAdapter adapter;
-    int portionSize=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,9 +30,5 @@ public class TabActivity extends AppCompatActivity implements FoodIntakeFragment
         tabLayout.setupWithViewPager(viewPager);
         viewPager.setCurrentItem(position);
     }
-    public void sendPortionSize(int portionSize,String type) {
-        TriangleFragment frag = (TriangleFragment) adapter.getItem(2);
-        frag.setPortion(portionSize,type);
 
-    }
 }

@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <Spinner
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="60dp"
         android:id="@+id/metrics_spinner"
         android:layout_gravity="right"
@@ -18,7 +18,10 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/cmFt"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/inches"
+        android:layout_toStartOf="@+id/inches"
+        android:layout_marginRight="10dp" />
 
     <EditText
         android:layout_width="80dp"
@@ -27,28 +30,9 @@
         android:ems="10"
         android:id="@+id/inches"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/cmFt_text"
-        android:layout_toEndOf="@+id/cmFt_text"
-        android:layout_marginLeft="5dp" />
+        android:layout_toLeftOf="@+id/metrics_spinner"
+        android:layout_toStartOf="@+id/metrics_spinner"
+        android:layout_marginRight="5dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ft"
-        android:id="@+id/cmFt_text"
-        android:textSize="35sp"
-        android:layout_alignBottom="@+id/cmFt"
-        android:layout_toRightOf="@+id/cmFt"
-        android:layout_toEndOf="@+id/cmFt" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="in"
-        android:id="@+id/in_text"
-        android:textSize="35sp"
-        android:layout_alignBottom="@+id/inches"
-        android:layout_toRightOf="@+id/inches"
-        android:layout_toEndOf="@+id/inches" />
 
 </RelativeLayout>

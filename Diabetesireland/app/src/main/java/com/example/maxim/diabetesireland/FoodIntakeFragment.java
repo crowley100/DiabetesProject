@@ -21,21 +21,8 @@ import java.util.Scanner;
 public class FoodIntakeFragment extends Fragment {
     private View view;
     private View radioLayout;
-    private foodIntakeFragmentListener mListener;
+    float carb,fg,water,dairy,protein,alc,oil,treats;
 
-    public interface foodIntakeFragmentListener {
-        void sendPortionSize(int portionSize,String type);
-    }
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        try {
-            mListener = (foodIntakeFragmentListener)context;
-        }catch (ClassCastException e){
-
-        }
-
-    }
     public static FoodIntakeFragment newInstance() {
         return new FoodIntakeFragment();
     }
@@ -136,13 +123,12 @@ public class FoodIntakeFragment extends Fragment {
                     public void onClick(DialogInterface dialog, int which) {
                         int selectedId = radioGroup.getCheckedRadioButtonId();
                         final RadioButton  radioButton = (RadioButton) radioLayout.findViewById(selectedId);
-                        Scanner userInput = new Scanner(radioButton.getText().toString());
-                        int portion = userInput.nextInt();
-                        mListener.sendPortionSize(portion,food);
+                        float portion = (parse(radioButton.getText().toString()));
+                        setPortion(portion, food);
                         dialog.dismiss();
                     }
                 });
-        helpBuilder.setNegativeButton("Back", new DialogInterface.OnClickListener() {
+        helpBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
 
             public void onClick(DialogInterface dialog, int which) {
                 // Do nothing but close the dialog
@@ -152,6 +138,53 @@ public class FoodIntakeFragment extends Fragment {
         AlertDialog helpDialog = helpBuilder.create();
         helpDialog.show();
 
+    }
+
+    public float parse(String ratio) {
+        String []portion = ratio.split(" ");
+
+            if (portion[0].contains("/")) {
+                String[] rat = portion[0].split("/");
+                return Float.parseFloat(rat[0]) / Float.parseFloat(rat[1]);
+            }
+        else{
+            return Float.parseFloat(portion[0]);
+        }
+    }
+
+    public void setPortion(float portionSize,String type) {
+        switch (type){
+            case "Water":
+                //UPDATE Water count on database
+
+                water += portionSize;
+                Log.v("portion",""+water);
+                break;
+            case "Fruit and Veg":
+                // UPDATE Fruits and Veg count on database
+                fg+= portionSize;
+                break;
+            case "Carbohydrates":
+                // UPDATE carb count on database
+                carb+=portionSize;
+                break;
+            case "Dairy":
+                //UPDATE
+                dairy+=portionSize;
+                break;
+            case "Protein":
+                protein+=portionSize;
+                break;
+            case "Alcohol":
+                alc+=portionSize;
+                break;
+            case "Fats":
+                oil+=portionSize;
+                break;
+            case "Treats":
+                treats+=portionSize;
+                break;
+        }
     }
 
 }
