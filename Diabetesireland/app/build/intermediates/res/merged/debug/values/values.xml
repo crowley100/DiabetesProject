@@ -320,6 +320,7 @@
     <string name="title_activity_exercise">Exercise</string>
     <string name="title_activity_food_intake">FoodIntake</string>
     <string name="title_activity_fragment">FragmentActivity</string>
+    <string name="title_activity_intake_graph">IntakeGraph</string>
     <string name="title_activity_list_view">ListViewActivity</string>
     <string name="title_activity_list_view_fragment">ListViewFragment</string>
     <string name="title_activity_main2">Main2Activity</string>

@@ -136,12 +136,11 @@
         android:background="#3F1451"
         android:id="@+id/continueButton"
         android:layout_gravity="center_horizontal"
-        android:layout_below="@+id/radioGroup"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
         android:allowUndo="true"
         android:textColor="#ffffff"
-        android:layout_marginBottom="10dp" />
+        android:layout_alignBottom="@+id/divider4"
+        android:layout_alignRight="@+id/textView23"
+        android:layout_alignEnd="@+id/textView23" />
 
 
     <TextView

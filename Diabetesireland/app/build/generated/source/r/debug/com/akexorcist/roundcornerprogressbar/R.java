@@ -46,9 +46,9 @@ public final class R {
 		public static final int tv_progress = 0x7f0c00c5;
 	}
 	public static final class layout {
-		public static final int layout_icon_round_corner_progress_bar = 0x7f040039;
-		public static final int layout_round_corner_progress_bar = 0x7f04003a;
-		public static final int layout_text_round_corner_progress_bar = 0x7f04003b;
+		public static final int layout_icon_round_corner_progress_bar = 0x7f04003b;
+		public static final int layout_round_corner_progress_bar = 0x7f04003c;
+		public static final int layout_text_round_corner_progress_bar = 0x7f04003d;
 	}
 	public static final class mipmap {
 		public static final int round_corner_progress_icon = 0x7f03000a;
