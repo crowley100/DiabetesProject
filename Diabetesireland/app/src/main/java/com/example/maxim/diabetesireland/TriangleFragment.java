@@ -53,8 +53,17 @@ public class TriangleFragment extends Fragment implements SensorEventListener {
 
         //FETCH steps count from DATABASE
         dashedCircularProgress = (DashedCircularProgress) view.findViewById(R.id.circleView);
+       // animate();
+        dashedCircularProgress.setOnValueChangeListener(
+                new DashedCircularProgress.OnValueChangeListener() {
+                    @Override
+                    public void onValueChange(float value) {
+                        pedometer.setText((int) steps + "");
 
-         carbProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.carb_prog);
+                    }
+                });
+
+        carbProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.carb_prog);
         //FETCH carb count from DATABASE
         carbProgress.setProgress(carb);
          waterProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.water_prog);
@@ -85,14 +94,6 @@ public class TriangleFragment extends Fragment implements SensorEventListener {
         }
         treatsProgress.setProgress(treats);
 
-        animate();
-        dashedCircularProgress.setOnValueChangeListener(
-                new DashedCircularProgress.OnValueChangeListener() {
-                    @Override
-                    public void onValueChange(float value) {
-                        pedometer.setText((int) steps + "");
-                    }
-                });
         return view;
     }
 
@@ -118,7 +119,8 @@ public class TriangleFragment extends Fragment implements SensorEventListener {
 
             if (g >= 2) {
                 steps++;
-                pedometer.setText(""+ steps);
+                pedometer.setText("" + steps);
+                animate();
             }
 
         }
@@ -128,7 +130,7 @@ public class TriangleFragment extends Fragment implements SensorEventListener {
 
         super.onResume();
         mSensorManager.registerListener(this, mStepCounterSensor,
-                SensorManager.SENSOR_DELAY_UI, 0);
+                SensorManager.SENSOR_DELAY_UI);
         pedometer.setText(""+ steps);
     }
 

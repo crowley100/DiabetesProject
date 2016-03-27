@@ -24,6 +24,10 @@
         "source": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.akexorcist\\RoundCornerProgressBar\\2.0.3\\res\\mipmap-mdpi\\round_corner_progress_icon.png"
     },
     {
+        "merged": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_app_icon.png",
+        "source": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\mipmap-mdpi\\ic_app_icon.png"
+    },
+    {
         "merged": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_water_icon.png",
         "source": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\mipmap-mdpi\\ic_water_icon.png"
     },

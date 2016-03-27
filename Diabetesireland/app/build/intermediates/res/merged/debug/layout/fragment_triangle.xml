@@ -19,14 +19,14 @@
 
     <com.github.glomadrian.dashedcircularprogress.DashedCircularProgress
         android:id="@+id/circleView"
-        app:external_color="@color/progress_color_bg"
+        app:external_color="@color/circle_text"
         app:base_color="@color/progress_color_bg"
         app:min="0"
         app:max="10000"
         app:progress_color="@color/circle_text"
         app:progress_icon="@mipmap/ic_pedometer_icon"
         app:duration="3500"
-        app:progress_stroke_width="96"
+        app:progress_stroke_width="48"
         android:layout_centerHorizontal="true"
         android:layout_width="300dp"
         android:layout_height="300dp">

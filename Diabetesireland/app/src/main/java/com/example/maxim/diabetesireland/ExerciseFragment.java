@@ -25,17 +25,15 @@ import java.util.Scanner;
 public class ExerciseFragment extends Fragment {
     View view;
     private View helpLayout;
-    private exerciseFragmentListener mListener;
 
-    public interface exerciseFragmentListener {
-        void sendExerciseDetails(int minutesSpent, String exerciseType); //EXERCISE DETAILS SENT HERE FOR DATABASE
-    }
 
     private Spinner exerciseSpinner;
     private static final String[] exerciseDurations = {"15", "30", "45", "60"};
     public Button lightButton, mediumButton, vigorousButton, lightHelpButton, mediumHelpButton, vigorousHelpButton, submitButton;
     boolean touchedLight, touchedMedium, touchedVigorous = false;
     int currentDuration = 0;
+    int exerciseDuration=0;
+    String exerciseType ="";
 
     public static ExerciseFragment newInstance() {
         return new ExerciseFragment();
@@ -115,9 +113,15 @@ public class ExerciseFragment extends Fragment {
                 lightButton.setBackgroundColor(0xffdbdbdb); //light grey
                 mediumButton.setBackgroundColor(0xffdbdbdb); //light grey
                 vigorousButton.setBackgroundColor(0xffdbdbdb); //light grey
-                if(touchedLight){mListener.sendExerciseDetails(currentDuration, "Light");}
-                else if(touchedMedium){mListener.sendExerciseDetails(currentDuration, "Medium");}
-                else if(touchedVigorous){mListener.sendExerciseDetails(currentDuration, "Vigorous");}
+                if(touchedLight){
+                    //Add to database
+                    setExercise("Light");setDuration(currentDuration);}
+                else if(touchedMedium){
+                    //Add to database
+                    setExercise("Medium");setDuration(currentDuration);}
+                else if(touchedVigorous){
+                    //Add to database
+                    setExercise("Vigorous");setDuration(currentDuration);}
                 touchedLight = false;
                 touchedMedium = false;
                 touchedVigorous = false;
@@ -168,6 +172,12 @@ public class ExerciseFragment extends Fragment {
 
 
 
+    private void setExercise(String type){
+        exerciseType =type;
+    }
+    private void setDuration(int duration){
+        exerciseDuration=duration;
+    }
     private void popUpExercise(String exampleList, String type) {
 
         AlertDialog.Builder helpBuilder = new AlertDialog.Builder(getActivity());

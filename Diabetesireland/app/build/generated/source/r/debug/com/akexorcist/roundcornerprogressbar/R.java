@@ -51,7 +51,7 @@ public final class R {
 		public static final int layout_text_round_corner_progress_bar = 0x7f04003b;
 	}
 	public static final class mipmap {
-		public static final int round_corner_progress_icon = 0x7f03000a;
+		public static final int round_corner_progress_icon = 0x7f03000b;
 	}
 	public static final class styleable {
 		public static final int[] IconRoundCornerProgress = { 0x7f010064, 0x7f010065, 0x7f010066, 0x7f010067, 0x7f010068, 0x7f010069, 0x7f01006a, 0x7f01006b, 0x7f01006c, 0x7f01006d };
