@@ -187,9 +187,4 @@ public class FoodIntakeFragment extends Fragment {
         }
     }
 
-    public float[] returnPortionSizes(){
-        float portions[] = {carb, fg, water, dairy, protein, alc, oil, treats};
-        return portions;
-    }
-
 }

@@ -164,29 +164,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         metrics.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-             if((metrics.getSelectedItem().toString()).equals("cm") || (metrics.getSelectedItem().toString()).equals("ft and in")){
-                if((metrics.getSelectedItem().toString()).equals("ft and in")) {
-                    input2.setVisibility(view.VISIBLE);
-                    input.getLayoutParams().width =200;
-                    input2.getLayoutParams().width=200;
+                if((metrics.getSelectedItem().toString()).equals("cm") || (metrics.getSelectedItem().toString()).equals("ft and in")){
+                    if((metrics.getSelectedItem().toString()).equals("ft and in")) {
+                        input2.setVisibility(view.VISIBLE);
+                        input.getLayoutParams().width =200;
+                        input2.getLayoutParams().width=200;
 
-                }
-                else{
-                    input2.setVisibility(view.GONE);
-                    input.getLayoutParams().width = 300;
+                    }
+                    else{
+                        input2.setVisibility(view.GONE);
+                        input.getLayoutParams().width = 300;
 
-                }
+                    }
 
-            }else{
-                 if((metrics.getSelectedItem().toString()).equals("st and lbs")) {
-                     input2.setVisibility(view.VISIBLE);
-                     input.getLayoutParams().width =200;
-                     input2.getLayoutParams().width=200;
-                 }
-                 else{
-                     input2.setVisibility(view.GONE);
-                     input.getLayoutParams().width = 300;
-                 }
+                }else{
+                    if((metrics.getSelectedItem().toString()).equals("st and lbs")) {
+                        input2.setVisibility(view.VISIBLE);
+                        input.getLayoutParams().width =200;
+                        input2.getLayoutParams().width=200;
+                    }
+                    else{
+                        input2.setVisibility(view.GONE);
+                        input.getLayoutParams().width = 300;
+                    }
                 }
             }
             @Override
@@ -269,7 +269,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     // ADD age to DATABASE
                 }
             }
-            }};
+        }};
 
 
 }

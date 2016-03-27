@@ -23,7 +23,8 @@
     <string name="title_activity_recycler_view">RecyclerViewActivity</string>
     <string name="title_activity_list_view_fragment">ListViewFragment</string>
     <string name="title_activity_manual_create">ManualCreateActivity</string>
-    <string name="title_activity_main2">Main2Activity</string>
-    <string name="title_activity_intake_graph">IntakeGraph</string>
+
+
+    <string name="notification_text">Counting your steps</string>
 
 </resources>

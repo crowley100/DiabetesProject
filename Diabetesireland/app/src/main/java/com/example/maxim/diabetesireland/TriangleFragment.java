@@ -5,6 +5,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,16 +17,18 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.akexorcist.roundcornerprogressbar.IconRoundCornerProgressBar;
+import com.github.glomadrian.dashedcircularprogress.DashedCircularProgress;
 
 
 public class TriangleFragment extends Fragment implements SensorEventListener {
     View view;
     IconRoundCornerProgressBar carbProgress,fgProgress,waterProgress,dairyProgress,proteinProgress,alcProgress,oilProgress,treatsProgress;
     float carb=0;float fg=0;float water=0;float dairy=0;float protein=0; float alc=0; float oil=0; float treats =0;
-    private SensorManager mSensorManager;
-    private Sensor mStepCounterSensor;
+    SensorManager mSensorManager;
+    Sensor mStepCounterSensor;
     private Sensor mStepDetectorSensor;
     private TextView pedometer;
+    private DashedCircularProgress dashedCircularProgress;
     int steps = 0;
 
 
@@ -38,13 +41,19 @@ public class TriangleFragment extends Fragment implements SensorEventListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setRetainInstance(true);
+        mSensorManager = (SensorManager)getActivity().getSystemService(Context.SENSOR_SERVICE);
+        mStepCounterSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_triangle, container, false);
+        pedometer = (TextView) view.findViewById(R.id.step_number);
+
+        //FETCH steps count from DATABASE
+        dashedCircularProgress = (DashedCircularProgress) view.findViewById(R.id.circleView);
+
          carbProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.carb_prog);
         //FETCH carb count from DATABASE
         carbProgress.setProgress(carb);
@@ -75,42 +84,57 @@ public class TriangleFragment extends Fragment implements SensorEventListener {
             treatsProgress.setMax(treats);
         }
         treatsProgress.setProgress(treats);
-        pedometer = (TextView) view.findViewById(R.id.step_number);
-        mSensorManager = (SensorManager)getActivity().getSystemService(Context.SENSOR_SERVICE);
-        mStepCounterSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
-        mStepDetectorSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_STEP_DETECTOR);
-        //FETCH steps count from DATABASE
-        pedometer.setText(steps+"");
+
+        animate();
+        dashedCircularProgress.setOnValueChangeListener(
+                new DashedCircularProgress.OnValueChangeListener() {
+                    @Override
+                    public void onValueChange(float value) {
+                        pedometer.setText((int) steps + "");
+                    }
+                });
         return view;
     }
+
+    private void animate() {
+        dashedCircularProgress.setValue(steps);
+    }
+
 
 
     public void onAccuracyChanged(Sensor sensor, int accuracy) {}
 
     public void onSensorChanged(SensorEvent event) {
-        Sensor sensor = event.sensor;
-        float[] values = event.values;
+        synchronized (this) {
 
-        if (values.length > 0) {
-            // UPDATE steps TO DATABASE
-            steps = (int) event.values[0];
+            if (event.sensor.getType() != Sensor.TYPE_ACCELEROMETER) {
+                return;
+            }
+
+            final float x = event.values[0];
+            final float y = event.values[1];
+            final float z = event.values[2];
+            final float g = Math.abs((x * x + y * y + z * z))/ (SensorManager.GRAVITY_EARTH * SensorManager.GRAVITY_EARTH);
+
+            if (g >= 2) {
+                steps++;
+                pedometer.setText(""+ steps);
+            }
+
         }
-
     }
 
     public void onResume() {
 
         super.onResume();
-
-        mSensorManager.registerListener(this, mStepCounterSensor, SensorManager.SENSOR_DELAY_FASTEST);
-        mSensorManager.registerListener(this, mStepDetectorSensor,SensorManager.SENSOR_DELAY_FASTEST);
-
+        mSensorManager.registerListener(this, mStepCounterSensor,
+                SensorManager.SENSOR_DELAY_UI, 0);
+        pedometer.setText(""+ steps);
     }
 
     public void onStop() {
         super.onStop();
         mSensorManager.unregisterListener(this, mStepCounterSensor);
-        mSensorManager.unregisterListener(this, mStepDetectorSensor);
     }
 
 

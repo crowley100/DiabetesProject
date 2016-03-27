@@ -21,7 +21,8 @@
         android:id="@+id/textView13"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="78dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -73,18 +74,5 @@
         android:layout_below="@+id/textView14"
         android:layout_alignRight="@+id/textView17"
         android:layout_alignEnd="@+id/textView17" />
-
-    <com.jjoe64.graphview.helper.GraphViewXML
-        android:layout_width="match_parent"
-        android:layout_height="200dip"
-        app:seriesData="0=5;2=5;3=0;4=2"
-        app:seriesType="line"
-        app:seriesColor="#00cc00"
-        app:seriesTitle="Daily Calories"
-        android:title="Calories Consumed This Week:"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="52dp" />
 
 </RelativeLayout>

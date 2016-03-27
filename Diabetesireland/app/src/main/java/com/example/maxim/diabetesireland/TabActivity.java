@@ -18,8 +18,8 @@ public class TabActivity extends AppCompatActivity {
         Intent myIntent = getIntent(); // gets the previously created intent
 
         int position= myIntent.getIntExtra("position",defaultval);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+       // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
         adapter=new ViewPagerAdapter(getSupportFragmentManager());

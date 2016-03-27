@@ -313,6 +313,7 @@
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_world">Hello world!</string>
+    <string name="notification_text">Counting your steps</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="step_counter">android.hardware.sensor.stepcounter</string>
     <string name="step_detector">android.hardware.sensor.stepdetector</string>
@@ -320,10 +321,8 @@
     <string name="title_activity_exercise">Exercise</string>
     <string name="title_activity_food_intake">FoodIntake</string>
     <string name="title_activity_fragment">FragmentActivity</string>
-    <string name="title_activity_intake_graph">IntakeGraph</string>
     <string name="title_activity_list_view">ListViewActivity</string>
     <string name="title_activity_list_view_fragment">ListViewFragment</string>
-    <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_manual_create">ManualCreateActivity</string>
     <string name="title_activity_plan">Plan</string>
     <string name="title_activity_recycler_view">RecyclerViewActivity</string>

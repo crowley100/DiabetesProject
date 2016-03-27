@@ -27,7 +27,7 @@
         android:id="@+id/view"
         android:layout_alignParentTop="true"
         android:layout_alignBottom="@+id/imageView2"
-         />
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -87,47 +87,47 @@
         android:textSize="15sp"
         android:id="@+id/radioGroup"
         android:gravity="center"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/imageView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-           <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Maintain your health?"
-        android:textSize="20sp"
-        android:id="@+id/healthRadio"
-        android:gravity="center"
-        android:paddingTop="15dp"
-        android:paddingBottom="10dp"
-        android:layout_below="@+id/radioGroup"
-        android:layout_centerHorizontal="true" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maintain your health?"
+            android:textSize="20sp"
+            android:id="@+id/healthRadio"
+            android:gravity="center"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp"
+            android:layout_below="@+id/radioGroup"
+            android:layout_centerHorizontal="true" />
 
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Be more healthy?"
-        android:textSize="20sp"
-        android:id="@+id/weightRadio"
-        android:gravity="center"
-        android:paddingBottom="10dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_below="@+id/healthRadio"
-        android:layout_alignRight="@+id/textView22"
-        android:layout_alignEnd="@+id/textView22" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Be more healthy?"
+            android:textSize="20sp"
+            android:id="@+id/weightRadio"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/healthRadio"
+            android:layout_alignRight="@+id/textView22"
+            android:layout_alignEnd="@+id/textView22" />
 
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Be more active?"
-        android:id="@+id/activeRadio"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:paddingBottom="10dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_below="@+id/weightRadio"
-        android:layout_alignRight="@+id/weightRadio"
-        android:layout_alignEnd="@+id/weightRadio" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Be more active?"
+            android:id="@+id/activeRadio"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/weightRadio"
+            android:layout_alignRight="@+id/weightRadio"
+            android:layout_alignEnd="@+id/weightRadio" />
     </RadioGroup>
     <Button
         android:layout_width="wrap_content"
@@ -136,10 +136,12 @@
         android:background="#3F1451"
         android:id="@+id/continueButton"
         android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/radioGroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
         android:allowUndo="true"
         android:textColor="#ffffff"
-        android:layout_below="@+id/radioGroup"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginBottom="10dp" />
 
 
     <TextView
