@@ -1,7 +1,6 @@
 package com.example.maxim.diabetesireland;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -11,12 +10,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import java.util.Scanner;
+import java.lang.CharSequence;
 
 
 /**
@@ -80,7 +77,7 @@ public class ExerciseFragment extends Fragment {
                 touchedLight = true;
                 touchedMedium = false;
                 touchedVigorous = false;
-                lightButton.setBackgroundColor(0xff16ff00); //green
+                lightButton.setBackgroundColor(0xff3F1451); //green
                 mediumButton.setBackgroundColor(0xffdbdbdb); //light grey
                 vigorousButton.setBackgroundColor(0xffdbdbdb); //light grey
             }
@@ -92,7 +89,7 @@ public class ExerciseFragment extends Fragment {
                 touchedMedium = true;
                 touchedVigorous = false;
                 lightButton.setBackgroundColor(0xffdbdbdb); //light grey
-                mediumButton.setBackgroundColor(0xffff6600); //orange
+                mediumButton.setBackgroundColor(0xff3F1451); //orange
                 vigorousButton.setBackgroundColor(0xffdbdbdb); //light grey
             }
         });
@@ -104,7 +101,7 @@ public class ExerciseFragment extends Fragment {
                 touchedVigorous = true;
                 lightButton.setBackgroundColor(0xffdbdbdb); //light grey
                 mediumButton.setBackgroundColor(0xffdbdbdb); //light grey
-                vigorousButton.setBackgroundColor(0xffff0000); //red
+                vigorousButton.setBackgroundColor(0xff3F1451); //red
             }
         });
         submitButton.setOnClickListener(new View.OnClickListener() {
@@ -130,35 +127,35 @@ public class ExerciseFragment extends Fragment {
         lightHelpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                popUpExercise("•Walking—slowly\n" +
-                        "•Sitting—using computer\n" +
-                        "•Standing—light work\n" +
-                        "•Fishing—sitting\n" +
-                        "•Playing most instruments", "Examples of Light Exercise");
+                popUpExercise("Walking—slowly\n" +
+                        "Sitting—using computer\n" +
+                        "Standing—light work\n" +
+                        "Fishing—sitting\n" +
+                        "Playing most instruments", "Examples of Light Exercise");
             }
         });
         mediumHelpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                popUpExercise("•Walking—very brisk\n" +
-                        "•Cleaning—heavy\n" +
-                        "•Mowing lawn\n" +
-                        "•Cycling—light effort\n" +
-                        "•Badminton—recreational\n" +
-                        "•Tennis—doubles", "Examples of Medium Exercise");
+                popUpExercise("Walking—very brisk\n" +
+                        "Cleaning—heavy\n" +
+                        "Mowing lawn\n" +
+                        "Cycling—light effort\n" +
+                        "Badminton—recreational\n" +
+                        "Tennis—doubles", "Examples of Medium Exercise");
             }
         });
         vigorousHelpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                popUpExercise("•Hiking\n" +
-                        "•Jogging\n" +
-                        "•Shoveling\n" +
-                        "•Carrying heavy loads\n" +
-                        "•Bicycling fast\n" +
-                        "•Basketball game\n" +
-                        "•Soccer game\n" +
-                        "•Tennis—singles", "Examples of Vigorous Exercise");
+                popUpExercise("Hiking\n" +
+                        "Jogging\n" +
+                        "Shoveling\n" +
+                        "Carrying heavy loads\n" +
+                        "Bicycling fast\n" +
+                        "Basketball game\n" +
+                        "Soccer game\n" +
+                        "Tennis—singles", "Examples of Vigorous Exercise");
             }
         });
 
@@ -182,13 +179,15 @@ public class ExerciseFragment extends Fragment {
 
         AlertDialog.Builder helpBuilder = new AlertDialog.Builder(getActivity());
         helpBuilder.setTitle(type);
-        helpBuilder.setMessage(exampleList);
+        helpBuilder.setMessage(exampleList); // ORIGINAL METHOD OF DISPLAYING POP-UP
         LayoutInflater inflater = getActivity().getLayoutInflater();
         helpLayout = inflater.inflate(R.layout.exercise_layout, null);
         helpBuilder.setView(helpLayout);
 
-        //final TextView listPopUp = (TextView) view.findViewById(R.id.textView10);
+        //TextView listPopUp = (TextView) view.findViewById(R.id.popuptext);
         //listPopUp.setText(exampleList);
+        //NON-FUNCTIONAL METHOD, AIMS TO CENTRE TEXT BUT SETTEXT NOT WORKING
+
 
         helpBuilder.setNegativeButton("Back", new DialogInterface.OnClickListener() {
 
