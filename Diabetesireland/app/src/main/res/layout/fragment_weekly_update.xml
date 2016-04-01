@@ -11,68 +11,29 @@
     tools:context="com.example.maxim.diabetesireland.WeeklyUpdateFragment"
     tools:showIn="@layout/activity_weekly_update">
 
+    <com.jjoe64.graphview.GraphView
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:id="@+id/graph"/>
 
-
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Calories Consumed"
-        android:id="@+id/textView13"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="78dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Calories Expended"
-        android:id="@+id/textView14"
-        android:layout_marginTop="32dp"
-        android:layout_alignTop="@+id/textView13"
-        android:layout_alignParentLeft="true"
+        android:text="Steps"
+        android:id="@+id/stepButton"
+        android:background="#ff3F1451"
+        android:textColor="#ffffffff"
+        android:layout_centerVertical="true"
         android:layout_alignParentStart="true" />
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Calorie Outcome"
-        android:id="@+id/textView15"
-        android:layout_below="@+id/textView14"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="13,300"
-        android:id="@+id/textView16"
-        android:layout_alignTop="@+id/textView13"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="5600"
-        android:id="@+id/textView17"
-        android:layout_below="@+id/textView16"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="7700"
-        android:id="@+id/textView18"
-        android:layout_below="@+id/textView14"
-        android:layout_alignRight="@+id/textView17"
-        android:layout_alignEnd="@+id/textView17" />
+        android:text="Carbohydrates"
+        android:id="@+id/carbButton"
+        android:background="#ffdbdbdb"
+        android:textColor="#ffffffff"
+        android:layout_alignBottom="@+id/stepButton"
+        android:layout_alignEnd="@+id/graph" />
 
 </RelativeLayout>
