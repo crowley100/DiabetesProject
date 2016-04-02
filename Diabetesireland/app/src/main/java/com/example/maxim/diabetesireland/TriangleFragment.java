@@ -1,6 +1,9 @@
 package com.example.maxim.diabetesireland;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -49,6 +52,7 @@ public class TriangleFragment extends Fragment implements SensorEventListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_triangle, container, false);
+        //Fetch string from database
         pedometer = (TextView) view.findViewById(R.id.step_number);
 
         //FETCH steps count from DATABASE
@@ -98,6 +102,10 @@ public class TriangleFragment extends Fragment implements SensorEventListener {
     }
 
     private void animate() {
+        if(steps > 5000){
+            dashedCircularProgress.setValue(steps);
+            carbProgress.setMax(carbProgress.getMax() + 1);
+        }
         dashedCircularProgress.setValue(steps);
     }
 

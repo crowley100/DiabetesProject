@@ -121,11 +121,15 @@ public class FoodIntakeFragment extends Fragment {
                 new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
-                        int selectedId = radioGroup.getCheckedRadioButtonId();
-                        final RadioButton  radioButton = (RadioButton) radioLayout.findViewById(selectedId);
-                        float portion = (parse(radioButton.getText().toString()));
-                        setPortion(portion, food);
-                        dialog.dismiss();
+                        if(radioGroup.getCheckedRadioButtonId() == -1) {
+
+                        }else{
+                            int selectedId = radioGroup.getCheckedRadioButtonId();
+                            final RadioButton radioButton = (RadioButton) radioLayout.findViewById(selectedId);
+                            float portion = (parse(radioButton.getText().toString()));
+                            setPortion(portion, food);
+                            dialog.dismiss();
+                        }
                     }
                 });
         helpBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

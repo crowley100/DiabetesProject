@@ -23,7 +23,10 @@
     <string name="title_activity_recycler_view">RecyclerViewActivity</string>
     <string name="title_activity_list_view_fragment">ListViewFragment</string>
     <string name="title_activity_manual_create">ManualCreateActivity</string>
-
+    <string name="disclaimer">This app is developed by Group23 in collaboration with Diabetes Ireland
+        \nto help you keep track of your activity and food intake by portion size.
+        \nRecommendations for food intake are based on information provided by you and as a guide only.
+        \nSee www.diabetes.ie for further information.</string>
 
     <string name="notification_text">Counting your steps</string>
 

@@ -9,18 +9,23 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.helper.StaticLabelsFormatter;
+import com.jjoe64.graphview.series.BarGraphSeries;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
 
 public class WeeklyUpdateFragment extends Fragment {
     View view;
+    //FETCH Steps of the week from DATABASE
+    int sundaySteps=2000,mondaySteps=5000,tuesdaySteps=9000,wedSteps=8000,thursSteps=5000,fridaySteps=7000,saturSteps=2000;
     boolean stepsSet = true, carbsSet = false;
     public static Button steps, carbs;
     GraphView graphView;
-    LineGraphSeries<DataPoint> stepSeries, carbSeries;
-    //STEPS TAKEN ARRAY FOR GRAPH
-    DataPoint[] stepsTaken = {new DataPoint(0,1), new DataPoint(1,5), new DataPoint(2,3), new DataPoint(3,2), new DataPoint(4,6), new DataPoint(5,6), new DataPoint(6,6)};
+    BarGraphSeries<DataPoint> stepSeries;
+    LineGraphSeries<DataPoint>  carbSeries;
+    //STEPS TAKEN ARRAY FOR GRAPH (Last datapoint is for padding)
+    DataPoint[] stepsTaken = {new DataPoint(0.15,sundaySteps), new DataPoint(0.64,mondaySteps), new DataPoint(1.16,tuesdaySteps), new DataPoint(1.74,wedSteps), new DataPoint(2.34,thursSteps), new DataPoint(2.9,fridaySteps), new DataPoint(3.35,saturSteps),new DataPoint(5.1,0)};
     //CARBS CONSUMED ARRAY FOR GRAPH
     DataPoint[] carbsConsumed = {new DataPoint(0,7), new DataPoint(1,6), new DataPoint(2,5), new DataPoint(3,4), new DataPoint(4,3), new DataPoint(5,2), new DataPoint(6,1)};
 
@@ -45,11 +50,19 @@ public class WeeklyUpdateFragment extends Fragment {
 
 
         //GRAPHVIEW FOR STEPS
-        stepSeries = new LineGraphSeries<DataPoint>(stepsTaken);
+        stepSeries = new BarGraphSeries<DataPoint>(stepsTaken);
         graphView.addSeries(stepSeries);
-        graphView.setTitle("WeeklyReport");
+        graphView.setTitle("         Weekly Report");
+        stepSeries.setSpacing(50);
+        StaticLabelsFormatter staticLabelsFormatter = new StaticLabelsFormatter(graphView);
+        staticLabelsFormatter.setHorizontalLabels(new String[] {"Sun","   Mon","Tues","Wed","Thurs","Fri","Sat"});
+        graphView.getGridLabelRenderer().setLabelFormatter(staticLabelsFormatter);
+        graphView.getGridLabelRenderer().setPadding(50);
         graphView.getGridLabelRenderer().setVerticalAxisTitle("Steps");
-        graphView.getGridLabelRenderer().setHorizontalAxisTitle("Days");
+        graphView.getGridLabelRenderer().setHorizontalAxisTitle("                    Days");
+        graphView.getViewport().setMinX(0);
+        graphView.getViewport().setMaxX(3.5);
+        graphView.getViewport().setXAxisBoundsManual(true);
         //GRAPHVIEW FOR CARBS
         carbSeries = new LineGraphSeries<DataPoint>(carbsConsumed);
 
@@ -64,8 +77,12 @@ public class WeeklyUpdateFragment extends Fragment {
                     carbs.setBackgroundColor(0xffdbdbdb);
                     carbs.setTextColor(0xffffffff);
                     graphView.getGridLabelRenderer().setVerticalAxisTitle("Steps");
+                    graphView.getGridLabelRenderer().setHorizontalAxisTitle("                    Days");
                     graphView.removeAllSeries();
                     graphView.addSeries(stepSeries);
+                    stepSeries.setSpacing(50);
+                    //stepSeries.setSpacing(50);
+
                 }
             }
         }));
@@ -81,6 +98,7 @@ public class WeeklyUpdateFragment extends Fragment {
                     steps.setBackgroundColor(0xffdbdbdb);
                     steps.setTextColor(0xffffffff);
                     graphView.getGridLabelRenderer().setVerticalAxisTitle("Carbohydrates");
+                    graphView.getGridLabelRenderer().setHorizontalAxisTitle("            Days");
                     graphView.removeAllSeries();
                     graphView.addSeries(carbSeries);
                 }

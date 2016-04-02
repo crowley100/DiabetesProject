@@ -26,6 +26,7 @@
         <activity
             android:name="com.example.maxim.diabetesireland.MainActivity"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,26 +37,32 @@
         <activity
             android:name="com.example.maxim.diabetesireland.Exercise"
             android:label="@string/title_activity_exercise"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.example.maxim.diabetesireland.Profile"
             android:label="@string/title_activity_daily__update"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.example.maxim.diabetesireland.Triangle"
             android:label="@string/title_activity_triangle"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.example.maxim.diabetesireland.WeeklyUpdate"
             android:label="@string/title_activity_weekly_update"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.example.maxim.diabetesireland.FoodIntake"
             android:label="@string/title_activity_food_intake"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.example.maxim.diabetesireland.TabActivity"
             android:label="@string/title_activity_tab"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

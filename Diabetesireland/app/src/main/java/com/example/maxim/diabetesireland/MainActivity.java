@@ -6,6 +6,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.InputFilter;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -23,6 +27,7 @@ import java.util.GregorianCalendar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     boolean touchedMale, touchedFemale= false;
+
     String registered = "notRegistered";String gender = "Male",db_weight,db_height;
     int user_age;
     double user_height,user_weight;
@@ -37,46 +42,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        registered_check();
-        setContentView(R.layout.activity_main);
-        nextScreen = (Button) findViewById(R.id.continueButton);
-        maleButton = (Button) findViewById(R.id.maleButton);
-        femaleButton = (Button) findViewById(R.id.femaleButton);
-        weight = (Button) findViewById(R.id.weight_button);
-        height = (Button) findViewById(R.id.height_button);
-        dateOfBirth = (Button) findViewById(R.id.datepicker);
-        weightButton = (RadioButton) findViewById(R.id.weightRadio);
-        activeButton = (RadioButton) findViewById(R.id.activeRadio);
-        healthButton = (RadioButton) findViewById(R.id.healthRadio);
-        maleButton.setOnClickListener(this);
-        femaleButton.setOnClickListener(this);
-        nextScreen.setOnClickListener(this);
-        weight.setOnClickListener((new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                String msg ="What is your weight?";
-                showPopUp(weight_metrics, msg);
-            }
-        }));
-        height.setOnClickListener((new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                String msg = "What is your height?";
-                showPopUp(height_metrics,msg);
-            }
-        }));
-        dateOfBirth.setOnClickListener(this);
-    }
-
-    private boolean registered_check() {
         // fetch String registered from database
         if((registered.equals("registered"))){
             Intent i =  new Intent(MainActivity.this, TabActivity.class);
             startActivity(i);
+            finish();
+        }else {
+            setContentView(R.layout.activity_main);
+            nextScreen = (Button) findViewById(R.id.continueButton);
+            maleButton = (Button) findViewById(R.id.maleButton);
+            femaleButton = (Button) findViewById(R.id.femaleButton);
+            weight = (Button) findViewById(R.id.weight_button);
+            height = (Button) findViewById(R.id.height_button);
+            dateOfBirth = (Button) findViewById(R.id.datepicker);
+            weightButton = (RadioButton) findViewById(R.id.weightRadio);
+            activeButton = (RadioButton) findViewById(R.id.activeRadio);
+            healthButton = (RadioButton) findViewById(R.id.healthRadio);
+            maleButton.setOnClickListener(this);
+            femaleButton.setOnClickListener(this);
+            nextScreen.setOnClickListener(this);
+            weight.setOnClickListener((new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    String msg = "What is your weight?";
+                    showPopUp(weight_metrics, msg);
+                }
+            }));
+            height.setOnClickListener((new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    String msg = "What is your height?";
+                    showPopUp(height_metrics, msg);
+                }
+            }));
+            dateOfBirth.setOnClickListener(this);
         }
-        return false;
     }
 
     private void getHeight(double height,EditText first,EditText second){
@@ -140,11 +142,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.continueButton:
                 // ADD TO DATABASE = registered
                 registered="registered";
-                intent = new Intent(MainActivity.this, TabActivity.class);
-                startActivity(intent);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                    builder.setMessage(R.string.disclaimer)
+                            .setPositiveButton("Accept", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    intent = new Intent(MainActivity.this, TabActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                }
+                            });
+                    builder.show();
                 break;
             case R.id.datepicker:
-                new DatePickerDialog(MainActivity.this, R.style.DialogTheme,listener, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show();
+                DatePickerDialog dialog = new DatePickerDialog(MainActivity.this, R.style.DialogTheme,listener, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
+                GregorianCalendar cal = new GregorianCalendar();
+                cal.add(Calendar.YEAR, -100);
+                dialog.getDatePicker().setMinDate(cal.getTimeInMillis());
+                GregorianCalendar cal2 = new GregorianCalendar();
+                cal2.add(Calendar.YEAR, -1);
+                Log.v("Max date", "" + cal.getTimeInMillis());
+                dialog.getDatePicker().setMaxDate(cal2.getTimeInMillis());
+                dialog.show();
                 break;
 
         }
@@ -169,12 +187,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         input2.setVisibility(view.VISIBLE);
                         input.getLayoutParams().width =200;
                         input2.getLayoutParams().width=200;
-
+                        input2.setFilters(new InputFilter[]{new InputFilter.LengthFilter(1)});
+                        input.setFilters( new InputFilter[] { new InputFilter.LengthFilter(1) } );
                     }
                     else{
                         input2.setVisibility(view.GONE);
                         input.getLayoutParams().width = 300;
-
+                        input.setFilters( new InputFilter[] { new InputFilter.LengthFilter(3)} );
                     }
 
                 }else{
@@ -182,10 +201,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         input2.setVisibility(view.VISIBLE);
                         input.getLayoutParams().width =200;
                         input2.getLayoutParams().width=200;
+                        input2.setFilters(new InputFilter[]{new InputFilter.LengthFilter(1)});
+                        input.setFilters( new InputFilter[] { new InputFilter.LengthFilter(1) } );
                     }
                     else{
                         input2.setVisibility(view.GONE);
                         input.getLayoutParams().width = 300;
+                        input.setFilters( new InputFilter[] { new InputFilter.LengthFilter(3)} );
                     }
                 }
             }
@@ -262,7 +284,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if ((m < cal.get(Calendar.MONTH)) || ((m == cal.get(Calendar.MONTH)) && (d < cal.get(Calendar.DAY_OF_MONTH)))) {
                     --user_age;
                 }
-                if(user_age < 0) {
+                else if(user_age < 0) {
                     throw new IllegalArgumentException("Age < 0");
                 }
                 else{

@@ -44,15 +44,16 @@ public class ProfileFragment extends Fragment {
         weight_text.setText("Weight: " +db_weight);
         height_text = (TextView) view.findViewById(R.id.updated_height);
         //FETCH HEIGHT FROM DATABASE
-        height_text.setText("Height: " + db_height);
+        height_text.setText("Height: "+db_height);
         TextView age_text = (TextView) view.findViewById(R.id.age_text);
         //FETCH AGE FROM DATA BASE
-        age_text.setText("Age: "+ (int)age + " years old");
+        age_text.setText("Age: " + (int)age + " years old");
         TextView bmi_text = (TextView) view.findViewById(R.id.bmi_text);
+        bmi_text.setText(bmi);
         calcBMI();
         TextView gender_text = (TextView) view.findViewById(R.id.gender_text);
         //FETCH GENDER TO DATABASE
-        gender_text.setText("Gender: "+gender);
+        gender_text.setText("Gender: " +gender);
         Button height_update = (Button) view.findViewById(R.id.height_update);
         Button weight_update = (Button) view.findViewById(R.id.weight_update);
         weight_update.setOnClickListener((new View.OnClickListener() {
@@ -204,7 +205,7 @@ public class ProfileFragment extends Fragment {
             bmi = "BMI: OverWeight " + calc_bmi;
         }
         else {
-            bmi ="BMI: Obese" + calc_bmi;
+            bmi ="BMI: Obese " + calc_bmi;
         }
     }
 }
