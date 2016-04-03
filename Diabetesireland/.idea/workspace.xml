@@ -61,23 +61,12 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/maxim/diabetesireland/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9158416">
-              <caret line="277" column="50" selection-start-line="277" selection-start-column="50" selection-end-line="277" selection-end-column="50" />
+            <state vertical-scroll-proportion="-4.421965">
+              <caret line="106" column="32" selection-start-line="106" selection-start-column="32" selection-end-line="106" selection-end-column="32" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2850#3092#0" expanded="true" />
-                <element signature="e#3091#3092#0" expanded="true" />
-                <element signature="e#3135#3377#0" expanded="true" />
-                <element signature="e#3376#3377#0" expanded="true" />
-                <element signature="e#6172#6191#0" expanded="true" />
-                <element signature="e#6250#6639#0" expanded="true" />
-                <element signature="e#6638#6639#0" expanded="true" />
-                <element signature="e#8063#8071#0" expanded="true" />
-                <element signature="e#10316#13105#0" expanded="true" />
-                <element signature="e#13104#13105#0" expanded="true" />
-                <element signature="e#13339#13340#0" expanded="true" />
-                <element signature="e#15255#16276#0" expanded="true" />
-                <element signature="e#16275#16276#0" expanded="true" />
+                <element signature="e#7103#7122#0" expanded="true" />
+                <element signature="e#7189#7626#0" expanded="true" />
+                <element signature="e#7625#7626#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1778,7 +1767,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1969,8 +1959,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1980,8 +1969,8 @@
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="recentsLimit" value="5" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="4200c4affce89200" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_23" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="71a1c8df" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_23_x86" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="FullScreen" value="false" />
@@ -2013,8 +2002,6 @@
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method />
@@ -2035,8 +2022,6 @@
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2134,8 +2119,6 @@
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method />
@@ -2180,9 +2163,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5030349" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36363637" sideWeight="0.4969651" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32955772" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36286202" sideWeight="0.4969651" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30153322" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2190,7 +2171,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2408492" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24054463" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2199,9 +2180,11 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32955772" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991204" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -2253,22 +2236,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/maxim/diabetesireland/WeeklyUpdateFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/maxim/diabetesireland/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1459696053362" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1459696053362" expanded="false" signature="-1:-1" placeholder=" { " />
-            <marker date="1459696053362" expanded="false" signature="-1:-1" placeholder=" }" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053362" expanded="false" signature="-1:-1" placeholder=" { " />
-            <marker date="1459696053362" expanded="false" signature="-1:-1" placeholder=" }" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <element signature="e#7103#7122#0" expanded="true" />
+            <element signature="e#7189#7626#0" expanded="true" />
+            <element signature="e#7625#7626#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2276,20 +2251,16 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/maxim/diabetesireland/WeeklyUpdateFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/maxim/diabetesireland/WeeklyUpdateFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1459696053362" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1459696053362" expanded="false" signature="-1:-1" placeholder=" { " />
-            <marker date="1459696053362" expanded="false" signature="-1:-1" placeholder=" }" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053362" expanded="false" signature="-1:-1" placeholder=" { " />
-            <marker date="1459696053362" expanded="false" signature="-1:-1" placeholder=" }" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2319,31 +2290,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1459696053362" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1459696053362" expanded="false" signature="-1:-1" placeholder=" { " />
-            <marker date="1459696053362" expanded="false" signature="-1:-1" placeholder=" }" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053362" expanded="false" signature="-1:-1" placeholder=" { " />
-            <marker date="1459696053362" expanded="false" signature="-1:-1" placeholder=" }" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_weekly_update.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/maxim/diabetesireland/MainActivity.java">
@@ -2365,50 +2324,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-          <folding>
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder=" { " />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder=" }" />
-            <marker date="1459696053329" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder=" { " />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder=" }" />
-            <marker date="1459696053329" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="(v) → {" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="}" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="(v) → {" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="}" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="(v) → {" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="}" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="(v) → {" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="}" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="(v) → {" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="}" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="(v) → {" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="}" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="(v) → {" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="}" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="(v) → {" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="}" />
-            <marker date="1459696053329" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053329" expanded="true" signature="-1:-1" placeholder="(dialog, which) → {" />
-            <marker date="1459696053329" expanded="true" signature="-1:-1" placeholder="}" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="(dialog, which) → {" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="}" />
-            <marker date="1459696053329" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053329" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_exercise.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="99" column="32" selection-start-line="99" selection-start-column="32" selection-end-line="99" selection-end-column="32" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/maxim/diabetesireland/TriangleFragment.java">
@@ -2444,13 +2372,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/maxim/diabetesireland/Exercise.java">
@@ -2461,14 +2389,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_weekly_update.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/maxim/diabetesireland/FoodIntake.java">
@@ -2484,44 +2412,44 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_triangle.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_weekly_update.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_weekly_update.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2603369">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_tab.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/maxim/diabetesireland/DatabaseHelper.java">
@@ -2540,24 +2468,24 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.1097922">
           <caret line="270" column="0" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_triangle.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_triangle.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30267063">
           <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/maxim/diabetesireland/TabActivity.java">
@@ -2568,69 +2496,69 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_food_intake.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13127413">
           <caret line="4" column="21" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="21" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_food_intake.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_food_intake.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="3" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="3" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_food_intake.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_food_intake.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33204633">
           <caret line="12" column="33" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="33" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/exercise_layout.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/exercise_layout.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20190024">
           <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="34" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_exercise.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_exercise.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04892368">
           <caret line="100" column="32" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/maxim/diabetesireland/WeeklyUpdate.java">
@@ -2672,14 +2600,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_tab.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.55654764">
           <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
@@ -2693,88 +2621,40 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_weekly_update.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
           <folding />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/maxim/diabetesireland/WeeklyUpdateFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.85022026">
           <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-          <folding>
-            <marker date="1459696053362" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1459696053362" expanded="false" signature="-1:-1" placeholder=" { " />
-            <marker date="1459696053362" expanded="false" signature="-1:-1" placeholder=" }" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053362" expanded="false" signature="-1:-1" placeholder=" { " />
-            <marker date="1459696053362" expanded="false" signature="-1:-1" placeholder=" }" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053362" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_exercise.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1459696053570" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1459696053570" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1459696053570" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1459696053570" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/maxim/diabetesireland/FoodIntakeFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.4942263">
           <caret line="133" column="19" selection-start-line="133" selection-start-column="19" selection-end-line="133" selection-end-column="19" />
-          <folding>
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder=" { " />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder=" }" />
-            <marker date="1459696053329" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder=" { " />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder=" }" />
-            <marker date="1459696053329" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="(v) → {" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="}" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="(v) → {" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="}" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="(v) → {" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="}" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="(v) → {" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="}" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="(v) → {" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="}" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="(v) → {" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="}" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="(v) → {" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="}" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="(v) → {" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="}" />
-            <marker date="1459696053329" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053329" expanded="true" signature="-1:-1" placeholder="(dialog, which) → {" />
-            <marker date="1459696053329" expanded="true" signature="-1:-1" placeholder="}" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="(dialog, which) → {" />
-            <marker date="1459696053329" expanded="false" signature="-1:-1" placeholder="}" />
-            <marker date="1459696053329" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053329" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2782,34 +2662,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2748268">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <marker date="1459696053337" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1459696053337" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1459696053337" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1459696053337" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/maxim/diabetesireland/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9158416">
-          <caret line="277" column="50" selection-start-line="277" selection-start-column="50" selection-end-line="277" selection-end-column="50" />
+        <state vertical-scroll-proportion="-4.421965">
+          <caret line="106" column="32" selection-start-line="106" selection-start-column="32" selection-end-line="106" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2850#3092#0" expanded="true" />
-            <element signature="e#3091#3092#0" expanded="true" />
-            <element signature="e#3135#3377#0" expanded="true" />
-            <element signature="e#3376#3377#0" expanded="true" />
-            <element signature="e#6172#6191#0" expanded="true" />
-            <element signature="e#6250#6639#0" expanded="true" />
-            <element signature="e#6638#6639#0" expanded="true" />
-            <element signature="e#8063#8071#0" expanded="true" />
-            <element signature="e#10316#13105#0" expanded="true" />
-            <element signature="e#13104#13105#0" expanded="true" />
-            <element signature="e#13339#13340#0" expanded="true" />
-            <element signature="e#15255#16276#0" expanded="true" />
-            <element signature="e#16275#16276#0" expanded="true" />
+            <element signature="e#7103#7122#0" expanded="true" />
+            <element signature="e#7189#7626#0" expanded="true" />
+            <element signature="e#7625#7626#0" expanded="true" />
           </folding>
         </state>
       </provider>

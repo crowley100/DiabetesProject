@@ -36,12 +36,12 @@
         "source": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\src\\main\\res\\mipmap-mdpi\\ic_app_icon.png"
     },
     {
-        "merged": "C:\\Users\\David\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_water_icon.png",
-        "source": "C:\\Users\\David\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\mipmap-mdpi\\ic_water_icon.png"
-    },
-    {
         "merged": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_pedometer_icon.png",
         "source": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\src\\main\\res\\mipmap-mdpi\\ic_pedometer_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\David\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_water_icon.png",
+        "source": "C:\\Users\\David\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\mipmap-mdpi\\ic_water_icon.png"
     },
     {
         "merged": "C:\\Users\\David\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_app_icon.png",

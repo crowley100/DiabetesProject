@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -26,23 +27,22 @@ import java.util.GregorianCalendar;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    boolean touchedMale, touchedFemale= false;
+    boolean touchedMale, touchedFemale= false,dobset=false,weightset=false,heightset=false;
 
     String registered = "notRegistered";String gender = "Male",db_weight,db_height;
     int user_age;
     double user_height,user_weight;
     public static Button maleButton, femaleButton,nextScreen,dateOfBirth,weight,height;
-    RadioButton weightButton, activeButton , healthButton;
-
+    RadioGroup plan;
     Intent intent;
     Calendar calendar = Calendar.getInstance();
     final String [] weight_metrics = {"kg","lbs","st and lbs"};
     final String [] height_metrics = {"cm","ft and in"};
     //Max/min heights/weights are in cm/kg
-    public static final int MAX_HEIGHT = 213, /*7 ft*/
-                            MIN_HEIGHT = 137, /*4 ft 6*/
-                            MAX_WEIGHT = 160,
-                            MIN_WEIGHT = 45;
+    public static final int MAX_HEIGHT = 300, /*7 ft*/
+                            MIN_HEIGHT = 50, /*4 ft 6*/
+                            MAX_WEIGHT = 300,
+                            MIN_WEIGHT = 30;
     View view;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,9 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             weight = (Button) findViewById(R.id.weight_button);
             height = (Button) findViewById(R.id.height_button);
             dateOfBirth = (Button) findViewById(R.id.datepicker);
-            weightButton = (RadioButton) findViewById(R.id.weightRadio);
-            activeButton = (RadioButton) findViewById(R.id.activeRadio);
-            healthButton = (RadioButton) findViewById(R.id.healthRadio);
+            plan =(RadioGroup) findViewById(R.id.radioGroup);
             maleButton.setOnClickListener(this);
             femaleButton.setOnClickListener(this);
             nextScreen.setOnClickListener(this);
@@ -85,35 +83,54 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             dateOfBirth.setOnClickListener(this);
         }
     }
-
-    private void getHeight(double height,EditText first,EditText second){
-        if((second.getText().toString()).equals("")) {
-            // ADD TO DATABASE => height
-            height =(Double.parseDouble(first.getText().toString()));
-        }
-        else{
-            double feet = (Double.parseDouble(first.getText().toString())) * 30.48;
-            double inches = (Double.parseDouble(second.getText().toString())) * 2.54;
-            // ADD TO DATABASE => height
-            height= feet + inches;
+    //Returns height in centimeters
+    private double getHeight(EditText first,EditText second) {
+        if ((second.getText().toString()).equals("")) {
+            if ((first.getText().toString()).equals("")) {
+                return 0;
+            } else {
+                heightset = true;
+                // ADD TO DATABASE => height
+                return(Double.parseDouble(first.getText().toString()));
+            }
+        } else {
+            if (((first.getText().toString()).equals("")) && ((second.getText().toString()).equals(""))) {
+                return 0;
+            } else {
+                double feet = (Double.parseDouble(first.getText().toString())) * 30.48;
+                double inches = (Double.parseDouble(second.getText().toString())) * 2.54;
+                // ADD TO DATABASE => height
+                return (feet + inches);
+            }
         }
     }
-    private void getWeight(double weight,EditText first,EditText second,String type){
+    //Returns weight in kilogram
+    private double getWeight(EditText first,EditText second,String type){
         if((second.getText().toString()).equals("")) {
-            if(type.equals("lbs")) {
-                // ADD TO DATABASE => weight
-                weight = ((Double.parseDouble(first.getText().toString())) * 0.453592);
-            }
-            else {
-                weight = ((Double.parseDouble(first.getText().toString())));
-            }
+            if ((first.getText().toString()).equals("")) {
+                return 0;
+            } else {
+                if (type.equals("lbs")) {
+                    weightset=true;
+                    // ADD TO DATABASE => weight
+                    return((Double.parseDouble(first.getText().toString())) * 0.453592);
+                } else {
+                    weightset=true;
+                    return((Double.parseDouble(first.getText().toString())));
+                }
 
+            }
         }
         else {
-            double stoneNum = (Double.parseDouble(first.getText().toString())) * 6.35029;
-            double pounds = (Double.parseDouble(second.getText().toString())) * 0.453592;
-            // ADD TO DATABASE => weight
-            weight = stoneNum + pounds;
+            if (((first.getText().toString()).equals("")) && ((second.getText().toString()).equals(""))) {
+                return 0;
+            } else {
+                weightset=true;
+                double stoneNum = (Double.parseDouble(first.getText().toString())) * 6.35029;
+                double pounds = (Double.parseDouble(second.getText().toString())) * 0.453592;
+                // ADD TO DATABASE => weight
+                return(stoneNum + pounds);
+            }
         }
     }
 
@@ -145,27 +162,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.continueButton:
-                // ADD TO DATABASE = registered
-                registered="registered";
-                    AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                    builder.setMessage(R.string.disclaimer)
-                            .setPositiveButton("Accept", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    intent = new Intent(MainActivity.this, TabActivity.class);
-                                    startActivity(intent);
-                                    finish();
-                                }
-                            });
-                    builder.show();
+                if((touchedMale == true || touchedFemale == true)){
+                    if(dobset==true && heightset==true && weightset==true){
+                        if(plan.getCheckedRadioButtonId()!=-1) {
+                            // ADD TO DATABASE = registered
+                            registered = "registered";
+                            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                            builder.setMessage(R.string.disclaimer)
+                                    .setPositiveButton("Accept", new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            intent = new Intent(MainActivity.this, TabActivity.class);
+                                            startActivity(intent);
+                                            finish();
+                                        }
+                                    });
+                            builder.show();
+                        }
+                    }
+
+                }
+                else {
+                }
                 break;
             case R.id.datepicker:
+                dobset=true;
                 DatePickerDialog dialog = new DatePickerDialog(MainActivity.this, R.style.DialogTheme,listener, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
                 GregorianCalendar cal = new GregorianCalendar();
                 cal.add(Calendar.YEAR, -100);
                 dialog.getDatePicker().setMinDate(cal.getTimeInMillis());
                 GregorianCalendar cal2 = new GregorianCalendar();
                 cal2.add(Calendar.YEAR, -1);
-                Log.v("Max date", "" + cal.getTimeInMillis());
+
                 dialog.getDatePicker().setMaxDate(cal2.getTimeInMillis());
                 dialog.show();
                 break;
@@ -231,14 +258,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             height.setText(input.getText() + " ft" + input2.getText() + " in");
                             //ADD TO DATABASE
                             db_height = height.getText().toString();
-                            getHeight(user_height, input, input2);
+                            user_height=getHeight(input, input2);
                         } else dialog.dismiss();
                     } else {
                         if (checkHeightValid(input, input2)) {
                             height.setText(input.getText() + " cm");
                             //ADD TO DATABASE
                             db_height = height.getText().toString();
-                            getHeight(user_height, input, input2);
+                            user_height=getHeight(input, input2);
                         } else dialog.dismiss();
                     }
                 } else {
@@ -247,7 +274,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             weight.setText(input.getText() + " st" + input2.getText() + " lbs"); /*maybe put thing here*/
                             //ADD TO DATABASE
                             db_weight = weight.getText().toString();
-                            getWeight(user_weight, input, input2, "st and lbs");
+                            user_weight=getWeight(input, input2, "st and lbs");
+                            Log.v("Weight"," "+user_weight);
                         } else dialog.dismiss();
 
                     } else {
@@ -256,14 +284,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 weight.setText(input.getText() + " lbs");
                                 //ADD TO DATABASE
                                 db_weight = weight.getText().toString();
-                                getWeight(user_weight, input, input2, "lbs");
+                                user_weight=getWeight(input, input2, "lbs");
+                                Log.v("Weight"," "+user_weight);
                             } else dialog.dismiss();
                         } else {
                             if (checkWeightValid(input, input2, "kg")) {
                                 weight.setText(input.getText() + " kg");
                                 //ADD TO DATABASE
                                 db_weight = weight.getText().toString();
-                                getWeight(user_weight, input, input2, "kg");
+
+                                user_weight=getWeight(input, input2, "kg");
+                                Log.v("Weight"," "+user_weight);
                             }
                             else dialog.dismiss();
                         }
