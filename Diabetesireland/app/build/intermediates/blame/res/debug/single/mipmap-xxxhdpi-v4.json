@@ -12,6 +12,10 @@
         "source": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_dairy_icon.png"
     },
     {
+        "merged": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_water_icon.png",
+        "source": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_water_icon.png"
+    },
+    {
         "merged": "C:\\Users\\David\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_water_icon.png",
         "source": "C:\\Users\\David\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_water_icon.png"
     },
@@ -26,6 +30,10 @@
     {
         "merged": "C:\\Users\\David\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\David\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_app_icon.png",
+        "source": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_app_icon.png"
     },
     {
         "merged": "C:\\Users\\David\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_carb_icon.png",
@@ -44,12 +52,20 @@
         "source": "C:\\Users\\David\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_pedometer_icon.png"
     },
     {
+        "merged": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_pedometer_icon.png",
+        "source": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_pedometer_icon.png"
+    },
+    {
         "merged": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_carb_icon.png",
         "source": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_carb_icon.png"
     },
     {
         "merged": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_carb_icon.png",
         "source": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_carb_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_oil_icon.png",
+        "source": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_oil_icon.png"
     },
     {
         "merged": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_protein_icon.png",
@@ -60,8 +76,20 @@
         "source": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_fg_icon.png"
     },
     {
+        "merged": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_carb_icon.png",
+        "source": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_carb_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\David\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_app_icon.png",
         "source": "C:\\Users\\David\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_app_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_dairy_icon.png",
+        "source": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_dairy_icon.png"
     },
     {
         "merged": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_protein_icon.png",
@@ -100,6 +128,10 @@
         "source": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_dairy_icon.png"
     },
     {
+        "merged": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_protein_icon.png",
+        "source": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_protein_icon.png"
+    },
+    {
         "merged": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_treats_icon.png",
         "source": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_treats_icon.png"
     },
@@ -112,8 +144,16 @@
         "source": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_oil_icon.png"
     },
     {
+        "merged": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_treats_icon.png",
+        "source": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_treats_icon.png"
+    },
+    {
         "merged": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_fg_icon.png",
         "source": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_fg_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_fg_icon.png",
+        "source": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_fg_icon.png"
     },
     {
         "merged": "C:\\Users\\David\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_treats_icon.png",
@@ -126,6 +166,10 @@
     {
         "merged": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_alc_icon.png",
+        "source": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_alc_icon.png"
     },
     {
         "merged": "C:\\Users\\David\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_fg_icon.png",
