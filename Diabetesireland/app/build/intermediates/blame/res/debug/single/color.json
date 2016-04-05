@@ -68,10 +68,6 @@
         "source": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color\\abc_secondary_text_material_light.xml"
     },
     {
-        "merged": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color\\abc_background_cache_hint_selector_material_dark.xml"
-    },
-    {
         "merged": "C:\\Users\\David\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_background_cache_hint_selector_material_light.xml",
         "source": "C:\\Users\\David\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color\\abc_background_cache_hint_selector_material_light.xml"
     },
@@ -154,10 +150,6 @@
     {
         "merged": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_light.xml",
         "source": "C:\\Users\\maxim\\Documents\\Gitt\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color\\abc_secondary_text_material_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_background_cache_hint_selector_material_light.xml",
-        "source": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\color\\abc_background_cache_hint_selector_material_light.xml"
     },
     {
         "merged": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_search_url_text.xml",

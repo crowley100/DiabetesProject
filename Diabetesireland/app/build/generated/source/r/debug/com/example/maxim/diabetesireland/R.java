@@ -2740,7 +2740,7 @@ containing a value of this type.
         public static final int action_mode_bar_stub=0x7f0d0058;
         public static final int action_mode_close_button=0x7f0d003e;
         public static final int action_settings=0x7f0d00dc;
-        public static final int activeRadio=0x7f0d0095;
+        public static final int activeRadio=0x7f0d0096;
         public static final int activity_chooser_view_content=0x7f0d003f;
         public static final int adjust_height=0x7f0d0032;
         public static final int adjust_width=0x7f0d0033;
@@ -2768,7 +2768,7 @@ containing a value of this type.
         public static final int cmFt=0x7f0d00da;
         public static final int collapseActionView=0x7f0d0035;
         public static final int contentPanel=0x7f0d004c;
-        public static final int continueButton=0x7f0d0096;
+        public static final int continueButton=0x7f0d0093;
         public static final int custom=0x7f0d0052;
         public static final int customPanel=0x7f0d0051;
         public static final int dairy_prog=0x7f0d00b2;
@@ -2908,7 +2908,7 @@ containing a value of this type.
         public static final int textView2=0x7f0d00a1;
         public static final int textView20=0x7f0d00b7;
         public static final int textView21=0x7f0d008c;
-        public static final int textView22=0x7f0d0094;
+        public static final int textView22=0x7f0d0095;
         public static final int textView23=0x7f0d009a;
         public static final int textView24=0x7f0d0099;
         public static final int textView25=0x7f0d00b8;
@@ -2940,7 +2940,7 @@ containing a value of this type.
         public static final int vigoroushelpbutton=0x7f0d007f;
         public static final int water_prog=0x7f0d00ad;
         public static final int waterbutton=0x7f0d0081;
-        public static final int weightRadio=0x7f0d0093;
+        public static final int weightRadio=0x7f0d0094;
         public static final int weight_button=0x7f0d009f;
         public static final int weight_update=0x7f0d00a7;
         public static final int withText=0x7f0d0038;

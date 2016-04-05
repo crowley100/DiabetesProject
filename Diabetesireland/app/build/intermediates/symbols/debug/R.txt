@@ -701,7 +701,7 @@ int id action_mode_bar 0x7f0d0059
 int id action_mode_bar_stub 0x7f0d0058
 int id action_mode_close_button 0x7f0d003e
 int id action_settings 0x7f0d00dc
-int id activeRadio 0x7f0d0095
+int id activeRadio 0x7f0d0096
 int id activity_chooser_view_content 0x7f0d003f
 int id adjust_height 0x7f0d0032
 int id adjust_width 0x7f0d0033
@@ -729,7 +729,7 @@ int id clip_vertical 0x7f0d002c
 int id cmFt 0x7f0d00da
 int id collapseActionView 0x7f0d0035
 int id contentPanel 0x7f0d004c
-int id continueButton 0x7f0d0096
+int id continueButton 0x7f0d0093
 int id custom 0x7f0d0052
 int id customPanel 0x7f0d0051
 int id dairy_prog 0x7f0d00b2
@@ -869,7 +869,7 @@ int id textView19 0x7f0d00af
 int id textView2 0x7f0d00a1
 int id textView20 0x7f0d00b7
 int id textView21 0x7f0d008c
-int id textView22 0x7f0d0094
+int id textView22 0x7f0d0095
 int id textView23 0x7f0d009a
 int id textView24 0x7f0d0099
 int id textView25 0x7f0d00b8
@@ -901,7 +901,7 @@ int id vigorousbutton 0x7f0d007c
 int id vigoroushelpbutton 0x7f0d007f
 int id water_prog 0x7f0d00ad
 int id waterbutton 0x7f0d0081
-int id weightRadio 0x7f0d0093
+int id weightRadio 0x7f0d0094
 int id weight_button 0x7f0d009f
 int id weight_update 0x7f0d00a7
 int id withText 0x7f0d0038

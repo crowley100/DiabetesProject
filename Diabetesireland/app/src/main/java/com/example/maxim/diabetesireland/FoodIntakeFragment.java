@@ -21,7 +21,7 @@ import java.util.Scanner;
 public class FoodIntakeFragment extends Fragment {
     private View view;
     private View radioLayout;
-    float carb,fg,water,dairy,protein,alc,oil,treats;
+    float carb = 0,fg = 0, water = 0, dairy = 0, protein = 0, alc = 0, oil = 0, treats = 0;
 
     public static FoodIntakeFragment newInstance() {
         return new FoodIntakeFragment();
@@ -44,7 +44,7 @@ public class FoodIntakeFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                showPopUp3("Select Water portion taken:","Water");
+                showPopUp3("Select Water portion taken:", "Water");
             }
         });
         Button showPopUpButton2 = (Button) view.findViewById(R.id.fruitvegbutton);
@@ -52,7 +52,7 @@ public class FoodIntakeFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                showPopUp3("Select Fruit and Vegetables portion taken:","Fruit and Veg");
+                showPopUp3("Select Fruit and Vegetables portion taken:", "Fruit and Veg");
             }
         });
         Button showPopUpButton3 = (Button) view.findViewById(R.id.carbutton);
@@ -76,7 +76,7 @@ public class FoodIntakeFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                showPopUp3("Select Protein portion taken:","Protein");
+                showPopUp3("Select Protein portion taken:", "Protein");
             }
         });
         Button showPopUpButton6 = (Button) view.findViewById(R.id.alcoholbutton);
@@ -84,7 +84,7 @@ public class FoodIntakeFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                showPopUp3("Select Alcohol portion taken:","Alcohol");
+                showPopUp3("Select Alcohol portion taken:", "Alcohol");
             }
         });
         Button showPopUpButton8 = (Button) view.findViewById(R.id.oilbutton);
@@ -92,7 +92,7 @@ public class FoodIntakeFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                showPopUp3("Select Fats and Oils portion taken:","Fats");
+                showPopUp3("Select Fats and Oils portion taken:", "Fats");
             }
         });
         Button showPopUpButton7 = (Button) view.findViewById(R.id.treatsbutton);
@@ -100,7 +100,7 @@ public class FoodIntakeFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                showPopUp3("Select Treats portion taken: (Only eat occasionally","Treats");
+                showPopUp3("Select Treats portion taken: (Only eat occasionally", "Treats");
             }
         });
 
@@ -128,7 +128,13 @@ public class FoodIntakeFragment extends Fragment {
                             final RadioButton radioButton = (RadioButton) radioLayout.findViewById(selectedId);
                             float portion = (parse(radioButton.getText().toString()));
                             setPortion(portion, food);
-                            dialog.dismiss();
+                            if(food.equals("Alcohol") && alc >= 3){ /*Limit for alcohol*/
+                                showAlert("alcohol");
+                            }
+                            if(food.equals("Carbohydrates") && carb >= 6){/*Limit for carbs. TODO figure out how to determine carb limit*/
+                                showAlert("carbohydrates");
+                            }
+                            else dialog.dismiss();
                         }
                     }
                 });
@@ -142,6 +148,20 @@ public class FoodIntakeFragment extends Fragment {
         AlertDialog helpDialog = helpBuilder.create();
         helpDialog.show();
 
+    }
+
+    private void showAlert(String foodType) {
+        AlertDialog.Builder alertPopUp = new AlertDialog.Builder(getActivity());
+        alertPopUp.setTitle("Warning");
+        alertPopUp.setMessage("You have exceeded your daily recommended intake of " + foodType);
+        alertPopUp.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                }
+        );
+        AlertDialog alertDialog = alertPopUp.create();
+        alertDialog.show();
     }
 
     public float parse(String ratio) {
