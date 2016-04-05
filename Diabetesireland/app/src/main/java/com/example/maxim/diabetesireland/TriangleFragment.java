@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -69,7 +70,11 @@ public class TriangleFragment extends Fragment implements SensorEventListener {
 
         carbProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.carb_prog);
         //FETCH carb count from DATABASE
-        carbProgress.setProgress(carb);
+        if(carbProgress.getProgress()<carbProgress.getMax()) {
+        carbProgress.setProgressColor(Color.parseColor("#ce0000"));
+        }
+        carbProgress.setMax(2);
+        carbProgress.setProgress(3);
          waterProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.water_prog);
         //FETCH water count from DATABASE
         waterProgress.setProgress(water);

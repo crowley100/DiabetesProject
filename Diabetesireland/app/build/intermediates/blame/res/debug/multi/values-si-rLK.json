@@ -391,9 +391,9 @@
                 "to": {
                     "startLine": 2,
                     "startColumn": 4,
-                    "startOffset": 55,
+                    "startOffset": 105,
                     "endColumn": 109,
-                    "endOffset": 160
+                    "endOffset": 210
                 },
                 "from": {
                     "file": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-si-rLK\\values-si-rLK.xml",
@@ -410,9 +410,9 @@
                 "to": {
                     "startLine": 3,
                     "startColumn": 4,
-                    "startOffset": 165,
+                    "startOffset": 215,
                     "endColumn": 107,
-                    "endOffset": 268
+                    "endOffset": 318
                 },
                 "from": {
                     "file": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-si-rLK\\values-si-rLK.xml",
@@ -429,9 +429,9 @@
                 "to": {
                     "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 273,
+                    "startOffset": 323,
                     "endColumn": 122,
-                    "endOffset": 391
+                    "endOffset": 441
                 },
                 "from": {
                     "file": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-si-rLK\\values-si-rLK.xml",
@@ -448,9 +448,9 @@
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 396,
+                    "startOffset": 446,
                     "endColumn": 106,
-                    "endOffset": 498
+                    "endOffset": 548
                 },
                 "from": {
                     "file": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-si-rLK\\values-si-rLK.xml",
@@ -467,9 +467,9 @@
                 "to": {
                     "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 503,
+                    "startOffset": 553,
                     "endColumn": 106,
-                    "endOffset": 605
+                    "endOffset": 655
                 },
                 "from": {
                     "file": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-si-rLK\\values-si-rLK.xml",
@@ -486,9 +486,9 @@
                 "to": {
                     "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 610,
+                    "startOffset": 660,
                     "endColumn": 87,
-                    "endOffset": 693
+                    "endOffset": 743
                 },
                 "from": {
                     "file": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-si-rLK\\values-si-rLK.xml",
@@ -505,9 +505,9 @@
                 "to": {
                     "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 698,
+                    "startOffset": 748,
                     "endColumn": 104,
-                    "endOffset": 798
+                    "endOffset": 848
                 },
                 "from": {
                     "file": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-si-rLK\\values-si-rLK.xml",
@@ -524,9 +524,9 @@
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 803,
+                    "startOffset": 853,
                     "endColumn": 115,
-                    "endOffset": 914
+                    "endOffset": 964
                 },
                 "from": {
                     "file": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-si-rLK\\values-si-rLK.xml",
@@ -543,9 +543,9 @@
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 919,
+                    "startOffset": 969,
                     "endColumn": 88,
-                    "endOffset": 1003
+                    "endOffset": 1053
                 },
                 "from": {
                     "file": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-si-rLK\\values-si-rLK.xml",
@@ -562,9 +562,9 @@
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 1008,
+                    "startOffset": 1058,
                     "endColumn": 86,
-                    "endOffset": 1090
+                    "endOffset": 1140
                 },
                 "from": {
                     "file": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-si-rLK\\values-si-rLK.xml",
@@ -581,9 +581,9 @@
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 1095,
+                    "startOffset": 1145,
                     "endColumn": 83,
-                    "endOffset": 1174
+                    "endOffset": 1224
                 },
                 "from": {
                     "file": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-si-rLK\\values-si-rLK.xml",
@@ -600,9 +600,9 @@
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 1179,
+                    "startOffset": 1229,
                     "endColumn": 108,
-                    "endOffset": 1283
+                    "endOffset": 1333
                 },
                 "from": {
                     "file": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-si-rLK\\values-si-rLK.xml",
@@ -619,9 +619,9 @@
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 1288,
+                    "startOffset": 1338,
                     "endColumn": 104,
-                    "endOffset": 1388
+                    "endOffset": 1438
                 },
                 "from": {
                     "file": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-si-rLK\\values-si-rLK.xml",
@@ -638,9 +638,9 @@
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 1393,
+                    "startOffset": 1443,
                     "endColumn": 97,
-                    "endOffset": 1486
+                    "endOffset": 1536
                 },
                 "from": {
                     "file": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-si-rLK\\values-si-rLK.xml",
@@ -657,9 +657,9 @@
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 1491,
+                    "startOffset": 1541,
                     "endColumn": 109,
-                    "endOffset": 1596
+                    "endOffset": 1646
                 },
                 "from": {
                     "file": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-si-rLK\\values-si-rLK.xml",
@@ -676,9 +676,9 @@
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 1601,
+                    "startOffset": 1651,
                     "endColumn": 98,
-                    "endOffset": 1695
+                    "endOffset": 1745
                 },
                 "from": {
                     "file": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-si-rLK\\values-si-rLK.xml",
@@ -695,9 +695,9 @@
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 1700,
+                    "startOffset": 1750,
                     "endColumn": 105,
-                    "endOffset": 1801
+                    "endOffset": 1851
                 },
                 "from": {
                     "file": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-si-rLK\\values-si-rLK.xml",
@@ -714,9 +714,9 @@
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1806,
+                    "startOffset": 1856,
                     "endColumn": 120,
-                    "endOffset": 1922
+                    "endOffset": 1972
                 },
                 "from": {
                     "file": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-si-rLK\\values-si-rLK.xml",
@@ -733,9 +733,9 @@
                 "to": {
                     "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 1927,
+                    "startOffset": 1977,
                     "endColumn": 98,
-                    "endOffset": 2021
+                    "endOffset": 2071
                 },
                 "from": {
                     "file": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-si-rLK\\values-si-rLK.xml",
@@ -752,9 +752,28 @@
                 "to": {
                     "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 2026,
+                    "startOffset": 2076,
+                    "endColumn": 229,
+                    "endOffset": 2301
+                },
+                "from": {
+                    "file": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.4.0\\res\\values-si-rLK\\common_strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 170,
+                        "endColumn": 233,
+                        "endOffset": 399
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 2306,
                     "endColumn": 100,
-                    "endOffset": 2122
+                    "endOffset": 2402
                 },
                 "from": {
                     "file": "C:\\Users\\jessa\\Desktop\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-si-rLK\\values-si-rLK.xml",

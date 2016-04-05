@@ -10,6 +10,7 @@ import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -21,6 +22,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -39,10 +41,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     final String [] weight_metrics = {"kg","lbs","st and lbs"};
     final String [] height_metrics = {"cm","ft and in"};
     //Max/min heights/weights are in cm/kg
-    public static final int MAX_HEIGHT = 300, /*7 ft*/
-                            MIN_HEIGHT = 50, /*4 ft 6*/
+    public static final int MAX_HEIGHT = 270,
+                            MIN_HEIGHT = 10,
                             MAX_WEIGHT = 300,
-                            MIN_WEIGHT = 30;
+                            MIN_WEIGHT = 10;
     View view;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (((first.getText().toString()).equals("")) && ((second.getText().toString()).equals(""))) {
                 return 0;
             } else {
+                heightset = true;
                 double feet = (Double.parseDouble(first.getText().toString())) * 30.48;
                 double inches = (Double.parseDouble(second.getText().toString())) * 2.54;
                 // ADD TO DATABASE => height
@@ -232,8 +235,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         input2.setVisibility(view.VISIBLE);
                         input.getLayoutParams().width = 200;
                         input2.getLayoutParams().width = 200;
-                        input2.setFilters(new InputFilter[]{new InputFilter.LengthFilter(1)});
-                        input.setFilters(new InputFilter[]{new InputFilter.LengthFilter(1)});
+                        input2.setFilters(new InputFilter[]{new InputFilter.LengthFilter(2)});
+                        input.setFilters(new InputFilter[]{new InputFilter.LengthFilter(2)});
                     } else {
                         input2.setVisibility(view.GONE);
                         input.getLayoutParams().width = 300;
@@ -252,57 +255,80 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         helpBuilder.setPositiveButton("Submit", new DialogInterface.OnClickListener() {
 
             public void onClick(DialogInterface dialog, int which) {
-                if ((metrics.getSelectedItem().toString()).equals("cm") || (metrics.getSelectedItem().toString()).equals("ft and in")) {
-                    if ((metrics.getSelectedItem().toString()).equals("ft and in")) {
-                        if (checkHeightValid(input, input2)) {
-                            height.setText(input.getText() + " ft" + input2.getText() + " in");
-                            //ADD TO DATABASE
-                            db_height = height.getText().toString();
-                            user_height=getHeight(input, input2);
-                        } else dialog.dismiss();
-                    } else {
-                        if (checkHeightValid(input, input2)) {
-                            height.setText(input.getText() + " cm");
-                            //ADD TO DATABASE
-                            db_height = height.getText().toString();
-                            user_height=getHeight(input, input2);
-                        } else dialog.dismiss();
-                    }
-                } else {
-                    if ((metrics.getSelectedItem().toString()).equals("st and lbs")) {
-                        if (checkWeightValid(input, input2, "st and lbs")) {
-                            weight.setText(input.getText() + " st" + input2.getText() + " lbs"); /*maybe put thing here*/
-                            //ADD TO DATABASE
-                            db_weight = weight.getText().toString();
-                            user_weight=getWeight(input, input2, "st and lbs");
-                            Log.v("Weight"," "+user_weight);
-                        } else dialog.dismiss();
-
-                    } else {
-                        if ((metrics.getSelectedItem().toString()).equals("lbs")) {
-                            if (checkWeightValid(input, input2, "lbs")) {
-                                weight.setText(input.getText() + " lbs");
+                if (!(input.getText().toString()).matches("")) {
+                    if ((metrics.getSelectedItem().toString()).equals("cm") || (metrics.getSelectedItem().toString()).equals("ft and in")) {
+                        if ((metrics.getSelectedItem().toString()).equals("ft and in")) {
+                            if (checkHeightValid(input, input2)) {
+                                height.setText(input.getText() + " ft" + input2.getText() + " in");
                                 //ADD TO DATABASE
-                                db_weight = weight.getText().toString();
-                                user_weight=getWeight(input, input2, "lbs");
-                                Log.v("Weight"," "+user_weight);
-                            } else dialog.dismiss();
-                        } else {
-                            if (checkWeightValid(input, input2, "kg")) {
-                                weight.setText(input.getText() + " kg");
-                                //ADD TO DATABASE
-                                db_weight = weight.getText().toString();
-
-                                user_weight=getWeight(input, input2, "kg");
-                                Log.v("Weight"," "+user_weight);
+                                db_height = height.getText().toString();
+                                user_height = getHeight(input, input2);
+                            } else {
+                                CharSequence text = "Invalid Height";
+                                Toast toast = Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT);
+                                toast.setGravity(Gravity.CENTER, 0, 0);
+                                toast.show();
                             }
-                            else dialog.dismiss();
+                        } else {
+                            if (checkHeightValid(input, input2)) {
+                                height.setText(input.getText() + " cm");
+                                //ADD TO DATABASE
+                                db_height = height.getText().toString();
+                                user_height = getHeight(input, input2);
+                            } else {
+                                CharSequence text = "Invalid Height";
+                                Toast toast = Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT);
+                                toast.setGravity(Gravity.CENTER, 0, 0);
+                                toast.show();
+                            }
+                        }
+                    } else {
+                        if ((metrics.getSelectedItem().toString()).equals("st and lbs")) {
+                            if (checkWeightValid(input, input2, "st and lbs")) {
+                                weight.setText(input.getText() + " st" + input2.getText() + " lbs"); /*maybe put thing here*/
+                                //ADD TO DATABASE
+                                db_weight = weight.getText().toString();
+                                user_weight = getWeight(input, input2, "st and lbs");
+                            } else {
+                                CharSequence text = "Invalid Weight";
+                                Toast toast = Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT);
+                                toast.setGravity(Gravity.CENTER, 0, 0);
+                                toast.show();
+                            }
+
+                        } else {
+                            if ((metrics.getSelectedItem().toString()).equals("lbs")) {
+                                if (checkWeightValid(input, input2, "lbs")) {
+                                    weight.setText(input.getText() + " lbs");
+                                    //ADD TO DATABASE
+                                    db_weight = weight.getText().toString();
+                                    user_weight = getWeight(input, input2, "lbs");
+                                } else {
+                                    CharSequence text = "Invalid Weight";
+                                    Toast toast = Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT);
+                                    toast.setGravity(Gravity.CENTER, 0, 0);
+                                    toast.show();
+                                }
+                            } else {
+                                if (checkWeightValid(input, input2, "kg")) {
+                                    weight.setText(input.getText() + " kg");
+                                    //ADD TO DATABASE
+                                    db_weight = weight.getText().toString();
+
+                                    user_weight = getWeight(input, input2, "kg");
+                                } else {
+                                    CharSequence text = "Invalid Weight";
+                                    Toast toast = Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT);
+                                    toast.setGravity(Gravity.CENTER, 0, 0);
+                                    toast.show();
+                                }
+                            }
                         }
                     }
+                } else {
+                    dialog.dismiss();
                 }
-
-                dialog.dismiss();
-        }
+            }
         });
         helpBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
 
@@ -316,19 +342,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 public static boolean checkHeightValid(EditText first, EditText second){
     if((second.getText().toString()).equals("")){
-        if((Double.parseDouble(first.getText().toString())) < MAX_HEIGHT
-                && (Double.parseDouble(first.getText().toString())) > MIN_HEIGHT){
+        if((Double.parseDouble(first.getText().toString())) <= MAX_HEIGHT
+                && (Double.parseDouble(first.getText().toString())) >= MIN_HEIGHT){
             return true;
         }
-        else return false;
+        else {
+            return false;
+        }
     }
     else{
         double feet = (Double.parseDouble(first.getText().toString())) * 30.48;
         double inches = (Double.parseDouble(second.getText().toString())) * 2.54;
-        if(feet + inches < MAX_HEIGHT && feet + inches > MIN_HEIGHT){
+        if(feet + inches <= MAX_HEIGHT && feet + inches >= MIN_HEIGHT){
             return true;
         }
-        else return false;
+        else{
+            return false;
+        }
     }
 }
     public static boolean checkWeightValid(EditText first, EditText second, String type){
