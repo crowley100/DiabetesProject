@@ -2,9 +2,8 @@ package com.example.maxim.diabetesireland;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,15 +14,15 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 /**
  * A placeholder fragment containing a simple view.
  */
 public class ProfileFragment extends Fragment {
     View view;
+    DatabaseHelper mydb;
+    double [] user_data = new double [3];
     double weight,height,age;
-    String db_weight,db_height;
+    double db_weight,db_height;
     String gender,bmi;
     TextView weight_text,height_text;
     final String [] weight_metrics = {"kg","lbs","st and lbs"};
@@ -38,21 +37,29 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        mydb = new DatabaseHelper(getActivity());
+        user_data = mydb.fetchUserData();
         view=inflater.inflate(R.layout.fragment_profile, container, false);
         weight_text = (TextView) view.findViewById(R.id.updated_weight);
         //FETCH WEIGHT FROM DATABASE
+        db_weight = user_data[2];
         weight_text.setText("Weight: " +db_weight);
         height_text = (TextView) view.findViewById(R.id.updated_height);
         //FETCH HEIGHT FROM DATABASE
+        db_height = user_data[1];
         height_text.setText("Height: "+db_height);
         TextView age_text = (TextView) view.findViewById(R.id.age_text);
         //FETCH AGE FROM DATA BASE
+        age = user_data[0];
         age_text.setText("Age: " + (int)age + " years old");
         TextView bmi_text = (TextView) view.findViewById(R.id.bmi_text);
-        bmi_text.setText(bmi);
+        weight = db_weight;
+        height = db_height;
         calcBMI();
+        bmi_text.setText(bmi);
         TextView gender_text = (TextView) view.findViewById(R.id.gender_text);
         //FETCH GENDER TO DATABASE
+        gender = mydb.fetchUserGender();
         gender_text.setText("Gender: " +gender);
         Button height_update = (Button) view.findViewById(R.id.height_update);
         Button weight_update = (Button) view.findViewById(R.id.weight_update);
@@ -126,26 +133,26 @@ public class ProfileFragment extends Fragment {
                 if ((metrics.getSelectedItem().toString()).equals("cm") || (metrics.getSelectedItem().toString()).equals("ft and in")) {
                     if ((metrics.getSelectedItem().toString()).equals("ft and in")) {
                         height_text.setText("Height: "+ input.getText() + " ft " + input2.getText() + " in");
-                        getHeight(height, input, input2);
+                        getHeight(input, input2);
                         calcBMI();
                     } else {
                         height_text.setText("Height: "+ input.getText() + " cm");
-                        getHeight(height, input, input2);
+                        getHeight(input, input2);
                         calcBMI();
                     }
                 } else {
                     if ((metrics.getSelectedItem().toString()).equals("st and lbs")) {
                         weight_text.setText("Weight: "+ input.getText() + " st " + input2.getText() + " lbs");
-                        getWeight(weight, input, input2, "st and lbs");
+                        getWeight(input, input2, "st and lbs");
                         calcBMI();
                     } else {
                         if ((metrics.getSelectedItem().toString()).equals("lbs")) {
                             weight_text.setText("Weight: "+ input.getText() + " lbs");
-                            getWeight(weight, input, input2, "lbs");
+                            getWeight(input, input2, "lbs");
                             calcBMI();
                         } else {
                             weight_text.setText("Weight: "+ input.getText() + " kg");
-                            getWeight(weight, input, input2, "kg");
+                            getWeight(input, input2, "kg");
                             calcBMI();
                         }
                     }
@@ -162,27 +169,31 @@ public class ProfileFragment extends Fragment {
         AlertDialog helpDialog = helpBuilder.create();
         helpDialog.show();
     }
-    private void getHeight(double height,EditText first,EditText second){
+    private void getHeight(EditText first,EditText second){
         if((second.getText().toString()).equals("")) {
             // UPDATE TO DATABASE => height
             height =(Double.parseDouble(first.getText().toString()));
+            mydb.updateHeight(height);
         }
         else{
             double feet = (Double.parseDouble(first.getText().toString())) * 30.48;
             double inches = (Double.parseDouble(second.getText().toString())) * 2.54;
             // UPDATE TO DATABASE => height
             height= feet + inches;
+            mydb.updateHeight(height);
         }
     }
-    private void getWeight(double weight,EditText first,EditText second,String type){
+    private void getWeight(EditText first,EditText second,String type){
         if((second.getText().toString()).equals("")) {
             if(type.equals("lbs")) {
                 // UPDATE TO DATABASE => weight
                 weight = ((Double.parseDouble(first.getText().toString())) * 0.453592);
+                mydb.updateWeight(weight);
             }
             else {
                 // UPDATE TO DATABASE => weight
                 weight = ((Double.parseDouble(first.getText().toString())));
+                mydb.updateWeight(weight);
             }
 
         }
@@ -191,6 +202,7 @@ public class ProfileFragment extends Fragment {
             double pounds = (Double.parseDouble(second.getText().toString())) * 0.453592;
             // UPDATE TO DATABASE => weight
             weight = stoneNum + pounds;
+            mydb.updateWeight(weight);
         }
     }
     private void calcBMI(){
@@ -202,7 +214,7 @@ public class ProfileFragment extends Fragment {
             bmi = "BMI: Healthy Weight " + calc_bmi;
         }
         else if((calc_bmi > 25.0) && (calc_bmi <29.9)){
-            bmi = "BMI: OverWeight " + calc_bmi;
+            bmi = "BMI: Overweight " + calc_bmi;
         }
         else {
             bmi ="BMI: Obese " + calc_bmi;

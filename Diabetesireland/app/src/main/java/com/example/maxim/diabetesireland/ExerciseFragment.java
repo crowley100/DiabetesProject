@@ -2,8 +2,8 @@ package com.example.maxim.diabetesireland;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +11,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.TextView;
-
-import java.lang.CharSequence;
 
 
 /**
@@ -23,6 +20,7 @@ public class ExerciseFragment extends Fragment {
     View view;
     private View helpLayout;
 
+    DatabaseHelper mydb;
 
     private Spinner exerciseSpinner;
     private static final String[] exerciseDurations = {"15", "30", "45", "60"};
@@ -46,6 +44,7 @@ public class ExerciseFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        mydb = new DatabaseHelper(getActivity());
         view =inflater.inflate(R.layout.fragment_exercise, container, false);
         lightButton = (Button) view.findViewById(R.id.lightbutton);
         mediumButton = (Button) view.findViewById(R.id.mediumbutton);
@@ -112,13 +111,22 @@ public class ExerciseFragment extends Fragment {
                 vigorousButton.setBackgroundColor(0xffdbdbdb); //light grey
                 if(touchedLight){
                     //Add to database
-                    setExercise("Light");setDuration(currentDuration);}
+                    setExercise("LIGHT_EXERCISE");
+                    setDuration(currentDuration);
+                    mydb.updateDailyExercise(exerciseDuration, exerciseType);
+                }
                 else if(touchedMedium){
                     //Add to database
-                    setExercise("Medium");setDuration(currentDuration);}
+                    setExercise("MODERATE_EXERCISE");
+                    setDuration(currentDuration);
+                    mydb.updateDailyExercise(exerciseDuration, exerciseType);
+                }
                 else if(touchedVigorous){
                     //Add to database
-                    setExercise("Vigorous");setDuration(currentDuration);}
+                    setExercise("VIGOROUS_EXERCISE");
+                    setDuration(currentDuration);
+                    mydb.updateDailyExercise(exerciseDuration, exerciseType);
+                }
                 touchedLight = false;
                 touchedMedium = false;
                 touchedVigorous = false;

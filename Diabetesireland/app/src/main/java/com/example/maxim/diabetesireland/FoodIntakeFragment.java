@@ -1,11 +1,7 @@
 package com.example.maxim.diabetesireland;
 
-import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -16,12 +12,11 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import java.util.Scanner;
-
 public class FoodIntakeFragment extends Fragment {
     private View view;
     private View radioLayout;
     float carb,fg,water,dairy,protein,alc,oil,treats;
+    DatabaseHelper myDb;
 
     public static FoodIntakeFragment newInstance() {
         return new FoodIntakeFragment();
@@ -38,6 +33,7 @@ public class FoodIntakeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        myDb = new DatabaseHelper(getActivity());
         view= inflater.inflate(R.layout.fragment_food_intake, container, false);
         Button showPopUpButton = (Button) view.findViewById(R.id.waterbutton);
         showPopUpButton.setOnClickListener(new View.OnClickListener() {
@@ -160,33 +156,40 @@ public class FoodIntakeFragment extends Fragment {
         switch (type){
             case "Water":
                 //UPDATE Water count on database
-
-                water += portionSize;
+                water = portionSize;
                 Log.v("portion",""+water);
+                myDb.updateDailyFood(portionSize, "WATER_INTAKE");
                 break;
             case "Fruit and Veg":
                 // UPDATE Fruits and Veg count on database
-                fg+= portionSize;
+                fg = portionSize;
+                myDb.updateDailyFood(portionSize, "FRUITandVEG_INTAKE");
                 break;
             case "Carbohydrates":
                 // UPDATE carb count on database
-                carb+=portionSize;
+                carb = portionSize;
+                myDb.updateDailyFood(portionSize, "CARBOHyDRATE_INTAKE");
                 break;
             case "Dairy":
                 //UPDATE
-                dairy+=portionSize;
+                dairy = portionSize;
+                myDb.updateDailyFood(portionSize, "DAIRY_INTAKE");
                 break;
             case "Protein":
-                protein+=portionSize;
+                protein = portionSize;
+                myDb.updateDailyFood(portionSize, "PROTEIN_INTAKE");
                 break;
             case "Alcohol":
-                alc+=portionSize;
+                alc = portionSize;
+                myDb.updateDailyFood(portionSize, "ALCOHOL_INTAKE");
                 break;
             case "Fats":
-                oil+=portionSize;
+                oil = portionSize;
+                myDb.updateDailyFood(portionSize, "FAT_INTAKE");
                 break;
             case "Treats":
-                treats+=portionSize;
+                treats = portionSize;
+                myDb.updateDailyFood(portionSize, "TREATS_INTAKE");
                 break;
         }
     }

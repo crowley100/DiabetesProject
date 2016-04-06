@@ -6,9 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
 import android.text.InputFilter;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +17,6 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -27,8 +24,8 @@ import java.util.GregorianCalendar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     boolean touchedMale, touchedFemale= false;
-
-    String registered = "notRegistered";String gender = "Male",db_weight,db_height;
+    DatabaseHelper mydb;
+    String gender = "Male",db_weight,db_height;
     int user_age;
     double user_height,user_weight;
     public static Button maleButton, femaleButton,nextScreen,dateOfBirth,weight,height;
@@ -42,8 +39,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // fetch String registered from database
-        if((registered.equals("registered"))){
+        mydb = new DatabaseHelper(this);
+        // method call to check if database already has user info
+        if(!(mydb.isEmpty())){
             Intent i =  new Intent(MainActivity.this, TabActivity.class);
             startActivity(i);
             finish();
@@ -81,34 +79,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void getHeight(double height,EditText first,EditText second){
+    private double getHeight(EditText first, EditText second){
         if((second.getText().toString()).equals("")) {
-            // ADD TO DATABASE => height
-            height =(Double.parseDouble(first.getText().toString()));
+            return (Double.parseDouble(first.getText().toString()));
         }
         else{
             double feet = (Double.parseDouble(first.getText().toString())) * 30.48;
             double inches = (Double.parseDouble(second.getText().toString())) * 2.54;
-            // ADD TO DATABASE => height
-            height= feet + inches;
+            return (feet + inches);
         }
     }
-    private void getWeight(double weight,EditText first,EditText second,String type){
+    private double getWeight(EditText first, EditText second, String type){
         if((second.getText().toString()).equals("")) {
             if(type.equals("lbs")) {
-                // ADD TO DATABASE => weight
-                weight = ((Double.parseDouble(first.getText().toString())) * 0.453592);
+                return ((Double.parseDouble(first.getText().toString())) * 0.453592);
             }
             else {
-                weight = ((Double.parseDouble(first.getText().toString())));
+                return ((Double.parseDouble(first.getText().toString())));
             }
 
         }
         else {
             double stoneNum = (Double.parseDouble(first.getText().toString())) * 6.35029;
             double pounds = (Double.parseDouble(second.getText().toString())) * 0.453592;
-            // ADD TO DATABASE => weight
-            weight = stoneNum + pounds;
+            return (stoneNum + pounds);
         }
     }
 
@@ -119,7 +113,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (!touchedMale) {
                     touchedFemale = false;
                     touchedMale = true;
-                    // ADD TO DATABASE
                     gender="Male";
                     maleButton.setBackgroundColor(0xff3F1451); //purple
                     maleButton.setTextColor(0xffffffff); //white
@@ -131,7 +124,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (!touchedFemale) {
                     touchedFemale = true;
                     touchedMale = false;
-                    //ADD TO DATABASE
                     gender="Female";
                     femaleButton.setBackgroundColor(0xff3F1451);//purple
                     femaleButton.setTextColor(0xffffffff); // white text
@@ -140,10 +132,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.continueButton:
-                // ADD TO DATABASE = registered
-                registered="registered";
-                    AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                    builder.setMessage(R.string.disclaimer)
+                mydb.insertUserData(user_age, gender, user_height, user_weight, "goal");// some goal
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setMessage(R.string.disclaimer)
                             .setPositiveButton("Accept", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
                                     intent = new Intent(MainActivity.this, TabActivity.class);
@@ -224,32 +215,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if ((metrics.getSelectedItem().toString()).equals("cm") || (metrics.getSelectedItem().toString()).equals("ft and in")) {
                     if ((metrics.getSelectedItem().toString()).equals("ft and in")) {
                         height.setText(input.getText() + " ft" + input2.getText() + " in");
-                        //ADD TO DATABASE
-                        db_height=height.getText().toString();
-                        getHeight(user_height, input, input2);
+                        db_height = height.getText().toString();
+                        user_height = getHeight(input, input2);
                     } else {
                         height.setText(input.getText() + " cm");
-                        //ADD TO DATABASE
-                        db_height=height.getText().toString();
-                        getHeight(user_height, input, input2);
+                        db_height = height.getText().toString();
+                        user_height = getHeight(input, input2);
                     }
                 } else {
                     if ((metrics.getSelectedItem().toString()).equals("st and lbs")) {
                         weight.setText(input.getText() + " st" + input2.getText() + " lbs");
-                        //ADD TO DATABASE
-                        db_weight=weight.getText().toString();
-                        getWeight(user_weight, input, input2,"st and lbs");
+                        db_weight = weight.getText().toString();
+                        user_weight = getWeight(input, input2, "st and lbs");
                     } else {
                         if ((metrics.getSelectedItem().toString()).equals("lbs")) {
                             weight.setText(input.getText() + " lbs");
-                            //ADD TO DATABASE
                             db_weight=weight.getText().toString();
-                            getWeight(user_weight, input, input2,"lbs");
+                            user_weight = getWeight(input, input2, "lbs");
                         } else {
                             weight.setText(input.getText() + " kg");
-                            //ADD TO DATABASE
                             db_weight=weight.getText().toString();
-                            getWeight(user_weight, input, input2,"kg");
+                            user_weight = getWeight(input, input2, "kg");
                         }
                     }
                 }
