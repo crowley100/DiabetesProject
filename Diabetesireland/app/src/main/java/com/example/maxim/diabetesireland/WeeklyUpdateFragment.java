@@ -89,11 +89,11 @@ public class WeeklyUpdateFragment extends Fragment {
         thisWeek=(TextView)view.findViewById(R.id.thisWeek);
         String [] labels = createLabels();
         allowances=(averageVar*10)-sumAll(weeklyCarbs[0],weeklyCarbs[1],weeklyCarbs[2],weeklyCarbs[3],weeklyCarbs[4],weeklyCarbs[5],weeklyCarbs[6]);
-        goals.setText("Goals Reached");
+        goals.setText("Goals Reached\n" + goalsReached);
         goals.setTextSize(18);
-        average.setText("Average Steps Per Day " + getAverage(weeklySteps[0],weeklySteps[1],weeklySteps[2],weeklySteps[3],weeklySteps[4],weeklySteps[5],weeklySteps[6]));
+        average.setText("Average Steps Per Day\n " + getAverage(weeklySteps[0],weeklySteps[1],weeklySteps[2],weeklySteps[3],weeklySteps[4],weeklySteps[5],weeklySteps[6]));
         average.setTextSize(18);
-        thisWeek.setText("Steps This Week " + sumAll(weeklySteps[0],weeklySteps[1],weeklySteps[2],weeklySteps[3],weeklySteps[4],weeklySteps[5],weeklySteps[6]));
+        thisWeek.setText("Steps This Week\n " + sumAll(weeklySteps[0],weeklySteps[1],weeklySteps[2],weeklySteps[3],weeklySteps[4],weeklySteps[5],weeklySteps[6]));
         thisWeek.setTextSize(18);
         //GRAPHVIEW FOR STEPS
         stepSeries = new BarGraphSeries<DataPoint>(stepsTaken);
@@ -127,11 +127,11 @@ public class WeeklyUpdateFragment extends Fragment {
                     graphView.removeAllSeries();
                     graphView.addSeries(stepSeries);
                     stepSeries.setSpacing(50);
-                    goals.setText("Goals Reached "+ goalsReached);
+                    goals.setText("Goals Reached\n"+ goalsReached);
                     goals.setTextSize(18);
-                    average.setText("Average Steps Per Day "+getAverage(weeklySteps[0],weeklySteps[1],weeklySteps[2],weeklySteps[3],weeklySteps[4],weeklySteps[5],weeklySteps[6]));
+                    average.setText("Average Steps Per Day\n"+getAverage(weeklySteps[0],weeklySteps[1],weeklySteps[2],weeklySteps[3],weeklySteps[4],weeklySteps[5],weeklySteps[6]));
                     average.setTextSize(18);
-                    thisWeek.setText("Steps This Week " + sumAll(weeklySteps[0],weeklySteps[1],weeklySteps[2],weeklySteps[3],weeklySteps[4],weeklySteps[5],weeklySteps[6]));
+                    thisWeek.setText("Steps This Week\n" + sumAll(weeklySteps[0],weeklySteps[1],weeklySteps[2],weeklySteps[3],weeklySteps[4],weeklySteps[5],weeklySteps[6]));
                     thisWeek.setTextSize(18);
 
                 }
@@ -152,11 +152,11 @@ public class WeeklyUpdateFragment extends Fragment {
                     graphView.getGridLabelRenderer().setHorizontalAxisTitle("            Days");
                     graphView.removeAllSeries();
                     graphView.addSeries(carbSeries);
-                    goals.setText("Total Carbohydrates Allowances For The Week " + allowances);
+                    goals.setText("Total Carbohydrates Allowances For The Week:\n" + allowances);
                     goals.setTextSize(18);
-                    average.setText("Average Carbohydrate Portion Per Day " +getAverage(weeklyCarbs[0],weeklyCarbs[1],weeklyCarbs[2],weeklyCarbs[3],weeklyCarbs[4],weeklyCarbs[5],weeklyCarbs[6]));
+                    average.setText("Average Carbohydrate Portion Per Day:\n" +getAverage(weeklyCarbs[0],weeklyCarbs[1],weeklyCarbs[2],weeklyCarbs[3],weeklyCarbs[4],weeklyCarbs[5],weeklyCarbs[6]));
                     average.setTextSize(18);
-                    thisWeek.setText("Total Portion of Carbohydrates This Week " + sumAll(weeklyCarbs[0],weeklyCarbs[1],weeklyCarbs[2],weeklyCarbs[3],weeklyCarbs[4],weeklyCarbs[5],weeklyCarbs[6]));
+                    thisWeek.setText("Total Portion of Carbohydrates This Week:\n" + sumAll(weeklyCarbs[0],weeklyCarbs[1],weeklyCarbs[2],weeklyCarbs[3],weeklyCarbs[4],weeklyCarbs[5],weeklyCarbs[6]));
                     thisWeek.setTextSize(18);
                 }
             }

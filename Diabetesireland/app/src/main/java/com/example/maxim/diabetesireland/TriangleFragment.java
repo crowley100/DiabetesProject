@@ -89,10 +89,8 @@ public class TriangleFragment extends Fragment implements SensorEventListener {
         }
         view = inflater.inflate(R.layout.fragment_triangle, container, false);
         pedometer = (TextView) view.findViewById(R.id.step_number);
-        //FETCH steps count from DATABASE
         steps = mydb.getSteps();
         dashedCircularProgress = (DashedCircularProgress) view.findViewById(R.id.circleView);
-       // animate();
         dashedCircularProgress.setOnValueChangeListener(
                 new DashedCircularProgress.OnValueChangeListener() {
                     @Override
@@ -101,15 +99,37 @@ public class TriangleFragment extends Fragment implements SensorEventListener {
 
                     }
                 });
+
         carbProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.carb_prog);
+
+        if((mydb.fetchUserGender()).equals("Male")){
+            carbProgress.setMax(6);
+            alcProgress.setMax(5);
+        }
+        else{
+            carbProgress.setMax(5);
+            alcProgress.setMax(3);
+        }
         waterProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.water_prog);
+        waterProgress.setMax(10);
+
         fgProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.fg_prog);
+        fgProgress.setMax(6);
+
         dairyProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.dairy_prog);
+        dairyProgress.setMax(4);
+
         proteinProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.protein_prog);
+        proteinProgress.setMax(2);
+
         alcProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.alcohol_prog);
+
         oilProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.oil_prog);
+        oilProgress.setMax(2);
+
         treatsProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.treats_prog);
-        //FETCH carb count from DATABASE
+        treatsProgress.setMax(2);
+
         if(carbProgress.getProgress()<carbProgress.getMax()) {
             carbProgress.setProgressColor(Color.parseColor("#FFBB33"));
         }
@@ -119,28 +139,21 @@ public class TriangleFragment extends Fragment implements SensorEventListener {
         carb = foodAndDrink[5];
         carbProgress.setProgress(carb);
 
-        //FETCH water count from DATABASE
         water = foodAndDrink[5];
         waterProgress.setProgress(water);
 
-        //FETCH fruit and veg count from DATABASE
         fg = foodAndDrink[3];
         fgProgress.setProgress(fg);
 
-        //FETCH dairy count from DATABASE
         dairy = foodAndDrink[2];
         dairyProgress.setProgress(dairy);
 
-        //FETCH protein count from DATABASE
         protein = foodAndDrink[1];
         proteinProgress.setProgress(protein);
 
-
-        //FETCH alcohol count from DATABASE
         alc=foodAndDrink[7];
         alcProgress.setProgress(alc);
 
-        //FETCH oil count from DATABASE
         oil = foodAndDrink[4];
         oilProgress.setProgress(oil);
 
@@ -169,7 +182,7 @@ public class TriangleFragment extends Fragment implements SensorEventListener {
 
     public void onSensorChanged(SensorEvent event) {
         synchronized (this) {
-            int h = 480; // TODO: remove this constant
+            int h = 480;
             mYOffset = h * 0.5f;
             mScale[0] = -(h * 0.5f * (1.0f / (SensorManager.STANDARD_GRAVITY * 2)));
             mScale[1] = -(h * 0.5f * (1.0f / (SensorManager.MAGNETIC_FIELD_EARTH_MAX)));
@@ -189,7 +202,7 @@ public class TriangleFragment extends Fragment implements SensorEventListener {
                         float direction = (v > mLastValues[k] ? 1 : (v < mLastValues[k] ? -1 : 0));
                         if (direction == -mLastDirections[k]) {
                             // Direction changed
-                            int extType = (direction > 0 ? 0 : 1); // minumum or maximum?
+                            int extType = (direction > 0 ? 0 : 1);
                             mLastExtremes[extType][k] = mLastValues[k];
                             float diff = Math.abs(mLastExtremes[extType][k] - mLastExtremes[1 - extType][k]);
 

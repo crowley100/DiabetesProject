@@ -39,7 +39,6 @@ public class PedometerService extends Service{
 
     public class LocalBinder extends Binder {
         public PedometerService getService() {
-            // Return this instance of LocalService so clients can call public methods
             return PedometerService.this;
         }
     }
@@ -52,7 +51,7 @@ public class PedometerService extends Service{
     public void getSteps(SensorEvent event) {
 
         synchronized (this) {
-            int h = 480; // TODO: remove this constant
+            int h = 480;
             mYOffset = h * 0.5f;
             mScale[0] = -(h * 0.5f * (1.0f / (SensorManager.STANDARD_GRAVITY * 2)));
             mScale[1] = -(h * 0.5f * (1.0f / (SensorManager.MAGNETIC_FIELD_EARTH_MAX)));
@@ -71,8 +70,7 @@ public class PedometerService extends Service{
 
                         float direction = (v > mLastValues[k] ? 1 : (v < mLastValues[k] ? -1 : 0));
                         if (direction == -mLastDirections[k]) {
-                            // Direction changed
-                            int extType = (direction > 0 ? 0 : 1); // minumum or maximum?
+                            int extType = (direction > 0 ? 0 : 1);
                             mLastExtremes[extType][k] = mLastValues[k];
                             float diff = Math.abs(mLastExtremes[extType][k] - mLastExtremes[1 - extType][k]);
 
@@ -118,7 +116,6 @@ public class PedometerService extends Service{
 
     @Override
     public void onDestroy() {
-        // TODO Auto-generated method stub
         mSensorManager.unregisterListener(stepListener);
         super.onDestroy();
     }
@@ -127,7 +124,6 @@ public class PedometerService extends Service{
 
         @Override
         public void onSensorChanged(SensorEvent event) {
-            // TODO Auto-generated method stub
             if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
                 getSteps(event);
                 sendSteps();
@@ -136,7 +132,6 @@ public class PedometerService extends Service{
 
         @Override
         public void onAccuracyChanged(Sensor sensor, int accuracy) {
-            // TODO Auto-generated method stub
 
         }
 

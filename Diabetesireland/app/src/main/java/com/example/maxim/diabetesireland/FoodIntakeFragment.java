@@ -146,7 +146,7 @@ public class FoodIntakeFragment extends Fragment {
         if(type.equals("Water")) {
             ((RadioButton) radioGroup.getChildAt(0)).setText("1 glass(200 ml)");
             ((RadioButton) radioGroup.getChildAt(1)).setText("1/2 glass(100 ml)");
-            ((RadioButton) radioGroup.getChildAt(2)).setText("1/4 glass(40 ml)");
+            ((RadioButton) radioGroup.getChildAt(2)).setText("1/4 glass(50 ml)");
         }
         else if(type.equals("Alcohol")) {
             ((RadioButton) radioGroup.getChildAt(0)).setText("5 units");
