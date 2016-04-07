@@ -102,14 +102,7 @@ public class TriangleFragment extends Fragment implements SensorEventListener {
 
         carbProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.carb_prog);
 
-        if((mydb.fetchUserGender()).equals("Male")){
-            carbProgress.setMax(6);
-            alcProgress.setMax(5);
-        }
-        else{
-            carbProgress.setMax(5);
-            alcProgress.setMax(3);
-        }
+
         waterProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.water_prog);
         waterProgress.setMax(10);
 
@@ -123,7 +116,14 @@ public class TriangleFragment extends Fragment implements SensorEventListener {
         proteinProgress.setMax(2);
 
         alcProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.alcohol_prog);
-
+        if((mydb.fetchUserGender()).equals("Male")){
+            carbProgress.setMax(6);
+            alcProgress.setMax(5);
+        }
+        else{
+            carbProgress.setMax(5);
+            alcProgress.setMax(3);
+        }
         oilProgress = (IconRoundCornerProgressBar) view.findViewById(R.id.oil_prog);
         oilProgress.setMax(2);
 
