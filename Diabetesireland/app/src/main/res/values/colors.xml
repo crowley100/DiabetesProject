@@ -4,7 +4,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-
+    <color name="red_progress">#8d0000</color>
     <color name="progress_color_bg">#F2F2F2</color>
     <color name="carb_color_icon">#FF8C1A</color>
     <color name="carb_color_progress">#FFBB33</color>

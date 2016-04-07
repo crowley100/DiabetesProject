@@ -59,6 +59,9 @@
             android:label="@string/title_activity_tab"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait"/>
+        <service
+            android:name="com.example.maxim.diabetesireland.PedometerService">
+            </service>
     </application>
 
 </manifest>

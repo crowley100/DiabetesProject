@@ -33,9 +33,9 @@ public final class R {
 		public static final int rcTextProgressSize = 0x7f0100be;
 	}
 	public static final class color {
-		public static final int round_corner_progress_bar_background_default = 0x7f0c0051;
-		public static final int round_corner_progress_bar_progress_default = 0x7f0c0052;
-		public static final int round_corner_progress_bar_secondary_progress_default = 0x7f0c0053;
+		public static final int round_corner_progress_bar_background_default = 0x7f0c0052;
+		public static final int round_corner_progress_bar_progress_default = 0x7f0c0053;
+		public static final int round_corner_progress_bar_secondary_progress_default = 0x7f0c0054;
 	}
 	public static final class id {
 		public static final int iv_progress_icon = 0x7f0d00c4;

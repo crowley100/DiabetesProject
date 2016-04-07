@@ -22,7 +22,25 @@ public class FoodIntakeFragment extends Fragment {
     private View view;
     private View radioLayout;
     float carb = 0,fg = 0, water = 0, dairy = 0, protein = 0, alc = 0, oil = 0, treats = 0;
+    //Default value for gender
+    String gender="Male";
+    DatabaseHelper myDb;
+    private foodIntakeFragmentListener mListener;
 
+
+    public interface foodIntakeFragmentListener {
+        void sendPortionSize(float portionSize,String type);
+    }
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        try {
+            mListener = (foodIntakeFragmentListener)context;
+        }catch (ClassCastException e){
+
+        }
+
+    }
     public static FoodIntakeFragment newInstance() {
         return new FoodIntakeFragment();
     }
@@ -33,12 +51,15 @@ public class FoodIntakeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        myDb = new DatabaseHelper(getActivity());
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view= inflater.inflate(R.layout.fragment_food_intake, container, false);
+
+        // Initalise all food group buttons and if clicked show portion pop up
         Button showPopUpButton = (Button) view.findViewById(R.id.waterbutton);
         showPopUpButton.setOnClickListener(new View.OnClickListener() {
 
@@ -60,7 +81,7 @@ public class FoodIntakeFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                showPopUp3("Select Carbohydrates portion taken:","Carbohydrates");
+                showPopUp3("Select Carbohydrates portion taken:", "Carbohydrates");
             }
         });
         Button showPopUpButton4 = (Button) view.findViewById(R.id.dairybutton);
@@ -100,23 +121,43 @@ public class FoodIntakeFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                showPopUp3("Select Treats portion taken: (Only eat occasionally", "Treats");
+                showPopUp3("Select Treats portion taken: (Only eat occasionally).", "Treats");
             }
         });
 
         return view;
     }
+
+    // Shows food portion pop up
+    // Arguments:
+    // String msg = contains message to be displayed in the pop up
+    // String type = describes the type of food
     private void showPopUp3(String msg,String type) {
 
         AlertDialog.Builder helpBuilder = new AlertDialog.Builder(getActivity());
         helpBuilder.setTitle("Portion Size");
         helpBuilder.setMessage(msg);
         final String food = type;
-
         LayoutInflater inflater = getActivity().getLayoutInflater();
         radioLayout = inflater.inflate(R.layout.portionlayout, null);
         helpBuilder.setView(radioLayout);
         final RadioGroup radioGroup = (RadioGroup) radioLayout.findViewById(R.id.radioGroup1);
+
+        if(type.equals("Water")) {
+            ((RadioButton) radioGroup.getChildAt(0)).setText("1 glass(200 ml)");
+            ((RadioButton) radioGroup.getChildAt(1)).setText("1/2 glass(100 ml)");
+            ((RadioButton) radioGroup.getChildAt(2)).setText("1/4 glass(40 ml)");
+        }
+        else if(type.equals("Alcohol")) {
+            ((RadioButton) radioGroup.getChildAt(0)).setText("5 units");
+            ((RadioButton) radioGroup.getChildAt(1)).setText("3 units");
+            ((RadioButton) radioGroup.getChildAt(2)).setText("1 units");
+        }
+        else{
+            radioLayout = inflater.inflate(R.layout.portionlayout, null);
+        }
+
+
         helpBuilder.setPositiveButton("Submit",
                 new DialogInterface.OnClickListener() {
 
@@ -128,10 +169,21 @@ public class FoodIntakeFragment extends Fragment {
                             final RadioButton radioButton = (RadioButton) radioLayout.findViewById(selectedId);
                             float portion = (parse(radioButton.getText().toString()));
                             setPortion(portion, food);
-                            if(food.equals("Alcohol") && alc >= 3){ /*Limit for alcohol*/
-                                showAlert("alcohol");
+                            mListener.sendPortionSize(portion,food);
+                            if(food.equals("Alcohol"))
+                            { /*Limit for alcohol*/
+                                if (gender.equals("Male")) {
+                                    if(alc >= 14) {
+                                        showAlert("alcohol");
+                                    }
+                                }
+                                else{
+                                    if(alc >= 11) {
+                                        showAlert("alcohol");
+                                    }
+                                }
                             }
-                            if(food.equals("Carbohydrates") && carb >= 6){/*Limit for carbs. TODO figure out how to determine carb limit*/
+                            if(food.equals("Carbohydrates") && carb >= 10){/*Limit for carbs. TODO figure out how to determine carb limit*/
                                 showAlert("carbohydrates");
                             }
                             else dialog.dismiss();
@@ -175,38 +227,47 @@ public class FoodIntakeFragment extends Fragment {
             return Float.parseFloat(portion[0]);
         }
     }
-
+    // Increments the global variables of a food group once user adds food portion of the particular food group
+    // Arguments:
+    // float portionSize = selected portion size of the user
+    // String type = describes the type of food
     public void setPortion(float portionSize,String type) {
         switch (type){
             case "Water":
                 //UPDATE Water count on database
-
                 water += portionSize;
-                Log.v("portion",""+water);
+                myDb.updateDailyFood(portionSize, "WATER_INTAKE");
                 break;
             case "Fruit and Veg":
                 // UPDATE Fruits and Veg count on database
                 fg+= portionSize;
+                myDb.updateDailyFood(portionSize, "FRUITandVEG_INTAKE");
                 break;
             case "Carbohydrates":
                 // UPDATE carb count on database
                 carb+=portionSize;
+                myDb.updateDailyFood(portionSize, "CARBOHYDRATE_INTAKE");
                 break;
             case "Dairy":
                 //UPDATE
                 dairy+=portionSize;
+                myDb.updateDailyFood(portionSize, "DAIRY_INTAKE");
                 break;
             case "Protein":
                 protein+=portionSize;
+                myDb.updateDailyFood(portionSize, "PROTEIN_INTAKE");
                 break;
             case "Alcohol":
                 alc+=portionSize;
+                myDb.updateDailyFood(portionSize, "ALCOHOL_INTAKE");
                 break;
             case "Fats":
                 oil+=portionSize;
+                myDb.updateDailyFood(portionSize, "FAT_INTAKE");
                 break;
             case "Treats":
                 treats+=portionSize;
+                myDb.updateDailyFood(portionSize, "TREATS_INTAKE");
                 break;
         }
     }

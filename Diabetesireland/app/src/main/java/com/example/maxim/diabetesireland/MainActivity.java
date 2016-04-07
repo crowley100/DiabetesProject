@@ -30,13 +30,14 @@ import java.util.GregorianCalendar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     boolean touchedMale, touchedFemale= false,dobset=false,weightset=false,heightset=false;
-
-    String registered = "notRegistered";String gender = "Male",db_weight,db_height;
+    String registered = "notRegistered";
+    String gender = "Male",db_weight,db_height;
     int user_age;
     double user_height,user_weight;
     public static Button maleButton, femaleButton,nextScreen,dateOfBirth,weight,height;
     RadioGroup plan;
     Intent intent;
+    DatabaseHelper mydb;
     Calendar calendar = Calendar.getInstance();
     final String [] weight_metrics = {"kg","lbs","st and lbs"};
     final String [] height_metrics = {"cm","ft and in"};
@@ -49,8 +50,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // fetch String registered from database
-        if((registered.equals("registered"))){
+        mydb = new DatabaseHelper(this);
+        // check if user is registered
+        if(!(mydb.isEmpty())){
             Intent i =  new Intent(MainActivity.this, TabActivity.class);
             startActivity(i);
             finish();
@@ -86,6 +88,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
     //Returns height in centimeters
+    //Arguments :
+    //EditText first= contains user input from the first editable text
+    //EditText second= contains user input from the second editable text
     private double getHeight(EditText first,EditText second) {
         if ((second.getText().toString()).equals("")) {
             if ((first.getText().toString()).equals("")) {
@@ -107,7 +112,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
     }
-    //Returns weight in kilogram
+    //Returns weight in kilograms
+    //Arguments :
+    //EditText first= contains user input from the first editable text
+    //EditText second= contains user input from the second editable text
+    //String type = used to distinguish lbs and kgs
     private double getWeight(EditText first,EditText second,String type){
         if((second.getText().toString()).equals("")) {
             if ((first.getText().toString()).equals("")) {
@@ -169,7 +178,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     if(dobset==true && heightset==true && weightset==true){
                         if(plan.getCheckedRadioButtonId()!=-1) {
                             // ADD TO DATABASE = registered
-                            registered = "registered";
+                            mydb.insertUserData(user_age, gender, user_height, user_weight, "goal");// some goal
                             AlertDialog.Builder builder = new AlertDialog.Builder(this);
                             builder.setMessage(R.string.disclaimer)
                                     .setPositiveButton("Accept", new DialogInterface.OnClickListener() {
@@ -194,7 +203,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 cal.add(Calendar.YEAR, -100);
                 dialog.getDatePicker().setMinDate(cal.getTimeInMillis());
                 GregorianCalendar cal2 = new GregorianCalendar();
-                cal2.add(Calendar.YEAR, -1);
+                cal2.add(Calendar.YEAR, -10);
 
                 dialog.getDatePicker().setMaxDate(cal2.getTimeInMillis());
                 dialog.show();
@@ -202,7 +211,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
     }
-
+    // Shows pop up for weight and height
+    // Arguments:
+    // String [] spinner = contains the selections for the spinner
+    // String title = contains the title for the popup
     private void showPopUp(String [] spinner,String title) {
 
         AlertDialog.Builder helpBuilder = new AlertDialog.Builder(MainActivity.this);
@@ -385,7 +397,7 @@ public static boolean checkHeightValid(EditText first, EditText second){
         }
 
     }
-
+    // Listens to the Date picker and calculates age of user
     DatePickerDialog.OnDateSetListener listener = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {

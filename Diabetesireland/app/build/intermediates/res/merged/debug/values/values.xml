@@ -91,6 +91,7 @@
     <color name="progress_color_bg">#F2F2F2</color>
     <color name="protein_color_icon">#CC0000</color>
     <color name="protein_color_progress">#FF3333</color>
+    <color name="red_progress">#8d0000</color>
     <color name="ripple_material_dark">#33ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
     <color name="round_corner_progress_bar_background_default">#5f5f5f</color>

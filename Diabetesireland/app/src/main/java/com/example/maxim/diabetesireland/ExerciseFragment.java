@@ -1,6 +1,7 @@
 package com.example.maxim.diabetesireland;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -22,8 +23,7 @@ import java.lang.CharSequence;
 public class ExerciseFragment extends Fragment {
     View view;
     private View helpLayout;
-
-
+    DatabaseHelper mydb;
     private Spinner exerciseSpinner;
     private static final String[] exerciseDurations = {"15", "30", "45", "60"};
     public Button lightButton, mediumButton, vigorousButton, lightHelpButton, mediumHelpButton, vigorousHelpButton, submitButton;
@@ -31,7 +31,22 @@ public class ExerciseFragment extends Fragment {
     int currentDuration = 0;
     int exerciseDuration=0;
     String exerciseType ="";
+    private exerciseFragmentListener mListener;
 
+
+    public interface exerciseFragmentListener {
+        void sendExercise(String type,int duration);
+    }
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        try {
+            mListener = (exerciseFragmentListener)context;
+        }catch (ClassCastException e){
+
+        }
+
+    }
     public static ExerciseFragment newInstance() {
         return new ExerciseFragment();
     }
@@ -42,11 +57,13 @@ public class ExerciseFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mydb = new DatabaseHelper(getActivity());
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view =inflater.inflate(R.layout.fragment_exercise, container, false);
+
         lightButton = (Button) view.findViewById(R.id.lightbutton);
         mediumButton = (Button) view.findViewById(R.id.mediumbutton);
         vigorousButton = (Button) view.findViewById(R.id.vigorousbutton);
@@ -112,13 +129,20 @@ public class ExerciseFragment extends Fragment {
                 vigorousButton.setBackgroundColor(0xffdbdbdb); //light grey
                 if(touchedLight){
                     //Add to database
-                    setExercise("Light");setDuration(currentDuration);}
+                    setExercise("Light");
+                    setDuration(currentDuration);
+                    mydb.updateDailyExercise(exerciseDuration, exerciseType);}
+
                 else if(touchedMedium){
                     //Add to database
-                    setExercise("Medium");setDuration(currentDuration);}
+                    setExercise("Medium");
+                    setDuration(currentDuration);
+                    mydb.updateDailyExercise(exerciseDuration, exerciseType);}
                 else if(touchedVigorous){
                     //Add to database
-                    setExercise("Vigorous");setDuration(currentDuration);}
+                    setExercise("Vigorous");
+                    setDuration(currentDuration);
+                    mydb.updateDailyExercise(exerciseDuration, exerciseType);}
                 touchedLight = false;
                 touchedMedium = false;
                 touchedVigorous = false;

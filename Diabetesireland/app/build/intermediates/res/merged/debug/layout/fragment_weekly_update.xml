@@ -35,7 +35,7 @@
     <Button
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:text="Food Intake"
+        android:text="Carbohydrate \nIntake"
         android:id="@+id/carbButton"
         android:background="#ffdbdbdb"
         android:textColor="#ffffffff"
@@ -46,28 +46,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Steps This Week:"
-        android:id="@+id/textView"
+        android:id="@+id/thisWeek"
         android:layout_below="@+id/graph"
-        android:layout_alignParentStart="true"
-        android:textSize="25sp" />
+        android:layout_alignParentStart="true"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Goals Reched:"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/textView"
+        android:text="Goals Reached:"
+        android:id="@+id/goals"
+        android:layout_below="@+id/thisWeek"
         android:layout_alignParentStart="true"
-        android:textSize="25sp"
         android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Average Steps Per Day:"
-        android:id="@+id/textView4"
-        android:textSize="25sp"
-        android:layout_below="@+id/textView3"
+        android:id="@+id/average"
+        android:layout_below="@+id/goals"
         android:layout_alignParentStart="true"
         android:layout_marginTop="20dp" />
 

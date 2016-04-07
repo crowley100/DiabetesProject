@@ -32,12 +32,12 @@
         "source": "C:\\Users\\David\\DiabetesProject\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_app_icon.png"
     },
     {
-        "merged": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_dairy_icon.png",
-        "source": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_dairy_icon.png"
-    },
-    {
         "merged": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\round_corner_progress_icon.png",
         "source": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\build\\intermediates\\exploded-aar\\com.akexorcist\\RoundCornerProgressBar\\2.0.3\\res\\mipmap-xxhdpi\\round_corner_progress_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_dairy_icon.png",
+        "source": "C:\\Users\\Hugh\\Desktop\\Software Engineering\\Diabetesireland\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_dairy_icon.png"
     },
     {
         "merged": "C:\\Users\\David\\DiabetesProject\\Diabetesireland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_alc_icon.png",
