@@ -277,7 +277,7 @@ public class WeeklyUpdateFragment extends Fragment {
     public double getAverage(double sun,double mon,double tue,double wed, double thu ,double fri, double sat){
         if(averageVar!=0) {
             double sum = sun + mon + tue + wed + thu + fri + sat;
-            return Math.round((sum / averageVar) *100)/100;;
+            return Math.round((sum / averageVar) *100)/100;
         }
         else {
             return 0;
