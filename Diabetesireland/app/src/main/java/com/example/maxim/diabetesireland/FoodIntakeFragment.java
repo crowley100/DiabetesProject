@@ -186,12 +186,12 @@ public class FoodIntakeFragment extends Fragment {
                             { /*Limit for alcohol*/
                                 if (gender.equals("Male")) {
                                     if(carb >= 6) {
-                                        showAlert("alcohol");
+                                        showAlert("carbohydrates");
                                     }
                                 }
                                 else{
                                     if(carb >= 5) {
-                                        showAlert("alcohol");
+                                        showAlert("carbohydrates");
                                     }
                                 }
                             }
