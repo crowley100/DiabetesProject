@@ -214,7 +214,12 @@ public class FoodIntakeFragment extends Fragment {
     private void showAlert(String foodType) {
         AlertDialog.Builder alertPopUp = new AlertDialog.Builder(getActivity());
         alertPopUp.setTitle("Warning");
-        alertPopUp.setMessage("You have exceeded your daily recommended intake of " + foodType);
+        if(foodType.equals("alcohol"){
+            alertPopUp.setMessage("You have exceeded your weekly recommended intake of " + foodType);
+        }
+        else{
+            alertPopUp.setMessage("You have exceeded your daily recommended intake of " + foodType);
+        }
         alertPopUp.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
