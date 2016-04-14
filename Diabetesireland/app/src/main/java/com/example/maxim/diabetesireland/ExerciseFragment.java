@@ -129,18 +129,18 @@ public class ExerciseFragment extends Fragment {
                 vigorousButton.setBackgroundColor(0xffdbdbdb); //light grey
                 if(touchedLight){
                     //Add to database
-                    setExercise("Light");
+                    setExercise("LIGHT_EXERCISE");
                     setDuration(currentDuration);
                     mydb.updateDailyExercise(exerciseDuration, exerciseType);}
 
                 else if(touchedMedium){
                     //Add to database
-                    setExercise("Medium");
+                    setExercise("MODERATE_EXERCISE");
                     setDuration(currentDuration);
                     mydb.updateDailyExercise(exerciseDuration, exerciseType);}
                 else if(touchedVigorous){
                     //Add to database
-                    setExercise("Vigorous");
+                    setExercise("VIGOROUS_EXERCISE");
                     setDuration(currentDuration);
                     mydb.updateDailyExercise(exerciseDuration, exerciseType);}
                 touchedLight = false;

@@ -182,9 +182,18 @@ public class FoodIntakeFragment extends Fragment {
                                         showAlert("alcohol");
                                     }
                                 }
-                            }
-                            if(food.equals("Carbohydrates") && carb >= 10){/*Limit for carbs. TODO figure out how to determine carb limit*/
-                                showAlert("carbohydrates");
+                            } if(food.equals("Carbohydrates"))
+                            { /*Limit for alcohol*/
+                                if (gender.equals("Male")) {
+                                    if(carb >= 6) {
+                                        showAlert("alcohol");
+                                    }
+                                }
+                                else{
+                                    if(carb >= 5) {
+                                        showAlert("alcohol");
+                                    }
+                                }
                             }
                             else dialog.dismiss();
                         }
